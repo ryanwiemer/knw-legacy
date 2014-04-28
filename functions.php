@@ -83,5 +83,6 @@ function knw_scripts() {
   wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/assets/css/style.min.css');
   wp_enqueue_script( 'knw-global-script',  get_template_directory_uri() . '/assets/js/global.min.js');
   wp_enqueue_script( 'knw-modernizr-script',  get_template_directory_uri() . '/assets/js/modernizr.min.js');
+  wp_enqueue_script( 'knw-swipe-script',  get_template_directory_uri() . '/assets/js/swipe.min.js');
 }
 add_action( 'wp_enqueue_scripts', 'knw_scripts' );

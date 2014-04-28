@@ -3,11 +3,11 @@
 	display: inline-block;
 	background: $highlight;
 	color: white;
-	padding: 1em 1.55em; 
+	padding: 1em 1.55em;
 	@include bp(medium) {
-	  	padding: .76em 1.65em;  
+	  	padding: .76em 1.65em;
 	}
-	 
+
 	&:hover {
 		background: darken( $highlight, 5% );
 		color: white;
@@ -15,9 +15,9 @@
 }
 
 .btn--small {
-		padding: .55em .6em!important; 
+		padding: .55em .6em!important;
 		@include bp(small) {
 			font-size: .75em!important;
-			padding: .3em .6em!important;   
+			padding: .3em .6em!important;
 		}
 	}
