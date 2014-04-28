@@ -1,23 +1,21 @@
 <?php
 /**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package knw
+ * The footer template
  */
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'knw' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'knw' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'knw' ), 'knw', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- content-->
+<footer>
+		<section>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank" class="icon-facebook"></a>
+				<a href="http://www.pinterest.com/knwphoto/" target="_blank" class="icon-pinterest"></a>
+				<a href="http://instagram.com/knwphoto" target="_blank" class="icon-instagram"></a>
+			</div>
+			<span class="copyright">&copy; <?php echo date("Y") ?> knw photography</span>
+		</section>
+	</footer>
+</div><!-- wrapper-->
 
 <?php wp_footer(); ?>
 

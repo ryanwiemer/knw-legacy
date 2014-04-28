@@ -58,6 +58,5 @@
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'knw' ), __( '1 Comment', 'knw' ), __( '% Comments', 'knw' ) ); ?></span>
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'knw' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
