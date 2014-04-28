@@ -1,0 +1,149 @@
+/* ---------- *
+ * Contact Form *
+ * ---------- */
+
+.form {
+    margin:0;
+    background: white;
+    border-bottom: 2px solid $shadow;
+    padding: 1em;
+    @include bp(medium) {
+        padding: 1em 2em;
+    }
+}
+
+.form input, textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+}
+
+.form__name, .form__email  {
+	width: 100%;
+	@extend %clearfix;
+	 
+}
+
+.form__name__input, .form__email__input  {
+	width: 100%;
+	margin-top: .25em;
+}
+
+
+.form__message__textarea {
+	width: 100%;
+	height: 300px;
+	margin-top: .25em;
+	resize: none;
+}
+
+
+.form__captcha__input {
+	width: 100%;
+	margin-top: .25em;
+}
+
+.form__submit {
+	font-family: $freight-sans;
+	border: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+
+.form__intro {
+	@include bp(extra-large) {
+	
+	}
+	 
+}
+
+
+
+
+
+
+
+
+
+
+.form label.error {
+    color: red;
+    position: relative;
+    top: -3.79em;
+    float: right;
+}
+
+.form__message .error {
+		top: -21.2em!important;
+	@include bp(small) {
+	 	top: -19em!important;   
+	}
+	@include bp(large) {
+	 	top: -16em!important;   
+	}
+}
+
+
+
+.form input[type="text"], form textarea {
+	padding: .2em;
+	font-family: $freight-sans;
+	font-size: .85em;
+    margin-bottom:1.25em;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    background: $background;
+    border:1px solid $shadow;
+}
+.form input[type="text"]:focus, form textarea:focus {
+    border-color: $shadow;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none
+}
+.form input[type="text"][disabled], form textarea[disabled] {
+    background:#fff
+}
+.form input[type="text"].error, form textarea.error {
+    background: $background;
+    border-color: red;
+}
+.form__required {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+//Form Success/Error Messages
+
+.form__success, .form__error {
+    display: none;
+	padding: 1em 0;
+	line-height: 2em;
+	margin-top: 1em;
+	color: white;
+	text-align: center;
+}
+
+.form__success p, .form__error p {
+	margin: 0;
+	padding: 0;
+}
+
+.form__success {
+	background: $secondary;
+}
+
+.form__error {
+	background: red;
+}

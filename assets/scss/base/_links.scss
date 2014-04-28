@@ -1,0 +1,18 @@
+/* ------- *
+ *  LINKS  *
+ * ------- */
+
+a {
+	text-decoration: none;
+}
+
+p a {
+	color: $highlight;
+	border-bottom: 1px dotted $highlight;
+	&:hover {
+		color: darken( $highlight, 5% );
+		border-bottom: 1px dotted darken ($highlight, 5%);
+	}
+}
+
+	

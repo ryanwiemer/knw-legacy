@@ -1,0 +1,94 @@
+/* ------- *
+ *  Typography  *
+ * ------- */
+
+html {
+	font-size: 100%;
+	
+	@include bp(small) {
+		font-size: 112.5%;
+	}
+
+	@include bp(medium) {
+		font-size: 125%;
+	}
+	
+	@include bp(large) {
+		font-size: 137.5%;
+	}
+}
+
+body {
+	font-family: $freight-sans;
+	font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $kulturista;
+	font-weight: 300;
+}
+
+
+//Icons
+@include font-face(icons, '../fonts/icons');
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-right-arrow:before {
+	content: "\e602";
+}
+.icon-left-arrow:before {
+	content: "\e601";
+}
+
+.icon-grid:before {
+	content: "\e60a";
+}
+
+
+.icon-menu:before {
+	content: "\e609";
+}
+.icon-pinterest:before {
+	content: "\e60b";
+}
+.icon-instagram:before {
+	content: "\e607";
+}
+.icon-facebook:before {
+	content: "\e608";
+}
+
+
+//Icons within the menu
+.menu ul a[title="About"]:before, .menu ul a[title="Galleries"]:before, .menu ul a[title="Pricing"]:before, .menu ul a[title="Contact"]:before {
+	font-family: "icons";
+	padding-right: 10px;
+	position: relative;
+	top: 2px;
+}
+
+.menu ul a[title="About"]:before {
+	content: "\e603";
+}
+
+.menu ul a[title="Galleries"]:before {
+	content: "\e605";
+}
+
+.menu ul a[title="Pricing"]:before {
+	content:  "\e604";
+}
+
+.menu ul a[title="Contact"]:before {
+	content: "\e606";
+}

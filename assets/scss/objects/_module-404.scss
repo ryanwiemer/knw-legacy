@@ -1,0 +1,49 @@
+/* ---------- *
+ * module-404 *
+ * ---------- */
+
+
+.error404__title {
+	font-size: 1em;
+	line-height: 75px;
+	@include bp(medium) {
+	    line-height: 30px;
+	    padding-top: 2%;
+	    padding-bottom: 8%;
+	}
+	 
+}
+
+.error404__message {
+	@include bp(medium) {
+	 	@include span-columns(8);   
+	}
+}
+
+.error404__card  span{
+	background: $shadow;
+	padding: 0 .25em;
+}
+
+
+.error404__card {
+	background: white;
+	height: 150px;
+	border-bottom: 2px solid $shadow;
+	text-align: center;
+	padding: .5em 1em;
+	margin-bottom: 1em;
+
+	@include bp(medium) {
+	 	@include span-columns(4);   
+	}
+
+	p {
+		font-size: 1em;
+	}
+}
+
+
+.error404__image {
+	
+}

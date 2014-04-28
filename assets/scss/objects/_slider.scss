@@ -1,0 +1,66 @@
+/* ---------- *
+ *   SLIDER   *
+ * ---------- */
+
+.slider {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    border: 4px solid white;
+    background: white;
+    margin: 0 auto;
+    -moz-box-shadow:    0 2px $shadow;
+    -webkit-box-shadow: 0 2px $shadow;
+    box-shadow:         0 2px $shadow;
+
+}
+.slider__wrap {
+	overflow: hidden;
+	position: relative;
+}
+.slider__wrap > div {
+    float:left;
+    position: relative;
+}
+
+.slider__caption {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	background: white;
+	opacity: .4;
+	color: $base;
+	padding: .25em .5em .25em .5em;
+}
+
+.no-touch .slider__wrap:hover .slider__caption {
+	background: $secondary;
+	opacity: 1;
+	color: white;
+}
+
+.slider__nav {
+	margin: 0;
+	padding: 0;
+	top: -2px;
+}
+
+.slider__nav a {
+	color: $secondary;
+	cursor: pointer;
+	&:hover {
+		color: $base;
+	}
+}
+
+.prev, .next {
+	padding: .25em .5em;
+}
+
+.prev {
+	float: left;
+}
+
+.next{
+	float: right;	
+}

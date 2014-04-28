@@ -1,0 +1,27 @@
+# Generated Stuff
+.sass-cache
+.sass-cache/*
+
+# Node Modules
+node_modules/*
+node_modules
+npm-debug.log
+
+# OS X Junk
+.DS_Store
+.DS_Store/*
+.DS\_Store
+
+# Not-Needed System Files
+*.sw?
+*.swp
+*.bak
+
+#Bower
+bower_components
+bower_components/*
+
+# Codekit
+codekit-config.json
+
+#Build files

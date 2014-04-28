@@ -1,0 +1,104 @@
+/* ---------- *
+ * Article Intro *
+ * ---------- */
+
+.article-intro {
+	@extend %clearfix;
+	background: $border;
+	border-left: 6px solid $secondary;
+	padding: 1em;
+	margin-bottom: .4em;   
+}
+
+.article-intro__title {
+	font-size: 1.5em;
+	padding-bottom: .25em;
+}
+
+.article-intro__location{
+	color: $secondary;
+	padding-bottom: 0; 
+}
+
+.article-intro__date{
+	color: $secondary;
+	padding-bottom: .5em;
+
+}
+
+
+.icon-grid span {
+	font-size: .85em;
+	position: relative;
+	top: -.15em;
+	padding-bottom: .5em;
+	text-transform: capitalize;
+	font-family: $freight-sans!important;
+	font-weight: 400;
+	text-transform: normal;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: subpixel-antialiased;
+}
+
+.icon-grid {
+	color: white;
+	background: $shadow;
+	padding: .25em;
+	&:hover {
+		background: $secondary;
+		color: $background!important;
+	}
+}
+
+
+
+
+
+.article-intro div {
+	@include span-columns(12);
+	padding-bottom: 1em;
+	@include bp(medium) {
+	 	@include span-columns(4);
+	}
+}
+
+.article-intro__description {
+	margin-bottom: 0;
+	@include span-columns(12);
+	@include bp(medium) {
+	    @include span-columns(8);
+	}
+	 
+}
+
+.posts p {
+	margin-bottom:0;
+}
+
+
+
+.article-intro .icon-left-arrow, .article-intro .icon-right-arrow, .article-intro .icon-grid {
+	color: $secondary;
+	padding-right: .5em;
+}
+
+
+.return-top {
+	background: lighten($secondary, 10%);
+	color: $background;
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: .85em;
+	cursor: pointer;
+	padding: 1em;
+	@include bp(large) {
+	    padding: .75em;
+	}
+	 
+
+&:hover {
+	background: $secondary;
+}
+
+}

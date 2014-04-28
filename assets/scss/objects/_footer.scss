@@ -1,0 +1,90 @@
+/* ---------- *
+ *   FOOTER   *
+ * ---------- */
+ 
+footer{
+	width: 100%;
+	background: $base;
+	height: 70px;
+	color: $tertiary;
+	text-align: center;	
+	@include bp(small){
+		height: 120px;
+	}
+ }
+ 
+footer section {
+	margin: 0 auto;
+	max-width: 700px;
+	@include bp(small) { 
+		padding: 0 .9em;   
+	}
+	@include bp(large) {
+	    max-width: 750px;
+	}
+	@include bp(extra-large) {
+	    max-width: 950px
+	}
+}
+ 
+.social-icons {
+	float: none;
+	position: relative;
+	@include bp(small){
+		right: .5em;
+		float: left;
+	}
+}
+
+footer a {
+	display: inline-block;
+	font-size: 1.5em;
+	width: 33.33333333333333%;
+	height: 70px;
+	float: left;
+	color: $tertiary;
+	overflow: hidden;
+	border-right: 1px solid $tertiary;
+	margin: 0;
+	padding: 0;
+	@include bp(small){
+		border: none;
+		display: inline;
+		width: auto;
+		font-size: 1.25em;
+		float: none;
+		margin: 0 .5em;
+	}
+}
+
+.no-touch footer a:hover {
+		background: $highlight;
+		color: white;
+		@include bp(small){
+			background: none;
+		}
+	}
+
+footer .icon-facebook, footer .icon-pinterest, footer .icon-instagram {
+	line-height: 80px;
+	@include bp(small){
+		line-height: 120px;
+	}
+}
+
+footer .icon-instagram {
+	border: none;
+}
+
+//Copyright
+.copyright {
+	display: none;	
+	@include bp(small){
+		display: block;
+		float: right;
+		font-size: .65em;
+		color: $tertiary;
+		position: relative;
+		line-height: 120px; 
+	}
+}

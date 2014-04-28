@@ -1,0 +1,29 @@
+/* ------- *
+ * PARAGRAPHS *
+ * ------- */
+
+p, aside {
+  font-size: 1em;
+  @include bp(medium) {
+      font-size: .95em;
+  }
+  @include bp(large) {
+      font-size: .85em;
+  }
+   
+   
+}
+
+p {
+	line-height: 1.4;
+	margin-bottom: 1.4em;
+	@include bp(small) {
+	    line-height: 1.45;
+	    margin-bottom: 1.45em;
+	}
+	 
+	@include bp(medium) {
+	 	line-height: 1.5;   
+	 	margin-bottom: 1.5em;
+	}
+}

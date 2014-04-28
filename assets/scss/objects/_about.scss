@@ -1,0 +1,228 @@
+/* ---------- *
+ *    ABOUT   *
+ * ---------- */
+
+
+//General About Styles
+
+.about-container {
+	@extend %clearfix;
+	@include outer-container;
+	
+}
+.about-collage--content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.about-collage {
+	margin-bottom: 1em!important;
+	@include bp(small) {
+	   margin-bottom: 2.35765%!important; 
+	}
+}
+.about-collage:last-child {
+	margin-bottom: 0;
+}
+.about-collage__content p {
+	padding: 0;
+	margin: 0;
+	margin-bottom: .5em;
+}
+
+
+
+
+
+
+
+
+
+
+//Biography Section
+.about-collage--bio {
+	padding: 1em 1.25em;
+	background: white;
+	border-bottom: 2px solid $shadow;
+	@include span-columns (12);
+	 
+	@include bp(large) {
+		@include span-columns (8);
+	}
+	@include bp(extra-large) {
+	    @include span-columns (8);
+	}
+	 
+}
+
+//Drop Cap
+.about-collage--bio span {
+	font-family: $kulturista;
+	position: relative;
+	top: -.05em;
+	font-size: 4em;
+	font-weight: 300;
+	padding-right: .15em;
+	margin: 0;
+	line-height: 1;
+	float: left;
+}
+
+
+
+
+
+//Portrait Image
+.about-collage--portrait {
+	background: white;
+	border-bottom: 2px solid $shadow;
+	position: relative;
+	text-align: center;
+	@include span-columns(12);
+	@include bp(small) {
+		@include span-columns(6);	
+	}
+	@include bp(large) {
+ 	    @include span-columns(4);
+ 	    @include omega ();
+	}
+	@include bp(extra-large) {
+	    @include span-columns(4);
+	    @include omega();
+	}
+
+	img {
+		border: 4px solid white;
+		padding-bottom: 19.75%;
+		@include bp(small) {
+		    padding-bottom: 25%;
+		}
+		@include bp(medium) {
+		    padding-bottom: 20%
+		}
+		@include bp(large) {
+		    padding-bottom: 22%;
+		}
+		@include bp(extra-large) {
+		    padding-bottom: 21%;
+		}	 
+	}
+
+	h3 {
+		font-size: 18px;
+		color: $highlight;
+	}
+}
+
+.about-collage--portrait__container {
+	position: absolute;
+	display: block;
+	position: absolute;
+	width: 100%;
+	bottom: 6%;
+	@include bp(small) {
+	   	bottom: 7.5%; 
+	}
+	@include bp(medium) {
+	    bottom: 6.5%;
+	}
+	 
+	@include bp(large) {
+	   bottom: 6%; 
+	}
+	@include bp(extra-large) {
+	    bottom: 6%; 
+	}
+}
+
+
+
+
+
+//Map Image
+.about-collage--map {
+	border-bottom: 2px solid $shadow;
+	@include span-columns(12);
+	@include bp(small) {
+		@include span-columns(6);	
+		margin-right: 0;
+	}
+	@include bp(large) {
+		@include span-columns(4);
+		@include omega ();
+	}
+	@include bp(extra-large) {
+	    @include span-columns(4);
+	    float: left;
+	    @include omega ();
+	}
+}
+
+.about-collage--map__img {
+	border: 4px solid white;
+	background-image: url('../img/map-san-francisco-east-bay.jpg');
+	background-size: cover;
+	padding-bottom: 123.25%; 
+	position: relative;
+	@include bp(medium) {
+	 	padding-bottom: 118.5%;   
+	}
+	@include bp(large) {
+	   padding-bottom: 172%; 
+	   background-position: center;  
+	}
+	@include bp(extra-large) {
+	    padding-bottom: 67.5%;
+	    background-position: center center; 
+	} 
+}
+.about-collage--map__img .city {
+	float: left;
+	position: absolute;
+	top: 73%;
+	left: 48%;
+	color: white;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, .4);
+	width: 25%;
+	font-size: 1.1em;
+	@include bp(small) {
+	   	width: 35%; 
+	}
+	@include bp(large) {
+	    top: 67%;
+	    font-size: .8em;
+	}
+	@include bp(extra-large) {
+		width: 30%;
+	    top: 65%;
+	    left: 47%;
+	}
+}
+
+
+
+	 
+	
+//Beach photo
+.about-collage--beach {
+	border-bottom: 2px solid $shadow;
+	@include span-columns(12);
+	 margin-bottom: 0!important;
+	@include bp(small) {
+	   margin-bottom: 0!important; 
+	}
+	@include bp(extra-large) {
+		@include span-columns(12);
+	}
+}
+
+.about-collage--beach img {
+	border: 4px solid white;
+	margin-bottom: -3px;
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		only screen and (min-moz-device-pixel-ratio: 1.5),
+		only screen and (min-device-pixel-ratio: 1.5) { margin-bottom: -2px;}
+}
+

@@ -1,0 +1,149 @@
+/* ---------- *
+ *PRICING TABLE*
+ * ---------- */
+
+.pricing__portraits {
+	@extend %clearfix;
+	padding-bottom: 1em;
+}
+
+.pricing__weddings {
+	@extend %clearfix;
+	padding-bottom: 1em;
+		padding-top: 2em;
+}
+
+
+.pricing-table {
+	@include row(display, ltr);
+	@include span-columns(12);
+	background: white;
+	margin: 0 auto;
+	border-bottom: solid 2px $shadow;
+}
+
+.pricing-table__header {
+	text-align: center;
+	color: $base;
+	margin: .75em auto .25em;
+	font-size: 2em;
+	font-family: $freight-sans;
+}
+
+.pricing-table__list {
+	margin: 0 1em 2em;
+}
+
+.pricing-table__list-item {
+	@include span-columns(8);
+	padding: .5em;
+	line-height: 1.4;
+}
+
+h4.pricing-table__list-item--time, h4.pricing-table__list-item--price {
+	display: none;
+	@include bp(small) {
+		display: inline;
+	} 
+}
+
+
+
+.pricing-table__list-item--time,
+.pricing-table__list-item--price {
+	@include span-columns(3);
+	text-align: center;
+	padding: .5em;
+	@include bp(small) {
+		@include span-columns(2);
+	}
+} 
+
+.pricing-table__top-row {
+	background: white;
+	@extend %clearfix;
+	padding-bottom: .5em;
+	color: $highlight;
+}
+
+.pricing-table__odd {
+	background: $border;
+	@extend %clearfix;
+	padding: 0;
+}
+
+.pricing-table__even {
+	@extend %clearfix;
+}
+
+
+div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
+	padding-top: .5em;
+}
+
+
+.pricing-table__list-item span {
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 600;
+	@extend %clearfix;
+}
+
+.pricing-table__list-item  {
+	font-size: 1em;
+    @include bp(large) {
+    font-size: .85em;
+  }
+}
+
+
+
+
+
+
+
+
+//Pricing Additional Information
+
+.pricing__footnotes span {
+	font-size: .85em;
+	font-weight: 600;
+	padding-left: 1em;
+	color: $secondary;
+	@include bp(extra-large) {
+		@include span-columns (2);
+		@extend %clearfix;
+		position: relative;
+		top: .1em;
+		line-height: 1.2;
+	}
+	
+}
+
+.pricing__footnotes ul {
+	margin-top: .5em;
+	@include bp(extra-large) {
+		@include span-columns (10);
+		margin-bottom: 2em;
+		position: relative;
+		top: -.4em;
+	}
+	
+}
+
+.pricing__footnotes ul li {
+	margin: 0 0 1em 1.25em;
+	padding: 0;
+	list-style-type: lower-roman;
+	font-size: .9em;
+	line-height: 1.3;
+  @include bp(large) {
+      font-size: .75em;
+  }
+  
+}
+
+
+h4.pricing-table__list-item {
+	font-size: 1em;
+}

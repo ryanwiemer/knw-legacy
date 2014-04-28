@@ -1,0 +1,50 @@
+/* ------- *
+ *   Main  *
+ * ------- */
+
+.wrapper {
+	@include bp (large){
+	margin-right: 25%;
+	}
+	@include bp(extra-large) {
+		margin-right: 340px;
+		}
+}
+
+.content {
+	padding: 0 1em;
+	margin: 2em auto;
+	@extend %clearfix;
+	max-width: 700px;
+	min-height: 300px;
+
+	@include bp(small) {
+	    min-height: 400px;
+	}
+
+	@include bp(large) {
+	    max-width: 750px;
+	}
+	@include bp(extra-large) {
+	    max-width: 950px;
+	    min-height: 500px;
+	}
+}
+
+body {
+	background: $background;
+	color: $base;
+	position: relative;
+	top: 55px;
+	@include bp (large){
+		top: 0;
+	}
+}
+
+::-moz-selection {
+	background: $border; /* Firefox */
+}
+
+::selection {
+	background: $border; /* Safari */
+}

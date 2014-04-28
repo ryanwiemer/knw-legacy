@@ -1,0 +1,62 @@
+.menu, .active .menu, .wrapper, .active .wrapper, .mobile-menu, .active .mobile-menu, footer, .active footer {
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;	
+	@include bp(large) {
+		-webkit-transition: none !important;
+  		-moz-transition: none !important;
+ 		-ms-transition: none !important;
+  		-o-transition: none !important;
+	 }  
+}
+
+
+nav ul a, .thumbnail__title {
+	@include transition (all .3s);
+}
+
+.galleries a, .galleries .btn, .intro-section a, footer a  {
+	@include transition (background color .3s);
+}
+
+footer a {
+		@include transition (background .3s);
+	@include bp(small) {
+	    @include transition (color .3s);
+	}	 
+}
+
+p a, #slider a {
+	@include transition (color .2s);
+}
+
+.content a {
+	@include transition (background .2s);
+}
+
+.thumbnail-list figcaption, figure a {
+	 @include transition (all .3s);
+}
+
+.no-touch .slider__wrap:hover .slider__caption {
+	@include transition (all .3s);
+}
+
+
+
+
+
+
+//Preload CSS
+.wf-loading .wrapper {
+
+}
+
+.wf-active .wrapper {
+
+}
+
+
+

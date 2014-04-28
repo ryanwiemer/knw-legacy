@@ -1,0 +1,25 @@
+{
+  "name": "knw",
+  "version": "0.1.1",
+  "homepage": "https://github.com/ryanwiemer/knw",
+  "authors": [
+    "Ryan Wiemer <ryan@ryanwiemer.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "3.2",
+    "neat": "1.5",
+    "jquery": "~1.11",
+    "jquery-form": "~3.46.0",
+    "Swipe": "git://github.com/thebird/Swipe.git#~2.0.0",
+    "selectivizr": "latest",
+    "jquery.validation": "~1.12.0"
+  }
+}
