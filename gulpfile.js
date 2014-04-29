@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(rename('global.min.js'))
         .pipe(gulp.dest('assets/js/'))
-        .pipe(notify({ message: 'Scripts are minified!'}))
+        //.pipe(notify({ message: 'Scripts are minified!'}))
         .pipe(livereload());
 });
 
@@ -43,7 +43,7 @@ gulp.task('sass', function() {
         .pipe(minifycss())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/css/'))
-        .pipe(notify({ message: 'CSS is minified!'}))
+        //.pipe(notify({ message: 'CSS is minified!'}))
         .pipe(livereload());
 });
 

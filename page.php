@@ -1,21 +1,38 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying pages
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package knw
+ * Condition tags used to determin if the Homepage, About, Pricing or Contact.
  */
 
 get_header(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<?php
+  if ( is_page ( 'Home' ) ) {
+    get_template_part( 'content', 'home' );
+  }
 
-				<?php get_template_part( 'content', 'page' ); ?>
+  elseif ( is_page ( 'About' ) ) {
+    get_template_part( 'content', 'about' );
+  }
 
-			<?php endwhile; // end of the loop. ?>
+  elseif ( is_page ( 'Pricing' ) ) {
+    get_template_part( 'content', 'pricing' );
+  }
+
+  elseif ( is_page ( 'Contact' ) ) {
+    get_template_part( 'content', 'contact' );
+  }
+
+  elseif ( is_page ( 'Galleries' ) ) {
+    get_template_part( 'content', 'galleries' );
+  }
+
+
+  else {
+    get_template_part( 'content', 'page' );
+  }
+
+?>
 
 <?php get_footer(); ?>
