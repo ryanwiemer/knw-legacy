@@ -1,10 +1,11 @@
 <?php
 /**
- * The content template for the Homepage.
+ * Template Name: Home Page
+ * Description: A Page Template for the Home Page
  */
-?>
+get_header(); ?>
 <div class="content">
-  
+
 <div id='slider' class='slider'>
   <div class='slider__wrap'>
     <?php if(get_field('slider')): ?>
@@ -26,3 +27,4 @@
 <?php while ( have_posts() ) : the_post(); ?>
   <?php the_content(); ?>
 <?php endwhile; // end of the loop. ?>
+<?php get_footer(); ?>
