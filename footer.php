@@ -5,7 +5,7 @@
 ?>
 
 </div><!-- content-->
-<footer>
+<footer class="site-footer">
 		<section>
 			<div class="social-icons">
 				<a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank" class="icon-facebook"></a>

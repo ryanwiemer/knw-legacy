@@ -13,7 +13,13 @@
 
 get_header(); ?>
 
-		<?php if ( have_posts() ) : ?>
+	<div class="hero hero--texture">
+    <h2 class="hero__title">Galleries</h2>
+  </div>
+
+  <div class="content">
+
+    <?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -28,7 +34,6 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php knw_paging_nav(); ?>
 
 		<?php else : ?>
 

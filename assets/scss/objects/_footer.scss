@@ -1,23 +1,23 @@
 /* ---------- *
  *   FOOTER   *
  * ---------- */
- 
-footer{
+
+.site-footer{
 	width: 100%;
 	background: $base;
 	height: 70px;
 	color: $tertiary;
-	text-align: center;	
+	text-align: center;
 	@include bp(small){
 		height: 120px;
 	}
  }
- 
+
 footer section {
 	margin: 0 auto;
 	max-width: 700px;
-	@include bp(small) { 
-		padding: 0 .9em;   
+	@include bp(small) {
+		padding: 0 .9em;
 	}
 	@include bp(large) {
 	    max-width: 750px;
@@ -26,7 +26,7 @@ footer section {
 	    max-width: 950px
 	}
 }
- 
+
 .social-icons {
 	float: none;
 	position: relative;
@@ -78,13 +78,13 @@ footer .icon-instagram {
 
 //Copyright
 .copyright {
-	display: none;	
+	display: none;
 	@include bp(small){
 		display: block;
 		float: right;
 		font-size: .65em;
 		color: $tertiary;
 		position: relative;
-		line-height: 120px; 
+		line-height: 120px;
 	}
 }
