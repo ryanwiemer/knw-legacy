@@ -73,77 +73,16 @@ add_action( 'init', 'register_my_menu' );
 
 
 
-//Rename Posts to Galleries
-function revcon_change_post_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Galleries';
-    $submenu['edit.php'][5][0] = 'Galleries';
-    $submenu['edit.php'][10][0] = 'Add Gallery';
-    echo '';
+//Register Gallery Post Format
+
+add_action( 'after_setup_theme', 'slug_post_formats' );
+function slug_post_formats() {
+    add_theme_support(
+        'post-formats', array(
+             'gallery'
+        )
+    );
 }
-function revcon_change_post_object() {
-    global $wp_post_types;
-    $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Galleries';
-    $labels->singular_name = 'Galleries';
-    $labels->add_new = 'Add Gallery';
-    $labels->add_new_item = 'Add Galleries';
-    $labels->edit_item = 'Edit Galleries';
-    $labels->new_item = 'Gallery';
-    $labels->view_item = 'View Galleries';
-    $labels->search_items = 'Search Galleries';
-    $labels->not_found = 'No Galleries found';
-    $labels->not_found_in_trash = 'No Galleries found in Trash';
-    $labels->all_items = 'All Galleries';
-    $labels->menu_name = 'Galleries';
-    $labels->name_admin_bar = 'Galleries';
-}
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
-
-
-
-//Custom Post Type for the Articles Section
-function articles_post_type() {
-	$labels = array(
-		'name'                => _x( 'Articles', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Article', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Articles', 'text_domain' ),
-		'all_items'           => __( 'All Articles', 'text_domain' ),
-		'view_item'           => __( 'View Article', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Article', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Article', 'text_domain' ),
-		'update_item'         => __( 'Update Article', 'text_domain' ),
-		'search_items'        => __( 'Search Articles', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
-	);
-	$args = array(
-		'label'               => __( 'articles', 'text_domain' ),
-		'description'         => __( 'Articles', 'text_domain' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', ),
-		'taxonomies'          => array( 'category'),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'rewrite' => array('slug' => 'articles'),
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'articles', $args );
-}
-add_action( 'init', 'articles_post_type', 0 );
-
 
 
 
