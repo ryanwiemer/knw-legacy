@@ -4,7 +4,7 @@
 
 html {
 	font-size: 100%;
-	
+
 	@include bp(small) {
 		font-size: 112.5%;
 	}
@@ -12,7 +12,7 @@ html {
 	@include bp(medium) {
 		font-size: 125%;
 	}
-	
+
 	@include bp(large) {
 		font-size: 137.5%;
 	}
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 //Icons within the menu
-.menu ul a[title="About"]:before, .menu ul a[title="Galleries"]:before, .menu ul a[title="Pricing"]:before, .menu ul a[title="Contact"]:before {
+.menu ul a[title="About"]:before, .menu ul a[title="Galleries"]:before, .menu ul a[title="Pricing"]:before, .menu ul a[title="Contact"]:before, .menu ul a[title="Blog"]:before {
 	font-family: "icons";
 	padding-right: 10px;
 	position: relative;
@@ -84,6 +84,11 @@ h1,h2,h3,h4,h5,h6 {
 .menu ul a[title="Galleries"]:before {
 	content: "\e605";
 }
+
+.menu ul a[title="Blog"]:before {
+  content: "\e605";
+}
+
 
 .menu ul a[title="Pricing"]:before {
 	content:  "\e604";

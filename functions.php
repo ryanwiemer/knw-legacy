@@ -73,22 +73,16 @@ add_action( 'init', 'register_my_menu' );
 
 
 
-//Register Gallery Post Format
+//Register and setup Gallery Post Format
 
 add_action( 'after_setup_theme', 'slug_post_formats' );
 function slug_post_formats() {
     add_theme_support(
         'post-formats', array(
-             'gallery'
+            'gallery'
         )
     );
 }
-
-
-
-
-
-
 
 //Conditioanl Page Scripts
 function knw_home_scripts() {
