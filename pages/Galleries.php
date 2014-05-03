@@ -4,6 +4,11 @@
  * Description: A Page Template for the Galleries
  */
 get_header(); ?>
+
+<div class="hero hero--texture">
+  <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
+</div>
+
 <div class="content">
 
 <?php
@@ -47,5 +52,5 @@ $the_query = new WP_Query( $args ); ?>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-<h5><?php echo get_num_queries(); ?></h5>
+<h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
 <?php get_footer(); ?>

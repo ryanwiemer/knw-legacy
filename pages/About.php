@@ -63,6 +63,5 @@ get_header(); ?>
 		  			<img src="<?php echo get_template_directory_uri(); ?>/assets//img/half-moon-bay-beach-san-francisco-bay-area.jpg" alt="Half Moon Bay beach near the San Francisco Bay Area" />
 		  		</div>
 			</div>
-
 		</section>
 <?php get_footer(); ?>
