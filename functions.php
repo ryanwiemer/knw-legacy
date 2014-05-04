@@ -71,10 +71,7 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
-
-
 //Register and setup Gallery Post Format
-
 add_action( 'after_setup_theme', 'slug_post_formats' );
 function slug_post_formats() {
     add_theme_support(
@@ -84,7 +81,19 @@ function slug_post_formats() {
     );
 }
 
+//Featured Image Support and removing some file sizes
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 400, 600);
+
+function sgr_filter_image_sizes( $sizes) {
+    unset( $sizes['medium']);
+    unset( $sizes['large']);
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
+
 //Conditioanl Page Scripts
+
 function knw_home_scripts() {
   if ( is_page('Home') ){ wp_enqueue_script( 'knw-swipe',  get_template_directory_uri() . '/assets/js/swipe.min.js', '', '', true);}
 }

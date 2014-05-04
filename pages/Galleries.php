@@ -34,15 +34,27 @@ get_header(); ?>
 $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
-
     <!-- pagination here -->
-
+    <ul class="thumbnail-list">
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-      <a href="#"><h2><?php the_title(); ?></h2></a>
-
+			<li>
+				<a href="<?php the_permalink(); ?>">
+					<figure class="thumbnail__border">
+						<?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail__image' ) ); }
+                else {
+	                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="thumbnail__image"/>';
+                  }?>
+					<figcaption class="thumbnail__overlay">
+							<h3 class="thumbnail__title"><?php the_title(); ?></h3>
+						</figcaption>
+					</figure>
+				</a>
+			</li>
 
     <?php endwhile; ?>
+    </ul>
     <!-- end of the loop -->
 
     <!-- pagination here -->

@@ -35,7 +35,7 @@ $the_query = new WP_Query( $args ); ?>
 
   <!-- the loop -->
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-    <h2><?php the_title(); ?></h2>
+    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 
   <?php endwhile; ?>
   <!-- end of the loop -->
@@ -47,5 +47,5 @@ $the_query = new WP_Query( $args ); ?>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-
+<h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
 <?php get_footer(); ?>

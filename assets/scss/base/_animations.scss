@@ -3,13 +3,13 @@
 	transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     -ms-transition: transform 0.3s;
-    -o-transition: transform 0.3s;	
+    -o-transition: transform 0.3s;
 	@include bp(large) {
 		-webkit-transition: none !important;
   		-moz-transition: none !important;
  		-ms-transition: none !important;
   		-o-transition: none !important;
-	 }  
+	 }
 }
 
 
@@ -25,7 +25,7 @@ footer a {
 		@include transition (background .3s);
 	@include bp(small) {
 	    @include transition (color .3s);
-	}	 
+	}
 }
 
 p a, #slider a {
@@ -44,19 +44,7 @@ p a, #slider a {
 	@include transition (all .3s);
 }
 
-
-
-
-
-
 //Preload CSS
-.wf-loading .wrapper {
+//.wf-loading .wrapper {}
 
-}
-
-.wf-active .wrapper {
-
-}
-
-
-
+//.wf-active .wrapper {}
