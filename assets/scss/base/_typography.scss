@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6 {
 
 //Icons
 @include font-face(icons, '../fonts/icons');
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"], .single a[rel="prev"], .single a[rel="next"] {
 	font-family: 'icons';
 	speak: none;
 	font-style: normal;
@@ -43,10 +43,10 @@ h1,h2,h3,h4,h5,h6 {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-right-arrow:before {
+.icon-right-arrow:before, .single a[rel="next"]:before  {
 	content: "\e602";
 }
-.icon-left-arrow:before {
+.icon-left-arrow:before, .single a[rel="prev"]:before {
 	content: "\e601";
 }
 

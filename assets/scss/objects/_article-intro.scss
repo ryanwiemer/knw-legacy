@@ -7,7 +7,7 @@
 	background: $border;
 	border-left: 6px solid $secondary;
 	padding: 1em;
-	margin-bottom: .4em;   
+	margin-bottom: .4em;
 }
 
 .article-intro__title {
@@ -17,42 +17,31 @@
 
 .article-intro__location{
 	color: $secondary;
-	padding-bottom: 0; 
+	padding-bottom: 0;
 }
 
 .article-intro__date{
 	color: $secondary;
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 
 }
 
-
-.icon-grid span {
-	font-size: .85em;
-	position: relative;
-	top: -.15em;
-	padding-bottom: .5em;
-	text-transform: capitalize;
-	font-family: $freight-sans!important;
-	font-weight: 400;
-	text-transform: normal;
-	-webkit-font-smoothing: subpixel-antialiased;
-	-moz-osx-font-smoothing: subpixel-antialiased;
-}
-
-.icon-grid {
-	color: white;
-	background: $shadow;
-	padding: .25em;
+.icon-grid, .single a[rel="prev"], .single a[rel="next"]  {
+	font-size: 1.5em;
+  padding: .25em;
+  background: $shadow;
+  color: $secondary;
 	&:hover {
-		background: $secondary;
-		color: $background!important;
+    background: $secondary;
+		color: $background;
 	}
+  @include bp(small) {
+    font-size:1.25em;
+  }
+  @include bp(medium) {
+    font-size:1em;
+  }
 }
-
-
-
-
 
 .article-intro div {
 	@include span-columns(12);
@@ -68,20 +57,12 @@
 	@include bp(medium) {
 	    @include span-columns(8);
 	}
-	 
+
 }
 
-.posts p {
+.article-intro p {
 	margin-bottom:0;
 }
-
-
-
-.article-intro .icon-left-arrow, .article-intro .icon-right-arrow, .article-intro .icon-grid {
-	color: $secondary;
-	padding-right: .5em;
-}
-
 
 .return-top {
 	background: lighten($secondary, 10%);
@@ -95,10 +76,8 @@
 	@include bp(large) {
 	    padding: .75em;
 	}
-	 
-
-&:hover {
-	background: $secondary;
+  &:hover {
+  	background: $secondary;
 }
 
 }

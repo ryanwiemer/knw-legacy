@@ -12,8 +12,13 @@ get_header(); ?>
 <div class="content">
 
 <?php
+	// First, initialize how many posts to render per page
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
+
   $args = array(
   'post_type' => 'post',
+  'paged' => $paged,
+
   'tax_query' => array(
   array(
   'taxonomy' => 'post_format',
@@ -22,7 +27,7 @@ get_header(); ?>
   'operator' => 'IN'
   )
   ),
-  'posts_per_page' => 5,
+  'posts_per_page' => 3,
   'no_found_rows' => true, // counts posts, remove if pagination required
   'update_post_term_cache' => false, // grabs terms, remove if terms required (category, tag...)
   'update_post_meta_cache' => false, // grabs post meta, remove if post meta required
@@ -58,6 +63,10 @@ $the_query = new WP_Query( $args ); ?>
     <!-- end of the loop -->
 
     <!-- pagination here -->
+    <?php
+      next_posts_link( 'Older Entries', 99999 );
+      previous_posts_link( 'Newer Entries' );
+    ?>
 
     <?php wp_reset_postdata(); ?>
 

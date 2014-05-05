@@ -28,10 +28,4 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<!-- #<?php portfoliopress_paging_nav(); ?> -->
-
-			<?php else : ?>
-				<?php get_template_part( 'content', 'none' ); ?>
-			<?php endif; ?>
-
 <?php get_footer(); ?>
