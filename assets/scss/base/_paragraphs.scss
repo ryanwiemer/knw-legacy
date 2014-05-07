@@ -10,8 +10,6 @@ p, aside {
   @include bp(large) {
       font-size: .85em;
   }
-   
-   
 }
 
 p {
@@ -21,9 +19,8 @@ p {
 	    line-height: 1.45;
 	    margin-bottom: 1.45em;
 	}
-	 
 	@include bp(medium) {
-	 	line-height: 1.5;   
+	 	line-height: 1.5;
 	 	margin-bottom: 1.5em;
 	}
 }

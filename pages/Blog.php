@@ -7,8 +7,12 @@ get_header(); ?>
 <div class="content">
 
 <?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
+
 $args = array(
 'post_type' => 'post',
+'paged' => $paged,
+
 'tax_query' => array(
 array(
 'taxonomy' => 'post_format',
@@ -31,8 +35,6 @@ $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
 
-  <!-- pagination here -->
-
   <!-- the loop -->
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
     <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
@@ -41,6 +43,10 @@ $the_query = new WP_Query( $args ); ?>
   <!-- end of the loop -->
 
   <!-- pagination here -->
+  <?php
+    next_posts_link( 'Older Entries', 99999 );
+    previous_posts_link( 'Newer Entries' );
+  ?>
 
   <?php wp_reset_postdata(); ?>
 
@@ -48,4 +54,5 @@ $the_query = new WP_Query( $args ); ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 <h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
+
 <?php get_footer(); ?>

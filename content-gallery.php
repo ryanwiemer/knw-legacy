@@ -24,7 +24,6 @@ if( have_rows('gallery_intro') ):
   <?php  endwhile;
        else :
         endif;?>
-
-
 		<?php the_content(); ?>
+    <a href="#wrapper" class="return-top">return to top</a>
 </article><!-- #post-## -->
