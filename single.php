@@ -16,7 +16,7 @@ get_header(); ?>
 
       else {
       get_template_part( 'content', 'blog' );
-      
+
       }?>
 
 		<?php endwhile; // end of the loop. ?>
