@@ -1,10 +1,8 @@
 /* ---------- *
- * Article Intro *
+ * Single - Entry Page *
  * ---------- */
 
-
-
-.article-intro {
+.gallery-intro {
 	@extend %clearfix;
 	background: $border;
 	border-left: 6px solid $secondary;
@@ -12,40 +10,35 @@
   margin-bottom: .5em;
 }
 
-.article-intro__title {
+.gallery-intro__title {
 	font-size: 1.5em;
 	padding-bottom: .25em;
 }
 
-.article-intro__location{
+.gallery-intro__location{
 	color: $secondary;
 	padding-bottom: 0;
 }
 
-.article-intro__date{
+.gallery-intro__date{
 	color: $secondary;
 	padding-bottom: 1em;
 
 }
 
 .icon-grid, .single a[rel="prev"], .single a[rel="next"]  {
-	font-size: 1.5em;
-  padding: .25em;
+	font-size: 1em;
+  padding: .35em;
+  margin-right: .25em;
   background: $shadow;
   color: $secondary;
 	&:hover {
     background: $secondary;
 		color: $background;
 	}
-  @include bp(small) {
-    font-size:1.25em;
-  }
-  @include bp(medium) {
-    font-size:1em;
-  }
 }
 
-.article-intro div {
+.gallery-intro div {
 	@include span-columns(12);
 	padding-bottom: 1em;
 	@include bp(medium) {
@@ -53,17 +46,42 @@
 	}
 }
 
-.article-intro__description {
+.gallery-intro__description {
 	margin-bottom: 0;
 	@include span-columns(12);
 	@include bp(medium) {
 	    @include span-columns(8);
 	}
+}
+
+.gallery-intro p {
+	margin-bottom:0;
+}
+
+
+.gallery-intro__cat a {
+  background: $shadow;
+  color: $secondary;
+  border: none;
+  padding: .25em .5em;
+  &:hover {
+    background: $secondary;
+    color: $background;
+  }
+}
+
+.gallery-intro__cat {
+padding-bottom: 1em;
+}
+
+.gallery-intro__nav {
+margin-bottom: .25em;
 
 }
 
-.article-intro p {
-	margin-bottom:0;
+.gallery-intro__nav a{
+  border: none;
+
 }
 
 .return-top {

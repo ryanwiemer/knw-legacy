@@ -1,0 +1,35 @@
+/* ---------- *
+ * Galleries Page  *
+ * ---------- */
+.categories {
+  background: $border;
+  margin-bottom: 1em;
+  border-left: 6px solid $secondary;
+  padding: 1em;
+  @extend %clearfix;
+}
+
+.categories p{
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.categories ul {
+  text-align: center;
+}
+
+.cat-item {
+  display: inline-block;
+}
+
+.cat-item a {
+  display: inline-block;
+  background: $shadow;
+  color: $secondary;
+  padding: .25em .5em;
+  margin: .25em;
+  &:hover {
+    background: $secondary;
+    color: $background;
+  }
+}

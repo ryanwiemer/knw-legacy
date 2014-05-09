@@ -7,7 +7,7 @@
 get_header(); ?>
 
 <div class="hero hero--texture">
-  <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
+  <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
 </div>
 
 <div class="content">

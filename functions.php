@@ -71,6 +71,28 @@ function register_my_menu() {
 }
 add_action( 'init', 'register_my_menu' );
 
+
+// Create a function to output valid category links
+function knw_the_category() {
+ $categories = get_the_category();
+	  $separator = ', ';
+	  $output = '';
+	  if($categories){
+		  foreach($categories as $category) {
+			  $output .= '<a href="'.get_category_link($category->term_id ).'" title="' . esc_attr( sprintf( __( "View Category" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+		  }
+		  echo trim($output, $separator);
+	  }
+}
+
+
+
+
+
+
+
+
+
 //Register and setup Gallery Post Format
 add_action( 'after_setup_theme', 'slug_post_formats' );
 function slug_post_formats() {

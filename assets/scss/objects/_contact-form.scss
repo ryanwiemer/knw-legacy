@@ -21,7 +21,7 @@
 .form__name, .form__email  {
 	width: 100%;
 	@extend %clearfix;
-	 
+
 }
 
 .form__name__input, .form__email__input  {
@@ -51,22 +51,12 @@
 	-moz-appearance: none;
 }
 
-
 .form__intro {
 	@include bp(extra-large) {
-	
+
 	}
-	 
+
 }
-
-
-
-
-
-
-
-
-
 
 .form label.error {
     color: red;
@@ -78,14 +68,12 @@
 .form__message .error {
 		top: -21.2em!important;
 	@include bp(small) {
-	 	top: -19em!important;   
+	 	top: -19em!important;
 	}
 	@include bp(large) {
-	 	top: -16em!important;   
+	 	top: -16em!important;
 	}
 }
-
-
 
 .form input[type="text"], form textarea {
 	padding: .2em;
@@ -114,15 +102,6 @@
 .form__required {
     color: red;
 }
-
-
-
-
-
-
-
-
-
 
 //Form Success/Error Messages
 

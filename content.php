@@ -4,7 +4,7 @@
  */
 ?>
 
-<article <?php post_class(); ?>>
+<gallery <?php post_class(); ?>>
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -17,4 +17,4 @@
 	<p>Sorry, this page does not exist</p>
 
 <?php endif; ?>
-</article><!-- #post-## -->
+</gallery><!-- #post-## -->

@@ -27,7 +27,7 @@ get_header(); ?>
   'operator' => 'IN'
   )
   ),
-  'posts_per_page' => -1,
+  'posts_per_page' => 6,
   'no_found_rows' => true, // counts posts, remove if pagination required
   'update_post_term_cache' => false, // grabs terms, remove if terms required (category, tag...)
   'update_post_meta_cache' => false, // grabs post meta, remove if post meta required
@@ -41,11 +41,23 @@ $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
 
-<ul class="Categories">
-  <?php wp_list_categories( $args ); ?> 
-</ul>
+  <?php $cat_args = array(
+  	'orderby'            => 'count',
+  	'title_li'           => __( '' ),
+  	'show_option_none'   => __( 'No categories' ),
+    'include'            => '',
+    'exclude'            => '9'
+  ); ?>
+
+<div class="categories">
+  <p>View galleries for a particular category or scroll down to see them all.</p>
+  <ul>
+    <?php wp_list_categories( $cat_args ); ?>
+  </ul>
+</div>
 
     <ul class="thumbnail-list">
+
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -69,6 +81,14 @@ $the_query = new WP_Query( $args ); ?>
     <!-- end of the loop -->
 
     <?php wp_reset_postdata(); ?>
+    <?php echo $the_query->max_num_pages ?>
+
+<?php
+// Custom query loop pagination
+previous_posts_link( 'Older Posts' );
+next_posts_link( 'Newer Posts', 9999 );
+ ?>
+
 
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

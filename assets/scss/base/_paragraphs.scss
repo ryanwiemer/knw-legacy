@@ -2,7 +2,7 @@
  * PARAGRAPHS *
  * ------- */
 
-p, aside {
+p, aside, .cat-item a, .gallery-intro__cat a  {
   font-size: 1em;
   @include bp(medium) {
       font-size: .95em;

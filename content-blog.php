@@ -4,9 +4,9 @@
  */
 ?>
 
-<article <?php post_class(); ?>>
+<gallery <?php post_class(); ?>>
 		<?php the_content(); ?>
-</article><!-- #post-## -->
+</gallery><!-- #post-## -->
 
 <?php
 				// If comments are open or we have at least one comment, load up the comment template
