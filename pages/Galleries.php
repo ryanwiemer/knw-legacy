@@ -41,25 +41,15 @@ $the_query = new WP_Query( $args ); ?>
 
   <?php if ( $the_query->have_posts() ) : ?>
 
-<?php $cats = get_terms('category',
-      array('orderby' => 'count',
-      'hide_empty' => 0));
-?>
-
-<ul class="filters" data-option-key="filter">
-    <li><a href="#filter" data-option-value="*" class="current">All</a></li>
-    <?php foreach($cats as $cat): ?>
-    <li><a href="#filter" data-option-value=".<?php echo $cat->slug; ?>" ><?php echo $cat->name; ?></a></li>
-    <?php endforeach; ?>
+<ul class="Categories">
+  <?php wp_list_categories( $args ); ?> 
 </ul>
 
     <ul class="thumbnail-list">
     <!-- the loop -->
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <?php $terms= get_the_terms(get_the_id(), 'category'); ?>
-
-			<li class="<?php if($terms) { foreach ($terms as $term) { echo $term->slug . '';}}?>" data-filter="<?php if($terms) { foreach ($terms as $term) { echo $term->slug . ' isotope-item';}}?>">
+			<li>
 				<a href="<?php the_permalink(); ?>">
 					<figure class="thumbnail__border">
 						<?php if ( has_post_thumbnail() ) {
@@ -85,34 +75,3 @@ $the_query = new WP_Query( $args ); ?>
 <?php endif; ?>
 <h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
 <?php get_footer(); ?>
-
-  <script>
-  $(window).load(function(){
-    var $container = $('.thumbnail-list');
-    $container.isotope({
-        filter: '*',
-        animationOptions: {
-            duration: 750,
-            easing: 'linear',
-            queue: false
-        }
-    });
-
-    $('.filters a').click(function(){
-        $('.filters .current').removeClass('current');
-        $(this).addClass('current');
-
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 750,
-                easing: 'linear',
-                queue: false
-            }
-         });
-         return false;
-    });
-});
-
-  </script>
