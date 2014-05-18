@@ -36,10 +36,13 @@ get_header(); ?>
 
 <?php
 
-// the query
-$the_query = new WP_Query( $args ); ?>
+$temp = $wp_query;
+$wp_query= null;
 
-  <?php if ( $the_query->have_posts() ) : ?>
+// the query
+$wp_query = new WP_Query( $args ); ?>
+
+  <?php if ( $wp_query->have_posts() ) : ?>
 
   <?php $cat_args = array(
   	'orderby'            => 'count',
@@ -59,7 +62,7 @@ $the_query = new WP_Query( $args ); ?>
     <ul class="thumbnail-list">
 
     <!-- the loop -->
-    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
 			<li>
 				<a href="<?php the_permalink(); ?>">
@@ -78,20 +81,20 @@ $the_query = new WP_Query( $args ); ?>
 
     <?php endwhile; ?>
     </ul>
+
     <!-- end of the loop -->
-
-    <?php wp_reset_postdata(); ?>
-    <?php echo $the_query->max_num_pages ?>
-
+<div class="pagination">
 <?php
 // Custom query loop pagination
 previous_posts_link( 'Older Posts' );
-next_posts_link( 'Newer Posts', 9999 );
+next_posts_link( 'Newer Posts', 99);
  ?>
-
+ </div>
+    <?php wp_reset_postdata();
+    $wp_query = null; $wp_query = $temp
+    ?>
 
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-<h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
 <?php get_footer(); ?>

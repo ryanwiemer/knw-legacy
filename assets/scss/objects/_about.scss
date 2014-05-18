@@ -8,7 +8,7 @@
 .about-container {
 	@extend %clearfix;
 	@include outer-container;
-	
+
 }
 .about-collage--content {
 	position: absolute;
@@ -20,7 +20,7 @@
 .about-collage {
 	margin-bottom: 1em!important;
 	@include bp(small) {
-	   margin-bottom: 2.35765%!important; 
+	   margin-bottom: 2.35765%!important;
 	}
 }
 .about-collage:last-child {
@@ -47,14 +47,14 @@
 	background: white;
 	border-bottom: 2px solid $shadow;
 	@include span-columns (12);
-	 
+
 	@include bp(large) {
 		@include span-columns (8);
 	}
 	@include bp(extra-large) {
 	    @include span-columns (8);
 	}
-	 
+
 }
 
 //Drop Cap
@@ -82,7 +82,7 @@
 	text-align: center;
 	@include span-columns(12);
 	@include bp(small) {
-		@include span-columns(6);	
+		@include span-columns(6);
 	}
 	@include bp(large) {
  	    @include span-columns(4);
@@ -107,7 +107,7 @@
 		}
 		@include bp(extra-large) {
 		    padding-bottom: 21%;
-		}	 
+		}
 	}
 
 	h3 {
@@ -123,17 +123,17 @@
 	width: 100%;
 	bottom: 6%;
 	@include bp(small) {
-	   	bottom: 7.5%; 
+	   	bottom: 7.5%;
 	}
 	@include bp(medium) {
 	    bottom: 6.5%;
 	}
-	 
+
 	@include bp(large) {
-	   bottom: 6%; 
+	   bottom: 6%;
 	}
 	@include bp(extra-large) {
-	    bottom: 6%; 
+	    bottom: 6%;
 	}
 }
 
@@ -146,7 +146,7 @@
 	border-bottom: 2px solid $shadow;
 	@include span-columns(12);
 	@include bp(small) {
-		@include span-columns(6);	
+		@include span-columns(6);
 		margin-right: 0;
 	}
 	@include bp(large) {
@@ -164,19 +164,19 @@
 	border: 4px solid white;
 	background-image: url('../img/map-san-francisco-east-bay.jpg');
 	background-size: cover;
-	padding-bottom: 123.25%; 
+	padding-bottom: 123.25%;
 	position: relative;
 	@include bp(medium) {
-	 	padding-bottom: 118.5%;   
+	 	padding-bottom: 118.5%;
 	}
 	@include bp(large) {
-	   padding-bottom: 172%; 
-	   background-position: center;  
+	   padding-bottom: 172%;
+	   background-position: center;
 	}
 	@include bp(extra-large) {
 	    padding-bottom: 67.5%;
-	    background-position: center center; 
-	} 
+	    background-position: center center;
+	}
 }
 .about-collage--map__img .city {
 	float: left;
@@ -188,7 +188,7 @@
 	width: 25%;
 	font-size: 1.1em;
 	@include bp(small) {
-	   	width: 35%; 
+	   	width: 35%;
 	}
 	@include bp(large) {
 	    top: 67%;
@@ -203,15 +203,15 @@
 
 
 
-	 
-	
+
+
 //Beach photo
 .about-collage--beach {
 	border-bottom: 2px solid $shadow;
 	@include span-columns(12);
 	 margin-bottom: 0!important;
 	@include bp(small) {
-	   margin-bottom: 0!important; 
+	   margin-bottom: 0!important;
 	}
 	@include bp(extra-large) {
 		@include span-columns(12);
@@ -225,4 +225,3 @@
 		only screen and (min-moz-device-pixel-ratio: 1.5),
 		only screen and (min-device-pixel-ratio: 1.5) { margin-bottom: -2px;}
 }
-

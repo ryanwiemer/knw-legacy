@@ -28,20 +28,20 @@ array(
 );
 
 ?>
-
+<ul class="blog_list">
 <?php
 // the query
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
-
   <!-- the loop -->
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-    <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+
+<li><a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a></li>
 
   <?php endwhile; ?>
   <!-- end of the loop -->
-
+</ul>
   <!-- pagination here -->
   <?php
     next_posts_link( 'Older Entries', 99999 );
