@@ -2,8 +2,42 @@
  *    BLOG    *
  * ---------- */
 
-.blog_list {}
+.hero--image {
+  background-size: cover;
+  background-size: center center;
+  position: relative;
+}
 
-.blog_list li:first-child {
-  background: green;
+.hero--image__title {
+  color: white;
+  display: inline-block;
+}
+
+.hero--image__title h2 {
+  padding-top: 150px;
+}
+
+.hero__comments {
+height: 40px;
+line-height: 40px;
+position: absolute;
+bottom: -40px;
+width: 50%;
+background: white;
+border-bottom: 2px solid $shadow;
+border-right: 2px solid $shadow;
+display: none;
+}
+
+.hero__read_more {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: 50%;
+  background: white;
+  border-bottom: 2px solid $shadow;
+  display: none;
+
 }

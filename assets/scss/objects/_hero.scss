@@ -2,6 +2,7 @@
  *    Hero    *
  * ---------- */
 .hero {
+  margin: 0;
 	height: 200px;
 	text-align: center;
 
@@ -15,8 +16,7 @@
 	}
 }
 
-.hero--texture {
-	margin: 0;
+.hero--purple {
 	background: $secondary;
 }
 

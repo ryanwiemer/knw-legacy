@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-<div class="hero hero--texture">
+<div class="hero hero--purple">
   <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
 </div>
 
