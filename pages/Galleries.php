@@ -60,10 +60,8 @@ $wp_query = new WP_Query( $args ); ?>
 </div>
 
     <ul class="thumbnail-list">
-
     <!-- the loop -->
     <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-
 			<li>
 				<a href="<?php the_permalink(); ?>">
 					<figure class="thumbnail__border">
@@ -78,18 +76,13 @@ $wp_query = new WP_Query( $args ); ?>
 					</figure>
 				</a>
 			</li>
-
     <?php endwhile; ?>
     </ul>
-
     <!-- end of the loop -->
-<div class="pagination">
 <?php
-// Custom query loop pagination
-previous_posts_link( 'Older Posts' );
-next_posts_link( 'Newer Posts', 99);
- ?>
- </div>
+  next_posts_link( 'Older Entries', 99999 );
+  previous_posts_link( 'Newer Entries' );
+?>
     <?php wp_reset_postdata();
     $wp_query = null; $wp_query = $temp
     ?>
@@ -97,4 +90,20 @@ next_posts_link( 'Newer Posts', 99);
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+
 <?php get_footer(); ?>
+
+<script>
+    var infinite_scroll = {
+        loading: {
+            img: "<?php echo get_template_directory_uri(); ?>/assets/img/loader.gif",
+            msgText: "<?php _e( 'Loading the next set of posts...', 'custom' ); ?>",
+            finishedMsg: "<?php _e( 'All posts loaded.', 'custom' ); ?>"
+        },
+        "nextSelector":".btn-pagination--next",
+        "navSelector":".btn-pagination",
+        "itemSelector":".thumbnail-list li",
+        "contentSelector":".thumbnail-list"
+    };
+    jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
+    </script>

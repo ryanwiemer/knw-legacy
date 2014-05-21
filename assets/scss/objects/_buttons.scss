@@ -21,3 +21,26 @@
 			padding: .3em .6em!important;
 		}
 	}
+
+.btn-pagination {
+	@include span-columns(3.2);
+	text-align: center;
+	color: $background;
+	background: lighten($secondary, 10%);
+	font-size: .85em;
+	padding: 1em 1.55em;
+	@include bp(medium) {
+			padding: .76em 1.65em;
+	}
+	&:hover {
+		background: $secondary;
+	}
+}
+
+.btn-pagination--prev {
+	float: right;
+}
+
+.btn-pagination--next {
+	float: left;
+}

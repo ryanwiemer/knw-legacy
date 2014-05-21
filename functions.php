@@ -114,8 +114,9 @@ function knw_home_scripts() {
 
 function knw_galleries_scripts() {
   wp_enqueue_script( 'knw-jquery',  get_template_directory_uri() . '/assets/js/jquery.min.js', '', '', true);
-  if ( is_page('Galleries') ){ wp_enqueue_script( 'knw-isotope',  get_template_directory_uri() . '/assets/js/jquery.isotope.min.js', '', '', true);}
+  if ( is_page('Galleries') ){ wp_enqueue_script( 'knw-infinite-scroll',  get_template_directory_uri() . '/assets/js/jquery.infinitescroll.min.js', '', '', true);}
 }
+
 
 function knw_contact_scripts() {
   if ( is_page('Contact') ){
@@ -150,3 +151,36 @@ add_action('init', 'my_custom_init');
 function my_custom_init() {
     add_post_type_support( 'gallery', 'wpcom-markdown' );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//Add class to pagination buttons
+add_filter('next_posts_link_attributes', 'posts_link_attributes_next');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_prev');
+
+function posts_link_attributes_next() {
+    return 'class="btn-pagination btn-pagination--next"';
+}
+
+function posts_link_attributes_prev() {
+    return 'class="btn-pagination btn-pagination--prev"';
+}
+
+
+
+
+
+//Change Excerpt length
+function new_excerpt_length($length) {
+return 35;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

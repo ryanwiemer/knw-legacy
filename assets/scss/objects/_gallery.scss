@@ -4,7 +4,6 @@
 .categories {
   background: $border;
   margin-bottom: 1em;
-  border-left: 6px solid $secondary;
   padding: 1em;
   @extend %clearfix;
 }

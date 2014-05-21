@@ -13,7 +13,7 @@
 }
 
 
-nav ul a, .thumbnail__title {
+nav ul a, .thumbnail__titlem {
 	@include transition (all .3s);
 }
 
@@ -42,6 +42,10 @@ p a, #slider a {
 
 .no-touch .slider__wrap:hover .slider__caption {
 	@include transition (all .3s);
+}
+
+.blog-post {
+	@include transition (background .3s);
 }
 
 //Preload CSS

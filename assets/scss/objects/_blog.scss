@@ -2,42 +2,57 @@
  *    BLOG    *
  * ---------- */
 
-.hero--image {
-  background-size: cover;
-  background-size: center center;
-  position: relative;
+.blog-list li:nth-child(even) .blog-post__img {
+  @include bp(medium) {
+    @include shift(4);
+  }
 }
 
-.hero--image__title {
-  color: white;
-  display: inline-block;
+.blog-list li:nth-child(even) .blog-post__details {
+  @include bp(medium) {
+    @include shift(-12);
+  }
 }
 
-.hero--image__title h2 {
-  padding-top: 150px;
+.blog-list {
+  margin-bottom: 1em;
+  @extend %clearfix;
 }
 
-.hero__comments {
-height: 40px;
-line-height: 40px;
-position: absolute;
-bottom: -40px;
-width: 50%;
-background: white;
-border-bottom: 2px solid $shadow;
-border-right: 2px solid $shadow;
-display: none;
-}
-
-.hero__read_more {
-  height: 40px;
-  line-height: 40px;
-  position: absolute;
-  bottom: -40px;
-  right: 0;
-  width: 50%;
-  background: white;
+.blog-post {
+  margin-bottom: -2px;
+  @extend %clearfix;
+  padding: 1em;
+  border-top: 2px solid $shadow;
   border-bottom: 2px solid $shadow;
-  display: none;
+  color: $secondary;
+  &:hover {
+    color: $base;
+    background: $border;
+  }
+}
 
+.blog-post__img {
+  @include bp(medium) {
+    @include span-columns(8);
+  }
+}
+
+.blog-post__details {
+  @include bp(medium) {
+    @include span-columns(4);
+  }
+}
+
+.blog-post__title {
+  font-size: 1.25em;
+  padding-bottom: .25em;
+}
+
+.blog-post__date {
+  margin-bottom: .25em;
+}
+
+.blog-post__comments {
+  margin-bottom: .25em;
 }

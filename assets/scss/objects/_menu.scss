@@ -10,10 +10,10 @@
 	z-index: 2;
 	height: 100%;
 	position: fixed;
-	border-left: 1px solid $border;	
+	border-left: 1px solid $border;
 	overflow-y: auto;
 	@include transform(translate3d(240px,0,0));
-	& .no-csstransforms {right: -240px;}	
+	& .no-csstransforms {right: -240px;}
 		@include bp (large){
 			@include transform(translate3d(0,0,0));
 			& .csstransforms {right: 0;}
@@ -23,11 +23,11 @@
 		@include bp(extra-large) {
 		    width: 340px;
 		}
-		 
+
 	ul {
 		margin:  0;
-	} 
-	
+	}
+
 	ul a{
 		border-top: solid 1px $border;
 		color: $base;
@@ -36,18 +36,18 @@
 		text-align: left;
 		font-size: 15px;
 		text-transform: uppercase;
-		font-weight: 400;	
+		font-weight: 400;
 		&:hover {
 		color: white;
-		background: $highlight;	
+		background: $highlight;
 		padding-left: 3.75em;
 		}
 		@include bp(extra-large) {
 		    font-size: 17px;
 		}
-		 
+
 	}
-	
+
 	li:last-child{
 		border-bottom: solid 1px $border;
 		}
@@ -76,7 +76,7 @@
 	margin: 0 auto;
 	max-width: 700px;
 	position: relative;
-	padding: 0 1em; 	 
+	padding: 0 1em;
 	@include bp(large) {
 	    max-width: 750px;
 	}
@@ -91,7 +91,7 @@
 	position: relative;
 	@include transform(translate3d(-240px,0,0));
  	& .no-csstransforms {right: 240px;}
- 	
+
  @include bp (large) {
  	@include transform(translate3d(0,0,0));
 	 & .no-csstransforms {right: 0;}
@@ -134,11 +134,8 @@
 	@include bp(extra-large) {
 	    font-size: 2.4em;
 	}
-	 
-	 
-	 
-	}
-	
+}
+
 .knw-logo1 {
 		color: $base;
 		font-size: .6em;

@@ -4,7 +4,7 @@
  * Description: A Page Template for the Blog
  */
 get_header(); ?>
-
+<div class="content">
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
 
@@ -30,51 +30,45 @@ array(
 <?php
 // the query
 $the_query = new WP_Query( $args ); ?>
-
+<ul class="blog-list">
 <?php if ( $the_query->have_posts() ) : ?>
   <!-- the loop -->
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-<?php if ($the_query->current_post == 0 && !is_paged() ) {?>
+<li>
+<article class="blog-post">
   <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
   $image = $image[0]; ?>
   <?php else :
   $image = get_bloginfo( 'stylesheet_directory') . '/assets/img/placeholder.png'; ?>
   <?php endif; ?>
-<div class="hero hero--image" style="background-image: linear-gradient(
-      rgba(135, 122, 127, 0.85),
-      rgba(135, 122, 127, 0.85)
-    ), url('<?php echo $image; ?>');" >
-    <a class="hero--image__title" href="<?php the_permalink(); ?>">
-      <h2><?php the_title(); ?></h2>
-    </a>
-<div class="hero__comments">12 comments</div>
-<div class="hero__read_more">Read more...</div>
-</div><!-- end hero--image -->
-<div class="content">
-<?php } else { ?>
-  <a href="<?php the_permalink(); ?>">
-  <h2><?php the_title(); ?></h2>
+  <?php if ( has_post_thumbnail() ) {
+      the_post_thumbnail( 'thumbnail', array( 'class' => 'blog-post__img' ) ); }
+      else {
+        echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="blog-post__img"/>';
+        }?>
+<div class="blog-post__details">
+  <h2 class="blog-post__title"><?php the_title(); ?></h2>
+  <p class="blog-post__date"><?php echo get_the_date(); ?></p>
+  <p class="blog-post__excerpt"><?php echo comments_number(); ?></p>
+  <a class="blog-post__btn btn btn--small" href="<?php the_permalink(); ?>">
+    Read more...
   </a>
-
-<?php }?>
-
-
+</div>
+</article>
+</li>
   <?php endwhile; ?>
   <!-- end of the loop -->
-  <!-- pagination here -->
+
+  <?php wp_reset_postdata(); ?>
+
   <?php
     next_posts_link( 'Older Entries', 99999 );
     previous_posts_link( 'Newer Entries' );
   ?>
 
-  <?php wp_reset_postdata(); ?>
-
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-
-<h5><?php echo get_num_queries(); ?> queries in <?php timer_stop(1); ?> seconds.</h5>
 
 <?php get_footer(); ?>
