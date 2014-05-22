@@ -12,12 +12,11 @@
 	 }
 }
 
-
-nav ul a, .thumbnail__titlem {
+nav ul a, .gallery__title {
 	@include transition (all .3s);
 }
 
-.galleries a, .galleries .btn, .intro-section a, footer a  {
+.btn, .intro-section a, footer a  {
 	@include transition (background color .3s);
 }
 
@@ -36,16 +35,16 @@ p a, #slider a {
 	@include transition (background .2s);
 }
 
-.thumbnail-list figcaption, figure a {
-	 @include transition (all .3s);
-}
-
 .no-touch .slider__wrap:hover .slider__caption {
 	@include transition (all .3s);
 }
 
 .blog-post {
 	@include transition (background .3s);
+}
+
+.gallery-list .gallery a, .gallery .gallery__border .gallery__overlay  {
+	@include transition (all .3s);
 }
 
 //Preload CSS

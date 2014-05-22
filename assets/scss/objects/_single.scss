@@ -57,7 +57,6 @@
 	margin-bottom:0;
 }
 
-
 .gallery-intro__cat a {
   background: $shadow;
   color: $secondary;
@@ -80,7 +79,6 @@ margin-bottom: .25em;
 
 .gallery-intro__nav a{
   border: none;
-
 }
 
 .return-top {
@@ -92,8 +90,6 @@ margin-bottom: .25em;
 	font-size: .85em;
 	cursor: pointer;
 	padding: 1em;
-
-
 	@include bp(large) {
 	    padding: .75em;
 	}

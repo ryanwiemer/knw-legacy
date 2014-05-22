@@ -2,18 +2,6 @@
  *    BLOG    *
  * ---------- */
 
-.blog-list li:nth-child(even) .blog-post__img {
-  @include bp(medium) {
-    @include shift(4);
-  }
-}
-
-.blog-list li:nth-child(even) .blog-post__details {
-  @include bp(medium) {
-    @include shift(-12);
-  }
-}
-
 .blog-list {
   margin-bottom: 1em;
   @extend %clearfix;

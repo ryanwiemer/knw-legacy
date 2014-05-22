@@ -14,11 +14,9 @@ get_header(); ?>
 <?php
 	// First, initialize how many posts to render per page
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
-
   $args = array(
   'post_type' => 'post',
   'paged' => $paged,
-
   'tax_query' => array(
   array(
   'taxonomy' => 'post_format',
@@ -34,15 +32,11 @@ get_header(); ?>
   );
 ?>
 
-<?php
+  <?php
+    $gallery_query = new WP_Query( $args );
+  ?>
 
-$temp = $wp_query;
-$wp_query= null;
-
-// the query
-$wp_query = new WP_Query( $args ); ?>
-
-  <?php if ( $wp_query->have_posts() ) : ?>
+  <?php if ( $gallery_query->have_posts() ) : ?>
 
   <?php $cat_args = array(
   	'orderby'            => 'count',
@@ -58,52 +52,41 @@ $wp_query = new WP_Query( $args ); ?>
     <?php wp_list_categories( $cat_args ); ?>
   </ul>
 </div>
-
-    <ul class="thumbnail-list">
-    <!-- the loop -->
-    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-			<li>
-				<a href="<?php the_permalink(); ?>">
-					<figure class="thumbnail__border">
-						<?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'thumbnail__image' ) ); }
-                else {
-	                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="thumbnail__image"/>';
-                  }?>
-					<figcaption class="thumbnail__overlay">
-							<h3 class="thumbnail__title"><?php the_title(); ?></h3>
-						</figcaption>
-					</figure>
-				</a>
-			</li>
-    <?php endwhile; ?>
-    </ul>
+<section class="gallery-list">
+  <?php while ( $gallery_query->have_posts() ) : $gallery_query->the_post(); ?>
+		<article class="gallery">
+			<a href="<?php the_permalink(); ?>">
+				<div class="gallery__border">
+					<?php if ( has_post_thumbnail() ) {
+              the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
+              else {
+                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                }?>
+				  <div class="gallery__overlay">
+						<h3 class="gallery__title"><?php the_title(); ?></h3>
+					</div>
+				</div>
+			</a>
+		</article>
+  <?php endwhile; ?>
+</section>
     <!-- end of the loop -->
-<?php
-  next_posts_link( 'Older Entries', 99999 );
-  previous_posts_link( 'Newer Entries' );
-?>
-    <?php wp_reset_postdata();
-    $wp_query = null; $wp_query = $temp
-    ?>
-
+<div class="pagination">
+  <?php
+    next_posts_link( 'Older Entries', 99999 );
+    previous_posts_link( 'Newer Entries' );
+  ?>
+</div>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-
+<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
-
 <script>
-    var infinite_scroll = {
-        loading: {
-            img: "<?php echo get_template_directory_uri(); ?>/assets/img/loader.gif",
-            msgText: "<?php _e( 'Loading the next set of posts...', 'custom' ); ?>",
-            finishedMsg: "<?php _e( 'All posts loaded.', 'custom' ); ?>"
-        },
-        "nextSelector":".btn-pagination--next",
-        "navSelector":".btn-pagination",
-        "itemSelector":".thumbnail-list li",
-        "contentSelector":".thumbnail-list"
-    };
-    jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
-    </script>
+  var ias = jQuery.ias({
+    container:  '.gallery-list',
+    item:       '.gallery',
+    pagination: '.pagination',
+    next:       '.btn-pagination--next'
+  });
+</script>
