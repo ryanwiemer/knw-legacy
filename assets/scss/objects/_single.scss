@@ -1,6 +1,35 @@
 /* ---------- *
- * Single - Entry Page *
+ *   Single   *
  * ---------- */
+
+
+//Post-Single
+
+.post img{
+  margin-bottom: 1.5em;
+}
+
+.post__title {
+  font-family: $kulturista;
+  font-size: 1.5em;
+}
+
+.post__date {
+  color: $secondary;
+}
+
+
+
+
+
+
+
+
+
+
+
+//Gallery-Single
+
 
 .gallery-intro {
 	@extend %clearfix;

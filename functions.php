@@ -104,7 +104,7 @@ add_action('after_setup_theme','remove_comment_form_allowed_tags');
 function wordpress_comment_form_defaults($default) {
 	unset($default['comment_notes_after']);
 	unset($default['comment_notes_before']);
-  unset($default['label_']);
+  unset($default['title_reply']);
 	return $default;
 }
 

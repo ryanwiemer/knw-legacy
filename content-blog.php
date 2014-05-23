@@ -4,9 +4,11 @@
  */
 ?>
 
-<section <?php post_class(); ?>>
+<article class="post">
+    <h2 class="post__title"><?php echo get_the_title(); ?></h2>
+    <p class="post__date">Posted on <?php echo get_the_date(); ?></p>
 		<?php the_content(); ?>
-</section><!-- #post-## -->
+</article><!-- #post-## -->
 
 <?php
 	// If comments are open or we have at least one comment, load up the comment template
