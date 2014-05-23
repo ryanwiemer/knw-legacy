@@ -16,7 +16,7 @@ nav ul a, .gallery__title {
 	@include transition (all .3s);
 }
 
-.btn, .intro-section a, footer a  {
+.btn, .intro-section a, footer a, #submit  {
 	@include transition (background color .3s);
 }
 

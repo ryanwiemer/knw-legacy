@@ -95,6 +95,50 @@ function slug_post_formats() {
     );
 }
 
+
+//Clean up WP comments
+function remove_comment_form_allowed_tags() {
+add_filter('comment_form_defaults','wordpress_comment_form_defaults');
+}
+add_action('after_setup_theme','remove_comment_form_allowed_tags');
+function wordpress_comment_form_defaults($default) {
+	unset($default['comment_notes_after']);
+	unset($default['comment_notes_before']);
+  unset($default['label_']);
+	return $default;
+}
+
+/* added HTML5 placeholders for each default field */
+
+function my_update_fields($fields) {
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+    $fields['author'] =
+        '<p class="comment-form-author">
+            <input required minlength="3" maxlength="30" placeholder="Your Name" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '" size="30"' . $aria_req . ' />
+        </p>';
+    $fields['email'] =
+        '<p class="comment-form-email">
+            <input required placeholder="Your Email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '" size="30"' . $aria_req . ' />
+        </p>';
+    $fields['url'] =
+        '<p class="comment-form-url">
+            <input placeholder="Your URL (optional)" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+    '" size="30" />
+        </p>';
+    return $fields;
+}
+add_filter('comment_form_default_fields','my_update_fields');
+
+
+
+
+
+
+
 //Featured Image Support and removing some file sizes
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 400, 600);

@@ -9,7 +9,6 @@
 ?>
 
   <div class="comments">
-
   	<?php if ( have_comments() ) : ?>
   		<h2 class="comments__title">Leave a comment</h2>
   		<ol class="comments__list">

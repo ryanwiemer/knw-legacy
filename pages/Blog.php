@@ -4,6 +4,10 @@
  * Description: A Page Template for the Blog
  */
 get_header(); ?>
+<div class="hero hero--purple">
+  <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
+</div>
+
 <div class="content">
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination

@@ -3,3 +3,41 @@
  * ---------- */
 
 //General Comment Styles
+
+
+.comments {
+}
+
+.comment-respond {}
+
+.comment-reply-title {}
+
+.comment-form {}
+
+.logged-in-as {}
+
+#comment {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;  
+  background: white;
+  outline:none;
+  box-shadow: none;
+  font-family: $freight-sans;
+  font-weight: 400;
+}
+
+
+#submit {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+  outline:none;
+  box-shadow: none;
+  font-family: $freight-sans;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  @extend .btn;
+  @extend .btn--small;
+}
