@@ -28,8 +28,46 @@ margin-bottom: 1.5em;
   padding-bottom: .25em;
 }
 
-.post__cat {
-  @include span-columns(6);
+.post blockquote {
+  background: $border;
+  margin: 0 .2em 1.5em .2em;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  border-left: 6px solid $secondary;
+}
+.post blockquote:before {
+  color: $secondary;
+  content: open-quote;
+  font-size: 3.5em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.post blockquote p {
+  display: inline;
+}
+
+.post blockquote em {
+  color: $shadow--alt;
+  font-family: $kulturista;
+  display: block;
+  margin-top: .25em;
+}
+
+.post blockquote em:before {
+  content: "\2013";
+  margin-right: .2em;
+}
+
+.post ul li {
+  margin-bottom: .5em;
+  list-style: disc;
+  list-style-position:inside;
+}
+
+.post ul {
+  margin-bottom: 1.5em;
 }
 
 
@@ -40,11 +78,7 @@ margin-bottom: 1.5em;
 
 
 
-
-
 //Gallery-Single
-
-
 .gallery-intro {
 	@extend %clearfix;
 	background: $border;
