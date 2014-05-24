@@ -2,115 +2,12 @@
  *   COMMENTS   *
  * ---------- */
 
-//General Comment Styles
+//Disqus Comment Styles
 
-.comments {
-  margin-top: 1em;
-}
-
-.comments__title {
-  margin-bottom: .5em;
-  border-bottom: 2px solid $border;
-}
-
-.comment-body {
-  background: $border;
-  padding: 1em 1em 1em 1em ;
-  margin-bottom: .5em;
-}
-
-
-.comment-author {
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.comments__list li:nth-child(even) .comment-body {
-}
-
-.comment-meta a {
+#disqus_thread  a{
   color: $highlight;
-  font-size: .85em;
 }
 
-.comment-meta {
-  margin-bottom: 1em;
+#disqus_thread {
+  color: $base;
 }
-
-
-.comment-form-author input, .comment-form-email input, .comment-form-url input, .comment-form-comment textarea {
-  width: 100%;
-  border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: white;
-  outline:none;
-  box-shadow: none;
-  font-family: $freight-sans;
-  font-weight: 400;
-  padding: .5em;
-  font-size: 1em;
-}
-
-.comment-form-comment label {
-  display: none;
-}
-
-
-
-#commentform p {
-  margin-bottom: .25em;
-}
-
-#comment {
-  margin-bottom: 0;
-}
-
-
-
-
-
-
-.comment-respond {}
-
-.comment-reply-title {}
-
-
-
-.logged-in-as a {
-  border: none;
-}
-
-.comment-form {}
-
-.logged-in-as {}
-
-#comment {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: white;
-  outline:none;
-  box-shadow: none;
-  font-family: $freight-sans;
-  font-weight: 400;
-}
-
-#submit {
-  -webkit-appearance: none;
-   -moz-appearance: none;
-   appearance: none;
-  outline:none;
-  box-shadow: none;
-  font-family: $freight-sans;
-  font-weight: 400;
-  border: none;
-  cursor: pointer;
-  @extend .btn;
-  @extend .btn--small;
-}
-
-.reply {}
-
-.comment-meta {}

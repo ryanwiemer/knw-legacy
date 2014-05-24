@@ -5,9 +5,11 @@
 ?>
 
 <article class="post">
+  <div class="post__intro">
     <h2 class="post__title"><?php echo get_the_title(); ?></h2>
     <p class="post__date">Posted on <?php echo get_the_date(); ?></p>
-		<?php the_content(); ?>
+  </div>
+	<?php the_content(); ?>
 </article><!-- #post-## -->
 
 <?php

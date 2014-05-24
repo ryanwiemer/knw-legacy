@@ -5,6 +5,12 @@
 
 //Post-Single
 
+.post__intro {
+@extend %clearfix;
+border-bottom: 2px solid $border;
+margin-bottom: 1.5em;
+}
+
 .post img{
   margin-bottom: 1.5em;
 }
@@ -12,10 +18,18 @@
 .post__title {
   font-family: $kulturista;
   font-size: 1.5em;
+  padding-bottom: .25em;
 }
 
 .post__date {
   color: $secondary;
+  @include span-columns(6);
+  margin: 0;
+  padding-bottom: .25em;
+}
+
+.post__cat {
+  @include span-columns(6);
 }
 
 
