@@ -158,7 +158,7 @@ function knw_home_scripts() {
 
 function knw_blog_scripts() {
   wp_enqueue_script( 'knw-jquery',  get_template_directory_uri() . '/assets/js/jquery.min.js', '', '', true);
-  if ( is_page('Blog') ){ wp_enqueue_script( 'knw-infinite-scroll',  get_template_directory_uri() . '/assets/js/jquery.ias.min.js', '', '', true);}
+  if ( is_page('Blog') ){ wp_enqueue_script( 'knw-infinite-scroll2',  get_template_directory_uri() . '/assets/js/jquery.ias2.min.js', '', '', true);}
 }
 
 function knw_category_scripts() {

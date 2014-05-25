@@ -82,11 +82,3 @@ get_header(); ?>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
-<script>
-  var ias = jQuery.ias({
-    container:  '.gallery-list',
-    item:       '.gallery',
-    pagination: '.pagination',
-    next:       '.btn-pagination--next'
-  });
-</script>

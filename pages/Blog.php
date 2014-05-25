@@ -73,11 +73,3 @@ array(
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
-<script>
-var ias = jQuery.ias({
-  container:  '.blog-list',
-  item:       '.blog-post',
-  pagination: '.pagination',
-  next:       '.btn-pagination--next',
-});
-</script>

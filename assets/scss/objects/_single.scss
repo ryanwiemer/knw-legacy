@@ -13,31 +13,6 @@ margin-bottom: 1.5em;
   margin-bottom: 1.5em;
 }
 
-.post__nav {
-  margin-bottom: 1.5em;
-  @extend %clearfix;
-  & a {
-    padding: .25em .5em;
-    background: $border;
-  }
-}
-
-.post__nav--left a{
-  display: inline-block;
-  float: left;
-  &:hover {
-    color: $secondary;
-  }
-}
-
-.post__nav--right a{
-  display: inline-block;
-  float: right;
-  &:hover {
-    color: $secondary;
-  }
-}
-
 .post__title {
   font-family: $kulturista;
   font-size: 1.5em;
@@ -46,7 +21,7 @@ margin-bottom: 1.5em;
 
 .post__date {
   color: $secondary;
-  @include span-columns(6);
+  @include span-columns(12);
   margin: 0;
   padding-bottom: .25em;
 }
