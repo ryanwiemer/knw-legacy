@@ -12,7 +12,7 @@
 				<a href="http://www.pinterest.com/knwphoto/" target="_blank" class="icon-pinterest"></a>
 				<a href="http://instagram.com/knwphoto" target="_blank" class="icon-instagram"></a>
 			</div>
-			<span class="copyright">&copy; <?php echo date("Y") ?> knw photography</span>
+			<span class="copyright">&copy; <?php echo date("Y") ?> KNW Photography</span>
 		</section>
 	</footer>
 </div><!-- wrapper-->

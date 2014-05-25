@@ -47,7 +47,7 @@ get_header(); ?>
   ); ?>
 
 <div class="categories">
-  <p>View galleries for a particular category or scroll down to see them all.</p>
+  <p>Click on a gallery below or select a category from the list.</p>
   <ul>
     <?php wp_list_categories( $cat_args ); ?>
   </ul>

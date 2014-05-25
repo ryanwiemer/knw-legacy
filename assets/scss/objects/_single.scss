@@ -2,9 +2,7 @@
  *   Single   *
  * ---------- */
 
-
 //Post-Single
-
 .post__intro {
 @extend %clearfix;
 border-bottom: 2px solid $border;
@@ -13,6 +11,31 @@ margin-bottom: 1.5em;
 
 .post img{
   margin-bottom: 1.5em;
+}
+
+.post__nav {
+  margin-bottom: 1.5em;
+  @extend %clearfix;
+  & a {
+    padding: .25em .5em;
+    background: $border;
+  }
+}
+
+.post__nav--left a{
+  display: inline-block;
+  float: left;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.post__nav--right a{
+  display: inline-block;
+  float: right;
+  &:hover {
+    color: $secondary;
+  }
 }
 
 .post__title {
@@ -69,13 +92,6 @@ margin-bottom: 1.5em;
 .post ul {
   margin-bottom: 1.5em;
 }
-
-
-
-
-
-
-
 
 
 //Gallery-Single

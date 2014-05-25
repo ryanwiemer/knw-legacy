@@ -3,7 +3,7 @@
  * ---------- */
 
 .home-intro {
-	margin: 1.5em auto 0;
+	margin: 1.5em auto -1.5em;
 	@include row(block, RTL);
 	@include span-columns(12);
 	@include bp (medium){
@@ -22,9 +22,13 @@
 	padding-left: 10px;
 	font-weight: 300;
 	@include bp(medium){
-		@include shift(-5.9);	
+		@include shift(-5.9);
 		@include span-columns(5);
 		position: relative;
 		right: 6px;
 		}
 	}
+
+.home-intro a {
+
+}
