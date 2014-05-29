@@ -12,31 +12,15 @@ get_header(); ?>
 <div class="content">
 
 <section class="pricing__portraits">
-  <div class="pricing-table">
-    <h3 class="pricing-table__header">Portrait Packages</h3>
-    <ul class="pricing-table__list">
-    	<li class="pricing-table__top-row">
-        <h4 class="pricing-table__list-item">Session Description</h4>
-        <h4 class="pricing-table__list-item--time">Time</h4>
-        <h4 class="pricing-table__list-item--price">Prices</h4>
-      </li>
-    	<li class="pricing-table__odd">
-        <div class="pricing-table__list-item">Individual PortraitFor high school senior photos, maternity, headshots, and others. This session is for 1 individual and allows for 1 outfit change within the hour time slot.</div>
-        <div class="pricing-table__list-item--time">1 hour</div>
-        <div class="pricing-table__list-item--price">$125</div>
-      </li>
-    	<li class="pricing-table__even">
-        <div class="pricing-table__list-item">CouplesThis session includes 1 location. I often customize packages for couples so if you need to extend the time or travel to various locations I would love to create a customized package for you.</div>
-        <div class="pricing-table__list-item--time">1 hour</div>
-        <div class="pricing-table__list-item--price">$150</div>
-      </li>
-    	<li class="pricing-table__odd">
-        <div class="pricing-table__list-item">Family PortraitFamily session prices includes up to 4 people (each additional person $25). I love working outdoors but I am also willing to shoot inside your home to accommodate your needs.</div>
-        <div class="pricing-table__list-item--time">1 hour</div>
-        <div class="pricing-table__list-item--price">$175</div>
-      </li>
-    </ul>
-  </div>
+	<div class="pricing-table">
+	  <h3 class="pricing-table__header">Portrait Packages</h3>
+		<ul class="pricing-table__list">
+			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item">Session Description</h4><h4 class="pricing-table__list-item--time">Time</h4><h4 class="pricing-table__list-item--price">Prices</h4></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Individual Portrait</span>For high school senior photos, maternity, headshots, and others. This session is for 1 individual and allows for 1 outfit change within the hour time slot.</div><div class="pricing-table__list-item--time">1 hour</div><div class="pricing-table__list-item--price">$125</div></li>
+			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Couples</span>This session includes 1 location. I often customize packages for couples so if you need to extend the time or travel to various locations I would love to create a customized package for you.</div><div class="pricing-table__list-item--time">1 hour</div><div class="pricing-table__list-item--price">$150</div></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Family Portrait</span>Family session prices includes up to 4 people (each additional person $25). I love working outdoors but I am also willing to shoot inside your home to accommodate your needs.</div><div class="pricing-table__list-item--time">1 hour</div><div class="pricing-table__list-item--price">$175</div></li>
+		</ul>
+	</div>
 </section>
 
   <div class="pricing__footnotes">Additional Information
@@ -48,41 +32,17 @@ get_header(); ?>
   </div>
 
 <section class="pricing__weddings pricing__weddings--last">
-  <div class="pricing-table">
-    <h3 class="pricing-table__header">Wedding Packages</h3>
-    <ul class="pricing-table__list">
-    	<li class="pricing-table__top-row">
-        <h4 class="pricing-table__list-item">Session Description</h4>
-        <h4 class="pricing-table__list-item--time">Time</h4>
-        <h4 class="pricing-table__list-item--price">Prices</h4>
-      </li>
-    	<li class="pricing-table__odd">
-        <div class="pricing-table__list-item">EngagementsThis session includes 1 - 2 locations and 1 - 2 outfits for the engaged couple.</div>
-        <div class="pricing-table__list-item--time">1.5 hours</div>
-        <div class="pricing-table__list-item--price">$200</div>
-      </li>
-    	<li class="pricing-table__even">
-        <div class="pricing-table__list-item">Bridals / FormalsThis session includes 1 location for a bride / groom or a bride and groom in formal attire. The session can be done prior to the wedding or on the actual wedding day.</div>
-        <div class="pricing-table__list-item--time">2 hours</div>
-        <div class="pricing-table__list-item--price">$250</div>
-      </li>
-    	<li class="pricing-table__odd">
-        <div class="pricing-table__list-item">Wedding Package 1This package includes 4 hours of wedding day coverage. Also included is a bridal / formal session.</div>
-        <div class="pricing-table__list-item--time">6 hours</div>
-        <div class="pricing-table__list-item--price">$1300</div>
-      </li>
-    	<li class="pricing-table__even">
-        <div class="pricing-table__list-item">Wedding Package 2This package includes 6 hours of wedding day coverage. Also included are engagement photos and a bridal / formal session.</div>
-        <div class="pricing-table__list-item--time">9 hours</div>
-        <div class="pricing-table__list-item--price">$1850</div>
-      </li>
-    	<li class="pricing-table__odd">
-        <div class="pricing-table__list-item">Wedding Package 3This package includes a full day wedding coverage. Also included are engagement photos and a bridal / formal session.</div>
-        <div class="pricing-table__list-item--time">TBD</div>
-        <div class="pricing-table__list-item--price">starts at $2000</div>
-      </li>
-    </ul>
-  </div>
+	<div class="pricing-table">
+	<h3 class="pricing-table__header">Wedding Packages</h3>
+		<ul class="pricing-table__list">
+			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item">Session Description</h4><h4 class="pricing-table__list-item--time">Time</h4><h4 class="pricing-table__list-item--price">Prices</h4></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Engagements</span>This session includes 1 - 2 locations and 1 - 2 outfits for the engaged couple.</div><div class="pricing-table__list-item--time">1.5 hours</div><div class="pricing-table__list-item--price">$200</div></li>
+			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Bridals / Formals</span>This session includes 1 location for a bride / groom or a bride and groom in formal attire. The session can be done prior to the wedding or on the actual wedding day.</div><div class="pricing-table__list-item--time">2 hours</div><div class="pricing-table__list-item--price">$250</div></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Wedding Package 1</span>This package includes 4 hours of wedding day coverage. Also included is a bridal / formal session.</div><div class="pricing-table__list-item--time">6 hours</div><div class="pricing-table__list-item--price">$1300</div></li>
+			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Wedding Package 2</span>This package includes 6 hours of wedding day coverage. Also included are engagement photos and a bridal / formal session.</div><div class="pricing-table__list-item--time">9 hours</div><div class="pricing-table__list-item--price">$1850</div></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Wedding Package 3</span>This package includes a full day wedding coverage. Also included are engagement photos and a bridal / formal session.</div><div class="pricing-table__list-item--time">TBD</div><div class="pricing-table__list-item--price">starts at $2000</div></li>
+		</ul>
+	</div>
 </section>
 
 <div class="pricing__footnotes">Additional Information
