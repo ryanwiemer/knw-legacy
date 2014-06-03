@@ -25,10 +25,11 @@
   color: $secondary;
   padding: .25em .5em;
   margin: .25em;
-  &:hover {
-    background: $secondary;
-    color: $background;
-  }
+}
+
+.no-touch .cat-item a:hover {
+  background: $secondary;
+  color: $background;
 }
 
 

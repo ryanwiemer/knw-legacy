@@ -69,9 +69,6 @@ get_header(); ?>
 			</a>
 		</article>
   <?php endwhile; ?>
-  <div class="ias-spinner">
-    <img src="http://knw.dev/wp-content/themes/knw/assets/img/spinner.gif" />
-  </div>
 </section>
     <!-- end of the loop -->
 <div class="pagination">
