@@ -10,6 +10,10 @@ get_header(); ?>
 
 <div class="content">
 <?php
+$temp_query = $wp_query;
+?>
+
+<?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
 
 $args = array(
@@ -31,13 +35,13 @@ array(
 );
 ?>
   <?php
-    $blog_query = new WP_Query( $args );
+    $wp_query = new WP_Query( $args );
   ?>
 
 <section class="blog-list">
-  <?php if ( $blog_query->have_posts() ) : ?>
+  <?php if ( have_posts() ) : ?>
   <!-- the loop -->
-  <?php while ( $blog_query->have_posts() ) : $blog_query->the_post(); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
   <article class="blog-post">
     <?php if (has_post_thumbnail( $post->ID ) ): ?>
     <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
@@ -62,9 +66,10 @@ array(
   <?php endwhile; ?>
   <!-- end of the loop -->
 </section>
+<h3><?php echo $posts_per_page ?></h3>
 <div class="pagination">
   <?php
-    next_posts_link( 'Older Entries', 99999 );
+    next_posts_link( 'Older Entries', 9999);
     previous_posts_link( 'Newer Entries' );
   ?>
 </div>
@@ -72,4 +77,7 @@ array(
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
+  <?php
+  $wp_query = $temp_query; ?>
+
 <?php get_footer(); ?>
