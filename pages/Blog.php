@@ -9,9 +9,6 @@ get_header(); ?>
 </div>
 
 <div class="content">
-<?php
-$temp_query = $wp_query;
-?>
 
 <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
@@ -34,9 +31,12 @@ array(
 'update_post_meta_cache' => false, // grabs post meta, remove if post meta required
 );
 ?>
-  <?php
-    $wp_query = new WP_Query( $args );
-  ?>
+
+<?php
+  $temp_query = $wp_query;
+  $wp_query= null;
+?>
+<?php $wp_query = new WP_Query( $args ); ?>
 
 <section class="blog-list">
   <?php if ( have_posts() ) : ?>
@@ -66,18 +66,20 @@ array(
   <?php endwhile; ?>
   <!-- end of the loop -->
 </section>
-<h3><?php echo $posts_per_page ?></h3>
 <div class="pagination">
-  <?php
-    next_posts_link( 'Older Entries', 9999);
-    previous_posts_link( 'Newer Entries' );
-  ?>
+<?php
+  next_posts_link( 'Older Entries', 9999);
+  previous_posts_link( 'Newer Entries' );
+?>
 </div>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
-<?php wp_reset_postdata(); ?>
-  <?php
-  $wp_query = $temp_query; ?>
 
+<?php
+  $wp_query = null;
+  $wp_query = $temp_query;
+?>
+
+<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>

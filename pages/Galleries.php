@@ -11,6 +11,8 @@ get_header(); ?>
 
 <div class="content">
 
+<?php $temp_query = $wp_query; ?>
+
 <?php
 	// First, initialize how many posts to render per page
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
@@ -32,19 +34,17 @@ get_header(); ?>
   );
 ?>
 
-  <?php
-    $gallery_query = new WP_Query( $args );
-  ?>
+<?php $wp_query = new WP_Query( $args ); ?>
 
-  <?php if ( $gallery_query->have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
-  <?php $cat_args = array(
-  	'orderby'            => 'count',
-  	'title_li'           => __( '' ),
-  	'show_option_none'   => __( 'No categories' ),
-    'include'            => '',
-    'exclude'            => '9'
-  ); ?>
+<?php $cat_args = array(
+	'orderby'            => 'count',
+	'title_li'           => __( '' ),
+	'show_option_none'   => __( 'No categories' ),
+  'include'            => '',
+  'exclude'            => '9'
+); ?>
 
 <div class="categories">
   <p>Click on a gallery below or select a category from the list.</p>
@@ -53,7 +53,7 @@ get_header(); ?>
   </ul>
 </div>
 <section class="gallery-list">
-  <?php while ( $gallery_query->have_posts() ) : $gallery_query->the_post(); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
 		<article class="gallery">
 			<a href="<?php the_permalink(); ?>">
 				<div class="gallery__border">
@@ -72,13 +72,14 @@ get_header(); ?>
 </section>
     <!-- end of the loop -->
 <div class="pagination">
-  <?php
-    next_posts_link( 'Older Entries', 99999 );
-    previous_posts_link( 'Newer Entries' );
-  ?>
+<?php
+  next_posts_link( 'Older Entries', 99999 );
+  previous_posts_link( 'Newer Entries' );
+?>
 </div>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
 <?php wp_reset_postdata(); ?>
+<?php $wp_query = $temp_query; ?>
 <?php get_footer(); ?>
