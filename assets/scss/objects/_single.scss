@@ -99,11 +99,13 @@ margin-bottom: 1.5em;
   margin-right: .25em;
   background: $shadow;
   color: $secondary;
-	&:hover {
-    background: $secondary;
-		color: $background;
-	}
 }
+
+.no-touch .icon-grid:hover, .no-touch .single a[rel="prev"]:hover, .no-touch .single a[rel="next"]:hover {
+  background: $secondary;
+  color: $background;
+}
+
 
 .gallery-intro div {
 	@include span-columns(12);
@@ -130,11 +132,14 @@ margin-bottom: 1.5em;
   color: $secondary;
   border: none;
   padding: .25em .5em;
-  &:hover {
-    background: $secondary;
-    color: $background;
-  }
 }
+
+.no-touch .gallery-intro__cat a:hover {
+  background: $secondary;
+  color: $background;
+}
+
+
 
 .gallery-intro__cat {
 padding-bottom: 1em;
