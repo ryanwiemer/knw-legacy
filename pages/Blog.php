@@ -80,6 +80,5 @@ array(
   $wp_query = null;
   $wp_query = $temp_query;
 ?>
-
 <?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>

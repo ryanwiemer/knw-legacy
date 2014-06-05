@@ -11,8 +11,6 @@ get_header(); ?>
 
 <div class="content">
 
-<?php $temp_query = $wp_query; ?>
-
 <?php
 	// First, initialize how many posts to render per page
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // allow for pagination
@@ -34,6 +32,10 @@ get_header(); ?>
   );
 ?>
 
+<?php
+  $temp_query = $wp_query;
+  $wp_query= null;
+?>
 <?php $wp_query = new WP_Query( $args ); ?>
 
 <?php if ( have_posts() ) : ?>
@@ -80,6 +82,10 @@ get_header(); ?>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif; ?>
+
+<?php
+  $wp_query = null;
+  $wp_query = $temp_query;
+?>
 <?php wp_reset_postdata(); ?>
-<?php $wp_query = $temp_query; ?>
 <?php get_footer(); ?>
