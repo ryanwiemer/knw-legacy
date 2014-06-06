@@ -7,12 +7,13 @@
 	@include bp(medium) {
 	  	padding: .76em 1.65em;
 	}
-
-	&:hover {
-		background: darken( $highlight, 5% );
-		color: white;
-	}
 }
+
+.no-touch .btn:hover {
+	background: darken( $highlight, 5% );
+	color: white;
+}
+
 
 .btn--small {
 		padding: .55em .6em!important;
@@ -32,9 +33,10 @@
 	@include bp(medium) {
 			padding: .76em 1.65em;
 	}
-	&:hover {
-		background: $secondary;
-	}
+}
+
+.no-touch .btn-pagination:hover {
+	background: $secondary;
 }
 
 .btn-pagination--prev {

@@ -14,10 +14,11 @@
   border-top: 2px solid $shadow;
   border-bottom: 2px solid $shadow;
   color: $secondary;
-  &:hover {
+}
+
+.no-touch .blog-post:hover {
     color: $base;
     background: $border;
-  }
 }
 
 .blog-post__img {
