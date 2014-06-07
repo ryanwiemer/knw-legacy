@@ -10,7 +10,23 @@ get_header(); ?>
   <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
 </div>
 
+<?php $cat_args = array(
+  'orderby'            => 'count',
+  'title_li'           => __( '' ),
+  'show_option_none'   => __( 'No categories' ),
+  'include'            => '',
+  'exclude'            => '9'
+); ?>
 <div class="content">
+<div class="categories">
+  <p>Click on a gallery below or select a category from the list.</p>
+  <ul>
+    <li class="cat-item"><a href="<?php echo site_url(); ?>/galleries" title="View all posts filed under all categories">all categories</a></li>
+    <?php wp_list_categories( $cat_args ); ?>
+  </ul>
+</div>
+
+
   <section class="gallery-list">
     <?php while ( have_posts() ) : the_post(); ?>
       <article class="gallery">

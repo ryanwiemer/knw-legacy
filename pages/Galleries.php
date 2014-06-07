@@ -51,6 +51,7 @@ get_header(); ?>
 <div class="categories">
   <p>Click on a gallery below or select a category from the list.</p>
   <ul>
+    <li class="cat-item"><a href="<?php echo site_url(); ?>/galleries" title="View all posts filed under all categories">all categories</a></li>
     <?php wp_list_categories( $cat_args ); ?>
   </ul>
 </div>
