@@ -47,6 +47,10 @@ p a, #slider a {
 	@include transition (all .3s);
 }
 
+.form input, .form textarea {
+	@include transition (all .2s);
+}
+
 //Preload CSS
 //.wf-loading .wrapper {}
 
