@@ -26,11 +26,9 @@ gulp.task ('move', function() {
 // Concatenate, Lint and Minify JS
 gulp.task('scripts', function() {
     return gulp.src(['assets/js/scripts/*.js'])
-        .pipe(concat('global.js'))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(jshint())
-        .pipe(jshint.reporter('default'))
         .pipe(uglify())
-        .pipe(rename('global.min.js'))
         .pipe(gulp.dest('assets/js/'))
         //.pipe(notify({ message: 'Scripts are minified!'}))
         .pipe(livereload());

@@ -19,7 +19,6 @@
     "jquery": "~1.11",
     "jquery-form": "~3.46.0",
     "Swipe": "git://github.com/thebird/Swipe.git#~2.0.0",
-    "selectivizr": "latest",
     "jquery.validation": "~1.12.0"
   }
 }

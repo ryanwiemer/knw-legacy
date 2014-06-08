@@ -10,14 +10,9 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
-
-    <!-- Typekit -->
     <script src="//use.typekit.net/igx3kix.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-
  	 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon" />
-
-		<!-- Google Analytics -->
     <script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
