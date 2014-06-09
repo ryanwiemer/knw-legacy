@@ -36,7 +36,7 @@ gulp.task('scripts', function() {
 
 // Compile Sass & Minify CSS
 gulp.task('sass', function() {
-    return gulp.src(['assets/scss/style.scss','assets/scss/oldie.scss'])
+    return gulp.src(['assets/scss/style.scss'])
         .pipe(sass())
         .pipe(minifycss())
         .pipe(rename({ suffix: '.min' }))

@@ -1,6 +1,7 @@
 /* ---------- *
  *    MENU    *
  * ---------- */
+
 .menu {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
@@ -21,15 +22,14 @@
 	-ms-transform: translateX(240px);
 	-o-transform: translateX(240px);
 	-webkit-transform: translateX(240px);
-	transform: translateX(240px);
-	@include transform(translate3d(240px,0,0));
+	-moz-transform: translateX(240px);
+
 		@include bp (large){
 			-moz-transform: translateX(0);
 			-ms-transform: translateX(0);
 			-o-transform: translateX(0);
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
-			@include transform(translate3d(0,0,0));
 			width: 25%;
 			right: 0;
 			}
@@ -71,7 +71,6 @@
 	-o-transform: translateX(0);
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
-	@include transform(translate3d(0,0,0));
 }
 
 // Mobile Menu
@@ -101,11 +100,10 @@
 
 .active .mobile-menu {
 	-moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  transform: translateX(-240px);
-	@include transform(translate3d(-240px,0,0));
+  	-ms-transform: translateX(-240px);
+  	-o-transform: translateX(-240px);
+  	-webkit-transform: translateX(-240px);
+  	transform: translateX(-240px);
 }
 
 .active .wrapper {
@@ -115,7 +113,6 @@
 	-o-transform: translateX(-240px);
 	-webkit-transform: translateX(-240px);
 	transform: translateX(-240px);
-	@include transform(translate3d(-240px,0,0));
 
  @include bp (large) {
 	-moz-transform: translateX(0);
@@ -123,8 +120,7 @@
 	-o-transform: translateX(0);
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
- 	@include transform(translate3d(0,0,0));
-     }
+  }
 }
 
 .menu-link {
@@ -176,4 +172,54 @@
 	text-transform: uppercase;
 	font-size: .5em;
 	margin-left: -.25em;
+}
+
+
+
+//CSS 3D Transform
+.csstransforms3d menu {
+    -moz-transform: translate3d(240px, 0, 0);
+    -ms-transform: translate3d(240px, 0, 0);
+    -o-transform: translate3d(240px, 0, 0);
+    -webkit-transform: translate3d(240px, 0, 0);
+    transform: translate3d(240px, 0, 0);
+    @include bp (large){
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+.csstransforms3d .active .menu {
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.csstransforms3d .active .mobile-menu {
+    -moz-transform: translate3d(-240px, 0, 0);
+    -ms-transform: translate3d(-240px, 0, 0);
+    -o-transform: translate3d(-240px, 0, 0);
+    -webkit-transform: translate3d(-240px, 0, 0);
+    transform: translate3d(-240px, 0, 0);
+}
+
+.csstransforms3d .active .wrapper {
+  -moz-transform: translate3d(-240px, 0, 0);
+  -ms-transform: translate3d(-240px, 0, 0);
+  -o-transform: translate3d(-240px, 0, 0);
+  -webkit-transform: translate3d(-240px, 0, 0);
+  transform: translate3d(-240px, 0, 0);
+
+ @include bp (large) {
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  }
 }
