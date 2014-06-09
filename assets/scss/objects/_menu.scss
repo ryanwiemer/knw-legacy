@@ -18,18 +18,9 @@
 	position: fixed;
 	border-left: 1px solid $border;
 	overflow-y: auto;
-	-moz-transform: translateX(240px);
-	-ms-transform: translateX(240px);
-	-o-transform: translateX(240px);
-	-webkit-transform: translateX(240px);
-	-moz-transform: translateX(240px);
 
 		@include bp (large){
-			-moz-transform: translateX(0);
-			-ms-transform: translateX(0);
-			-o-transform: translateX(0);
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
+
 			width: 25%;
 			}
 		@include bp(extra-large) {
@@ -65,11 +56,7 @@
 		}
 	}
 .active .menu{
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	-o-transform: translateX(0);
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
+
 }
 
 // Mobile Menu
@@ -98,27 +85,14 @@
 }
 
 .active .mobile-menu {
-  -moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  transform: translateX(-240px);
+
 }
 
 .active .wrapper {
 	position: relative;
-	-moz-transform: translateX(-240px);
-	-ms-transform: translateX(-240px);
-	-o-transform: translateX(-240px);
-	-webkit-transform: translateX(-240px);
-	transform: translateX(-240px);
 
  @include bp (large) {
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	-o-transform: translateX(0);
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
+
   }
 }
 
@@ -173,24 +147,27 @@
 	margin-left: -.25em;
 }
 
-//CSS 2D Transform
 
-.no-csstransforms .menu {
-    right: 0;
+
+
+
+//No Transform
+.menu {
+    right: -240px;
     @include bp (large){
       right: 0;
     }
 }
 
-.no-csstransforms .active .menu {
+.active .menu {
     right: 0;
 }
 
-.no-csstransforms .active .mobile-menu {
+.active .mobile-menu {
     right: 240px;
 }
 
-.no-csstransforms .active .wrapper {
+.active .wrapper {
   right: 240px;
 
  @include bp (large) {
@@ -199,18 +176,27 @@
 }
 
 
-
-
-
+//CSS 2D Transform
 
 //CSS 3D Transform
-.csstransforms3d menu {
+.csstransforms .menu {
+    right: 0;
+    -moz-transform: translateX(240px);
+    -ms-transform: translateX(240px);
+    -o-transform: translateX(240px);
+    -webkit-transform: translateX(240px);
+    -moz-transform: translateX(240px);
     -moz-transform: translate3d(240px, 0, 0);
     -ms-transform: translate3d(240px, 0, 0);
     -o-transform: translate3d(240px, 0, 0);
     -webkit-transform: translate3d(240px, 0, 0);
     transform: translate3d(240px, 0, 0);
     @include bp (large){
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
@@ -219,7 +205,13 @@
     }
 }
 
-.csstransforms3d .active .menu {
+.csstransforms .active .menu {
+    right: 0;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
@@ -227,7 +219,13 @@
     transform: translate3d(0, 0, 0);
 }
 
-.csstransforms3d .active .mobile-menu {
+.csstransforms .active .mobile-menu {
+  right: 0;
+  -moz-transform: translateX(-240px);
+  -ms-transform: translateX(-240px);
+  -o-transform: translateX(-240px);
+  -webkit-transform: translateX(-240px);
+  -moz-transform: translateX(-240px);
     -moz-transform: translate3d(-240px, 0, 0);
     -ms-transform: translate3d(-240px, 0, 0);
     -o-transform: translate3d(-240px, 0, 0);
@@ -235,7 +233,13 @@
     transform: translate3d(-240px, 0, 0);
 }
 
-.csstransforms3d .active .wrapper {
+.csstransforms .active .wrapper {
+  right: 0;
+  -moz-transform: translateX(-240px);
+  -ms-transform: translateX(-240px);
+  -o-transform: translateX(-240px);
+  -webkit-transform: translateX(-240px);
+  -moz-transform: translateX(-240px);
   -moz-transform: translate3d(-240px, 0, 0);
   -ms-transform: translate3d(-240px, 0, 0);
   -o-transform: translate3d(-240px, 0, 0);
@@ -243,6 +247,11 @@
   transform: translate3d(-240px, 0, 0);
 
  @include bp (large) {
+   -moz-transform: translateX(0);
+   -ms-transform: translateX(0);
+   -o-transform: translateX(0);
+   -webkit-transform: translateX(0);
+   transform: translateX(0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
