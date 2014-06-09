@@ -3,6 +3,11 @@
  * ------- */
 
 .wrapper {
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 	@include bp (large){
 	margin-right: 25%;
 	}

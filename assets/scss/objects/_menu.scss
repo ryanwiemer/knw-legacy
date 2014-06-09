@@ -2,6 +2,11 @@
  *    MENU    *
  * ---------- */
 .menu {
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 	text-align: center;
 	background: white;
 	width: 240px;
@@ -12,11 +17,11 @@
 	position: fixed;
 	border-left: 1px solid $border;
 	overflow-y: auto;
+	@include transform(translateX(240px));
 	@include transform(translate3d(240px,0,0));
-	& .no-csstransforms {right: -240px;}
 		@include bp (large){
+			@include transform(translateX(0px));
 			@include transform(translate3d(0,0,0));
-			& .csstransforms {right: 0;}
 			width: 25%;
 			right: 0;
 			}
@@ -53,8 +58,8 @@
 		}
 	}
 .active .menu{
+	@include transform(translateX(0px));
 	@include transform(translate3d(0,0,0));
-	& .csstransforms {right: 0;}
 }
 
 // Mobile Menu
@@ -83,18 +88,18 @@
 }
 
 .active .mobile-menu {
+	@include transform(translateX(-240px));
 	@include transform(translate3d(-240px,0,0));
-	& .no-csstransforms {right: 240px;}
 }
 
 .active .wrapper {
 	position: relative;
+	@include transform(translateX(-240px));
 	@include transform(translate3d(-240px,0,0));
- 	& .no-csstransforms {right: 240px;}
 
  @include bp (large) {
+	@include transform(translateX(0px));
  	@include transform(translate3d(0,0,0));
-	 & .no-csstransforms {right: 0;}
      }
 }
 

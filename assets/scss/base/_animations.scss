@@ -1,14 +1,15 @@
 .menu, .active .menu, .wrapper, .active .wrapper, .mobile-menu, .active .mobile-menu, footer, .active footer {
 	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: transform 0.3s;
+	-ms-transition: transform 0.3s;
+	-o-transition: transform 0.3s;
 	transition: transform 0.3s;
-    -moz-transition: transform 0.3s;
-    -ms-transition: transform 0.3s;
-    -o-transition: transform 0.3s;
 	@include bp(large) {
 		-webkit-transition: none !important;
-  		-moz-transition: none !important;
- 		-ms-transition: none !important;
-  		-o-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+		transition: none !important;
 	 }
 }
 
