@@ -12,7 +12,7 @@
 	background: white;
 	width: 240px;
 	top: 0;
-	right: 0;
+  right:0;
 	z-index: 2;
 	height: 100%;
 	position: fixed;
@@ -31,7 +31,6 @@
 			-webkit-transform: translateX(0);
 			transform: translateX(0);
 			width: 25%;
-			right: 0;
 			}
 		@include bp(extra-large) {
 		    width: 340px;
@@ -99,11 +98,11 @@
 }
 
 .active .mobile-menu {
-	-moz-transform: translateX(-240px);
-  	-ms-transform: translateX(-240px);
-  	-o-transform: translateX(-240px);
-  	-webkit-transform: translateX(-240px);
-  	transform: translateX(-240px);
+  -moz-transform: translateX(-240px);
+  -ms-transform: translateX(-240px);
+  -o-transform: translateX(-240px);
+  -webkit-transform: translateX(-240px);
+  transform: translateX(-240px);
 }
 
 .active .wrapper {
@@ -135,7 +134,7 @@
 }
 
 .knw {
-    font-family: $kulturista;
+  font-family: $kulturista;
 	color: $base;
 	text-align: left;
 	line-height: 50px;
@@ -173,6 +172,34 @@
 	font-size: .5em;
 	margin-left: -.25em;
 }
+
+//CSS 2D Transform
+
+.no-csstransforms .menu {
+    right: 0;
+    @include bp (large){
+      right: 0;
+    }
+}
+
+.no-csstransforms .active .menu {
+    right: 0;
+}
+
+.no-csstransforms .active .mobile-menu {
+    right: 240px;
+}
+
+.no-csstransforms .active .wrapper {
+  right: 240px;
+
+ @include bp (large) {
+  right: 0;
+  }
+}
+
+
+
 
 
 
