@@ -17,10 +17,18 @@
 	position: fixed;
 	border-left: 1px solid $border;
 	overflow-y: auto;
-	@include transform(translateX(240px));
+	-moz-transform: translateX(240px);
+	-ms-transform: translateX(240px);
+	-o-transform: translateX(240px);
+	-webkit-transform: translateX(240px);
+	transform: translateX(240px);
 	@include transform(translate3d(240px,0,0));
 		@include bp (large){
-			@include transform(translateX(0px));
+			-moz-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
 			@include transform(translate3d(0,0,0));
 			width: 25%;
 			right: 0;
@@ -58,7 +66,11 @@
 		}
 	}
 .active .menu{
-	@include transform(translateX(0px));
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
 	@include transform(translate3d(0,0,0));
 }
 
@@ -88,17 +100,29 @@
 }
 
 .active .mobile-menu {
-	@include transform(translateX(-240px));
+	-moz-transform: translateX(-240px);
+  -ms-transform: translateX(-240px);
+  -o-transform: translateX(-240px);
+  -webkit-transform: translateX(-240px);
+  transform: translateX(-240px);
 	@include transform(translate3d(-240px,0,0));
 }
 
 .active .wrapper {
 	position: relative;
-	@include transform(translateX(-240px));
+	-moz-transform: translateX(-240px);
+	-ms-transform: translateX(-240px);
+	-o-transform: translateX(-240px);
+	-webkit-transform: translateX(-240px);
+	transform: translateX(-240px);
 	@include transform(translate3d(-240px,0,0));
 
  @include bp (large) {
-	@include transform(translateX(0px));
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
  	@include transform(translate3d(0,0,0));
      }
 }
