@@ -8,7 +8,7 @@
 <html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <script src="//use.typekit.net/igx3kix.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
