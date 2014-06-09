@@ -175,10 +175,7 @@
   }
 }
 
-
 //CSS 2D Transform
-
-//CSS 3D Transform
 .csstransforms .menu {
     right: 0;
     -moz-transform: translateX(240px);
@@ -186,22 +183,12 @@
     -o-transform: translateX(240px);
     -webkit-transform: translateX(240px);
     -moz-transform: translateX(240px);
-    -moz-transform: translate3d(240px, 0, 0);
-    -ms-transform: translate3d(240px, 0, 0);
-    -o-transform: translate3d(240px, 0, 0);
-    -webkit-transform: translate3d(240px, 0, 0);
-    transform: translate3d(240px, 0, 0);
     @include bp (large){
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
       -o-transform: translateX(0);
       -webkit-transform: translateX(0);
       transform: translateX(0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
     }
 }
 
@@ -212,11 +199,6 @@
     -o-transform: translateX(0);
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
 }
 
 .csstransforms .active .mobile-menu {
@@ -226,11 +208,6 @@
   -o-transform: translateX(-240px);
   -webkit-transform: translateX(-240px);
   -moz-transform: translateX(-240px);
-    -moz-transform: translate3d(-240px, 0, 0);
-    -ms-transform: translate3d(-240px, 0, 0);
-    -o-transform: translate3d(-240px, 0, 0);
-    -webkit-transform: translate3d(-240px, 0, 0);
-    transform: translate3d(-240px, 0, 0);
 }
 
 .csstransforms .active .wrapper {
@@ -240,11 +217,6 @@
   -o-transform: translateX(-240px);
   -webkit-transform: translateX(-240px);
   -moz-transform: translateX(-240px);
-  -moz-transform: translate3d(-240px, 0, 0);
-  -ms-transform: translate3d(-240px, 0, 0);
-  -o-transform: translate3d(-240px, 0, 0);
-  -webkit-transform: translate3d(-240px, 0, 0);
-  transform: translate3d(-240px, 0, 0);
 
  @include bp (large) {
    -moz-transform: translateX(0);
@@ -252,6 +224,54 @@
    -o-transform: translateX(0);
    -webkit-transform: translateX(0);
    transform: translateX(0);
+  }
+}
+
+
+//CSS 3D Transform
+.csstransforms3d .menu {
+    right: 0;
+    -moz-transform: translate3d(240px, 0, 0);
+    -ms-transform: translate3d(240px, 0, 0);
+    -o-transform: translate3d(240px, 0, 0);
+    -webkit-transform: translate3d(240px, 0, 0);
+    transform: translate3d(240px, 0, 0);
+    @include bp (large){
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+.csstransforms3d .active .menu {
+    right: 0;
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.csstransforms3d .active .mobile-menu {
+    right: 0;
+    -moz-transform: translate3d(-240px, 0, 0);
+    -ms-transform: translate3d(-240px, 0, 0);
+    -o-transform: translate3d(-240px, 0, 0);
+    -webkit-transform: translate3d(-240px, 0, 0);
+    transform: translate3d(-240px, 0, 0);
+}
+
+.csstransforms3d .active .wrapper {
+  right: 0;
+  -moz-transform: translate3d(-240px, 0, 0);
+  -ms-transform: translate3d(-240px, 0, 0);
+  -o-transform: translate3d(-240px, 0, 0);
+  -webkit-transform: translate3d(-240px, 0, 0);
+  transform: translate3d(-240px, 0, 0);
+
+ @include bp (large) {
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
