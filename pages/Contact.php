@@ -15,30 +15,31 @@ get_header(); ?>
   <fieldset>
     <div class="form__name">
       <label class="form__name__label" for="name">Name</label>
-      <input class="form__name__input" name="name" required="" type="text" value="" />
+      <input class="form__name__input" name="name" type="text"/>
     </div>
 
     <div class="form__email">
       <label class="form__email__label" for="email">Email</label>
-      <input class="form__email__input" name="email" required="" type="text" value="" />
+      <input class="form__email__input" name="email" type="text"/>
     </div>
 
     <div class="form__message">
-      <label class="form__message__label" for="Message">Message</label>
-      <textarea class="form__message__textarea" name="message" required=""></textarea>
+      <label class="form__message__label" for="message">Message</label>
+      <textarea class="form__message__textarea" name="message" type="text"></textarea>
+    </div>
+
+    <div class="form__bot">
+      <label class="form__bot__label" for="bot">Spam Filter (Leave Blank)</label>
+      <input class="form__bot__input" name="bot" type="text"/>
     </div>
 
     <input class="form__submit btn" name="submit" type="submit" value="Send" />
   </fieldset>
+  <div class="form__success">
+      Message sent successfully!
+    </div>
+    <div class="form__error">
+      Error, please try again.
+    </div>
 </form>
-<div class="form__success">
-
-Message sent successfully. Thank you!
-
-</div>
-<div class="form__error">
-
-Something went wrong, try refreshing and submitting the form again.
-
-</div>
 <?php get_footer(); ?>

@@ -12,11 +12,11 @@ get_header(); ?>
 
       <?php
       if ( has_post_format( 'gallery' )) {
-      get_template_part( 'content', 'gallery' );}
+      	get_template_part( 'content', 'gallery' );
+			}
 
       else {
-      get_template_part( 'content', 'blog' );
-
+      	get_template_part( 'content', 'blog' );
       }?>
 
 		<?php endwhile; // end of the loop. ?>

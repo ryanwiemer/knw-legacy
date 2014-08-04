@@ -1,7 +1,7 @@
 {
   "name": "knw",
-  "version": "0.1.1",
-  "homepage": "https://github.com/ryanwiemer/knw",
+  "version": "0.1.2",
+  "homepage": "http://knw.io",
   "authors": [
     "Ryan Wiemer <ryan@ryanwiemer.com>"
   ],
@@ -19,6 +19,7 @@
     "jquery": "~1.11",
     "jquery-form": "~3.46.0",
     "Swipe": "git://github.com/thebird/Swipe.git#~2.0.0",
-    "jquery.validation": "~1.12.0"
+    "fastclick": "~1.0.3",
+    "jquery-validate": "~1.13.0"
   }
 }

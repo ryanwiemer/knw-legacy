@@ -21,6 +21,3 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleClass(document.body, 'active');
 };
 });
-
-
-//

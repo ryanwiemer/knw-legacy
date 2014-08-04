@@ -15,22 +15,27 @@ var livereload = require('gulp-livereload');
 
 // Move and Minfiy Scripts from Bower
 gulp.task ('move', function() {
-    return gulp.src(['bower_components/jquery/dist/jquery.js','bower_components/jquery-form/jquery.form.js','bower_components/Swipe/swipe.js','bower_components/jquery.validation/dist/jquery.validate.js'])
-        .pipe(rename({ suffix: '.min' }))
+    return gulp.src([
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/jquery-form/jquery.form.js',
+        'bower_components/jquery-validate/dist/jquery.validate.js',
+        'bower_components/fastclick/lib/fastclick.js',
+        'bower_components/Swipe/swipe.js',
+        'bower_components/jquery-ias/src/jquery-ias.js'])
         .pipe(uglify())
-        .pipe(gulp.dest('assets/js/'))
-        .pipe(notify({ message: 'Bower components are moved!'}));
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('assets/js/'));
 });
 
 
 // Concatenate, Lint and Minify JS
 gulp.task('scripts', function() {
     return gulp.src(['assets/js/scripts/*.js'])
-        .pipe(rename({ suffix: '.min' }))
         .pipe(jshint())
+        .pipe(jshint.reporter('default'))
         .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js/'))
-        //.pipe(notify({ message: 'Scripts are minified!'}))
         .pipe(livereload());
 });
 
@@ -41,7 +46,6 @@ gulp.task('sass', function() {
         .pipe(minifycss())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('assets/css/'))
-        //.pipe(notify({ message: 'CSS is minified!'}))
         .pipe(livereload());
 });
 
