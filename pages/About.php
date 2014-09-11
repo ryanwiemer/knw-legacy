@@ -16,8 +16,8 @@ get_header(); ?>
 			<div class="about-collage about-collage--bio">
 			<div class="about-collage__ornament"></div>
 		  		<div class="about-collage__content">
-		  			<p><span>M</span>y name is Kirsten Noelle Wiemer and I started knw
-		  			photography to share my love for capturing moments with others. I have
+		  			<p><span>M</span>y name is Kirsten Noelle Wiemer and I started KNW
+		  			Photography to share my love for capturing moments with others. I have
 		  			always been a creative person and photography is one way I like to
 		  			show my creativity. Recently I discovered a love for natural
 		  			light photography and working with people. Through my photography

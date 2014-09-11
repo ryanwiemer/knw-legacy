@@ -27,7 +27,9 @@
 	<body <?php body_class(); ?>>
 		<header>
 				<nav class="menu">
-					<a href="<?php echo get_site_url(); ?>"><h1><span class="knw-logo1">knw</span> <span class="knw-logo2">photography</span></h1></a>
+					<a href="<?php echo get_site_url(); ?>">
+						<h1><span class="knw-logo1">knw</span> <span class="knw-logo2">photography</span></h1>
+					</a>
             <?php wp_nav_menu( array( 'menu' => 'Menu 1', 'container' => 'ul', 'menu_class' => '', 'container_class' => '') ); ?>
 				</nav>
 				<div class="mobile-menu">
