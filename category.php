@@ -54,11 +54,3 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
-<script>
-  var ias = jQuery.ias({
-    container:  '.gallery-list',
-    item:       '.gallery',
-    pagination: '.pagination',
-    next:       '.btn-pagination--next'
-  });
-</script>

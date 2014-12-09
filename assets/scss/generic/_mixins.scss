@@ -2,37 +2,28 @@
  * $MIXINS *
  * ------- */
 
-/*Retina
-@mixin bp($point) {
-	@if $point == 2x {
-		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-		only screen and (min-moz-device-pixel-ratio: 1.5),
-		only screen and (min-device-pixel-ratio: 1.5) { @content; }
-	}
-} */
-
-$small: 450px !default;
-$medium: 700px !default;
-$large: 1000px !default;
-$extra-large: 1300px !default;
-
-$breakpoints: small $small, medium $medium, extra-large $extra-large, large $large !default;
-
-$oldie: false !default;
-
-@mixin bp($point) {
-  @if $oldie {
-    @if ($point == large) or ($point == medium) or ($point == small)  {
+@mixin bp($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 450px) {
       @content;
     }
   }
-  @else {
-    @each $breakpoint in $breakpoints {
-      @if $point == nth($breakpoint, 1) {
-        @media (min-width: nth($breakpoint, 2)) {
-          @content;
-        }
-      }
+
+  @else if $breakpoint == "medium" {
+    @media (min-width: 700px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: 1000px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "extra-large" {
+    @media (min-width: 1300px) {
+      @content;
     }
   }
 }
