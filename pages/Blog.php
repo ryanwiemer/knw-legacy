@@ -36,15 +36,16 @@ get_header(); ?>
     <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
     <article class="blog-post">
 
-      <?php if (has_post_thumbnail( $post->ID ) ): ?>
-        <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); $image = $image[0]; ?>
-      <?php else :
-        $image = get_bloginfo( 'stylesheet_directory') . '/assets/img/placeholder.png'; ?>
-      <?php endif; ?>
-
-      <?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'thumbnail', array( 'class' => 'blog-post__img' ) ); }
-      else { echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="blog-post__img"/>';}?>
-
+      <?php if ( has_post_thumbnail() ) {
+        $large = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+        $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');?>
+        <img class="blog-post__img" srcset="<?php echo $large[0]; ?> 1800w, <?php echo $medium[0]; ?> 900w, <?php echo $thumb[0]; ?> 450w" sizes="100vw">
+        <?php
+      }
+      else {
+        echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="blog-post__img"/>';
+      }?>
       <div class="blog-post__details">
         <h2 class="blog-post__title"><?php the_title(); ?></h2>
         <p class="blog-post__date"><?php echo get_the_date(); ?></p>

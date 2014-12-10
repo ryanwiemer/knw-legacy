@@ -34,7 +34,6 @@
 
 
 //Gallery List Styles
-
 .gallery-list {
   margin: 0;
   padding: 0;
@@ -62,8 +61,8 @@
 .gallery__border {
   border: 5px solid white;
   -moz-box-shadow:    0 2px $shadow;
-    -webkit-box-shadow: 0 2px $shadow;
-    box-shadow:         0 2px $shadow;
+  -webkit-box-shadow: 0 2px $shadow;
+  box-shadow:         0 2px $shadow;
   position: relative;
 }
 

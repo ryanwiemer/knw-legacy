@@ -53,7 +53,11 @@ get_header(); ?>
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
-              the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
+            $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+            $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');?>
+            <img class="gallery__image" srcset="<?php echo $medium[0]; ?> 900w, <?php echo $thumb[0]; ?> 450w" sizes="100vw">
+            <?php
+              }
               else {
                 echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
                 }?>

@@ -11,7 +11,11 @@ get_header(); ?>
     <?php if(get_field('slider')): ?>
       <?php while(has_sub_field('slider')): ?>
         <div>
-          <a href="<?php the_sub_field('slide_link'); ?>"> <img src="<?php the_sub_field('slide_image'); ?>"/>
+          <a href="<?php the_sub_field('slide_link'); ?>">
+            <?php $large = wp_get_attachment_image_src(get_sub_field('slide_image'), 'large'); ?>
+            <?php $medium = wp_get_attachment_image_src(get_sub_field('slide_image'), 'medium'); ?>
+            <?php $thumb = wp_get_attachment_image_src(get_sub_field('slide_image'), 'thumbnail'); ?>
+            <img srcset="<?php echo $large[0]; ?> 1800w, <?php echo $medium[0]; ?> 900w, <?php echo $thumb[0]; ?> 450w" sizes="100vw">
             <div class="slider__caption"><?php the_sub_field('slide_title'); ?></div>
           </a>
         </div>
