@@ -10,9 +10,8 @@
 .pricing__weddings {
 	@extend %clearfix;
 	padding-bottom: 1em;
-		padding-top: 2em;
+	padding-top: 2em;
 }
-
 
 .pricing-table {
 	@include row(display, ltr);
@@ -40,24 +39,11 @@
 	line-height: 1.4;
 }
 
-h4.pricing-table__list-item--time, h4.pricing-table__list-item--price {
-	display: none;
-	@include bp(small) {
-		display: inline;
-	} 
-}
-
-
-
-.pricing-table__list-item--time,
 .pricing-table__list-item--price {
-	@include span-columns(3);
+	@include span-columns(4);
 	text-align: center;
 	padding: .5em;
-	@include bp(small) {
-		@include span-columns(2);
-	}
-} 
+}
 
 .pricing-table__top-row {
 	background: white;
@@ -76,11 +62,9 @@ h4.pricing-table__list-item--time, h4.pricing-table__list-item--price {
 	@extend %clearfix;
 }
 
-
-div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
+div.pricing-table__list-item--price  {
 	padding-top: .5em;
 }
-
 
 .pricing-table__list-item span {
 	font-size: 1em;
@@ -96,12 +80,13 @@ div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
   }
 }
 
-
-
-
-
-
-
+.pricing-table__email {
+	padding: 1em .5em 0 .5em;
+	font-size: 1em;
+	@include bp(large) {
+		font-size: .85em;
+	}
+}
 
 //Pricing Additional Information
 
@@ -117,7 +102,7 @@ div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
 		top: .1em;
 		line-height: 1.2;
 	}
-	
+
 }
 
 .pricing__footnotes ul {
@@ -128,7 +113,7 @@ div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
 		position: relative;
 		top: -.4em;
 	}
-	
+
 }
 
 .pricing__footnotes ul li {
@@ -140,9 +125,8 @@ div.pricing-table__list-item--time,  div.pricing-table__list-item--price  {
   @include bp(large) {
       font-size: .75em;
   }
-  
-}
 
+}
 
 h4.pricing-table__list-item {
 	font-size: 1em;
