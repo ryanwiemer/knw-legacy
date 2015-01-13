@@ -86,6 +86,13 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
+function sgr_filter_image_sizes( $sizes) {
+  unset( $sizes['large']);
+  return $sizes;
+  }
+add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
+
+
 //Featured Image Support
 add_theme_support( 'post-thumbnails' );
 
