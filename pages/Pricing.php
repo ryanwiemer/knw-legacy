@@ -16,7 +16,7 @@ get_header(); ?>
 	  <h3 class="pricing-table__header">Portrait Packages</h3>
 		<ul class="pricing-table__list">
 			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item">Session Description</h4><h4 class="pricing-table__list-item--price">Price</h4></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Individual Portrait</span>For high school senior photos, maternity, headshots, and others. This session is for an individual for 60 minutes.</div><div class="pricing-table__list-item--price">$200</div></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Individual Portrait</span>For high school senior photos, maternity, headshots, and others. This session is for an individual for 60 minutes.</div><div class="pricing-table__list-item--price">$250</div></li>
 			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Couples / Engagements </span>This session includes 1 location for 60 - 90 minutes. I often customize packages for couples so if you need to extend the time or travel to various locations I would love to create a customized package for you.</div><div class="pricing-table__list-item--price">$300</div></li>
 			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Family Portrait</span>Family sessions include up to 4 people (each additional person $25) for 60 minutes. I love working outdoors but I am also willing to shoot inside your home to accommodate your needs.</div><div class="pricing-table__list-item--price">$325</div></li>
 		</ul>
