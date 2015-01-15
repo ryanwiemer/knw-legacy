@@ -26,7 +26,7 @@ get_header(); ?>
   <div class="pricing__footnotes">Additional Information
     <ul>
       <li>A $100 non-refundable deposit is required to secure your session date.</li>
-    	<li>Each session comes with USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
+    	<li>Each portrait package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
     	<li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any session.</li>
     </ul>
   </div>
