@@ -19,7 +19,8 @@
     "Swipe": "git://github.com/thebird/Swipe.git#~2.0.0",
     "fastclick": "~1.0.3",
     "jquery-validate": "~1.13.0",
-    "picturefill": "~2.1.0",
-    "infinite-ajax-scroll": "~2.1.3"
+    "picturefill": "~2.2.0",
+    "infinite-ajax-scroll": "~2.1.3",
+    "jquery-ias": "~2.2.0"
   }
 }
