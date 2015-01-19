@@ -23,8 +23,8 @@ gulp.task ('move', function() {
         'bower_components/jquery-form/jquery.form.js',
         'bower_components/jquery-validate/dist/jquery.validate.js',
         'bower_components/fastclick/lib/fastclick.js'])
-        //'bower_components/Swipe/swipe.js',
         //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'])
+        //'bower_components/Swipe/swipe.js'
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('assets/js/vendor/'));

@@ -53,9 +53,8 @@ get_header(); ?>
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
-            $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-            $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'thumbnail');?>
-            <img class="gallery__image" srcset="<?php echo $medium[0]; ?> 900w, <?php echo $thumb[0]; ?> 450w" sizes="100vw">
+            $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');?>
+            <img class="gallery__image" src="<?php echo $medium[0]; ?>">
             <?php
               }
               else {
