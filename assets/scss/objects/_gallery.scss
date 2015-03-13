@@ -47,9 +47,20 @@
     @include bp(small) {
       margin-bottom: 2.35765%;
       @include span-columns(6);
-      @include omega(2n);
-      }
+      //@include omega(2n);
+    }
   }
+
+.gallery:nth-of-type(2n)
+  {
+  @include bp(small) {
+     margin-right: 0;
+   }
+}
+
+
+
+
 
 .category footer {
   margin-top: -.75em;
