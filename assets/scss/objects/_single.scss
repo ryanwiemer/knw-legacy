@@ -19,13 +19,6 @@ margin-bottom: 1.5em;
   padding-bottom: .25em;
 }
 
-.post__date {
-  color: $secondary;
-  @include span-columns(12);
-  margin: 0;
-  padding-bottom: .25em;
-}
-
 .post blockquote {
   background: $border;
   margin: 0 .2em 1.5em .2em;

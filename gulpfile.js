@@ -10,24 +10,38 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
-var lr = require('tiny-lr');
-var livereload = require('gulp-livereload');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload
 
+gulp.task('browser-sync', function() {
+  //watch files
+  var files = [
+    'assets/css/*.css',
+    'assets/js/*.js',
+    '*.php'
+  ];
+  //initialize browsersync
+  browserSync.init(files, {
+  //browsersync with a php server
+  proxy: "knw.dev",
+  notify: false
+  });
+});
 
 // Move and Minfiy Scripts from Bower
 gulp.task ('move', function() {
-    return gulp.src([
-        'bower_components/picturefill/dist/picturefill.js',
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/jquery-form/jquery.form.js',
-        'bower_components/jquery-validate/dist/jquery.validate.js',
-        'bower_components/fastclick/lib/fastclick.js'])
-        //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'])
-        //'bower_components/Swipe/swipe.js'
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('assets/js/vendor/'));
+  return gulp.src([
+    'bower_components/picturefill/dist/picturefill.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/jquery-form/jquery.form.js',
+    'bower_components/jquery-validate/dist/jquery.validate.js',
+    'bower_components/fastclick/lib/fastclick.js'])
+    //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'])
+    //'bower_components/Swipe/swipe.js'
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('assets/js/vendor/'));
 });
 
 // Lint JS
@@ -35,7 +49,7 @@ gulp.task('scripts', function() {
   gulp.src(['assets/js/scripts/*.js'])
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
-  .pipe(livereload());
+  .pipe(browserSync.reload({stream:true}));
 });
 
 // Concat JS
@@ -48,7 +62,6 @@ gulp.task('concat', function() {
   .pipe(concat('contact.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
-
 });
 
 // Compile Sass & Minify CSS
@@ -61,14 +74,15 @@ gulp.task('sass', function() {
   .pipe(minifycss())
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest('assets/css/'))
-  .pipe(livereload());
+  .pipe(browserSync.reload({stream:true}));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/scss/*/*.scss', ['sass'])
     gulp.watch('assets/js/*/*.js', ['scripts', 'concat']);
+    gulp.watch('.php').on('change', reload);
 });
 
 // Default Task
-gulp.task('default', ['sass','scripts','concat', 'watch']);
+gulp.task('default', ['sass','scripts','concat', 'browser-sync','watch']);

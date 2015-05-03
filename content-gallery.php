@@ -11,7 +11,6 @@
     <div>
       <h2 class="gallery-intro__title"><?php the_title(); ?></h2>
         <p class="gallery-intro__location"><?php the_sub_field('gallery_intro_location'); ?></p>
-        <p class="gallery-intro__date"><?php the_sub_field('gallery_intro_date'); ?></p>
         <p class="gallery-intro__cat"><?php knw_the_category( ); ?></p>
         <p class="gallery-intro__nav">
           <?php previous_post_link('%link', '', TRUE, ' ', 'post_format' );?>
