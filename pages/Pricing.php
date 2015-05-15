@@ -37,8 +37,8 @@ get_header(); ?>
 		<ul class="pricing-table__list">
 			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item">Session Description</h4><h4 class="pricing-table__list-item--price">Price</h4></li>
 			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Bridals / Formals</span>This session includes 1 location for a bride / groom or a bride and groom in formal attire for 60 minutes. The session can be done prior to the wedding or on the actual wedding day.</div><div class="pricing-table__list-item--price">$350</div></li>
-			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Basic Wedding Package</span>This package includes 4 hours of wedding day coverage. Also included is a bridal / formal session.</div><div class="pricing-table__list-item--price">$1500</div></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Complete Wedding Package</span>This package includes 6 hours of wedding day coverage. Also included are engagement photos and a bridal / formal session.</div><div class="pricing-table__list-item--price">$2100+</div></li>
+			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Basic Wedding Package</span>This package includes 4 hours of wedding day coverage.</div><div class="pricing-table__list-item--price">$1500</div></li>
+			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Complete Wedding Package</span>This package includes 6 hours or more of wedding day coverage.</div><div class="pricing-table__list-item--price">$2100+</div></li>
       <p class="pricing-table__email">Not finding a good fit? I am also happy to create a custom wedding package just for you! Please <a href="/contact">contact me</a> with details of your wedding to discuss a customized package.</p>
     </ul>
 	</div>
