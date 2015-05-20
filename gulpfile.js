@@ -12,7 +12,7 @@ var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
-var reload      = browserSync.reload
+var reload      = browserSync.reload;
 
 gulp.task('browser-sync', function() {
   //watch files
@@ -80,7 +80,7 @@ gulp.task('sass', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('assets/scss/*/*.scss', ['sass'])
-    gulp.watch('assets/js/*/*.js', ['scripts', 'concat']);
+    gulp.watch('assets/js/*/*.js', ['scripts', 'concat'])
     gulp.watch('.php').on('change', reload);
 });
 
