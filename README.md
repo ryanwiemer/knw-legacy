@@ -1,7 +1,12 @@
-KNW Photography
-===
-Custom WordPress theme for www.knw.io
+#README
+WordPress theme built for KNW Photography.
 
-##Copyright
+###Dependencies
+- Git
+- Node.js
+- Gulp
+- Bower
+
+###Copyright
 - All rights reserved
 - Copyright 2015 KNW Photography
