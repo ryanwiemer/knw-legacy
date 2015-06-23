@@ -94,7 +94,7 @@ div.pricing-table__list-item--price  {
 	font-size: .85em;
 	font-weight: 600;
 	padding-left: 1em;
-	color: $secondary;
+	color: $highlight;
 	@include bp(extra-large) {
 		@include span-columns (2);
 		@extend %clearfix;

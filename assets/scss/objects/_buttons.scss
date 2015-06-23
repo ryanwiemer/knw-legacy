@@ -27,7 +27,7 @@
 	@include span-columns(3.2);
 	text-align: center;
 	color: $background;
-	background: lighten($secondary, 10%);
+	background: lighten($highlight, 10%);
 	font-size: .85em;
 	padding: 1em 1.55em;
 	@include bp(medium) {
@@ -36,7 +36,7 @@
 }
 
 .no-touch .btn-pagination:hover {
-	background: $secondary;
+	background: $highlight;
 }
 
 .btn-pagination--prev {

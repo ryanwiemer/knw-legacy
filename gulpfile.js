@@ -25,7 +25,8 @@ gulp.task('browser-sync', function() {
   browserSync.init(files, {
   //browsersync with a php server
   proxy: "knw.dev",
-  notify: false
+  notify: false,
+  open: false
   });
 });
 

@@ -34,7 +34,7 @@
 }
 
 .no-touch .slider__wrap:hover .slider__caption {
-	background: $secondary;
+	background: $highlight;
 	opacity: 1;
 	color: white;
 }
@@ -46,7 +46,7 @@
 }
 
 .slider__nav a {
-	color: $secondary;
+	color: $highlight;
 	cursor: pointer;
 	&:hover {
 		color: $base;
@@ -62,5 +62,5 @@
 }
 
 .next{
-	float: right;	
+	float: right;
 }

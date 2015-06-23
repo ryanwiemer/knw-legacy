@@ -4,7 +4,7 @@
 
 //Category Menu
 .categories {
-  background: $border;
+  background: white;
   margin-bottom: 1em;
   padding: 1em;
   @extend %clearfix;
@@ -22,13 +22,13 @@
 .cat-item a {
   display: inline-block;
   background: $shadow;
-  color: $secondary;
+  color: $base;
   padding: .25em .5em;
   margin: .25em;
 }
 
 .no-touch .cat-item a:hover {
-  background: $secondary;
+  background: $highlight;
   color: $background;
 }
 
@@ -106,8 +106,8 @@
   font-size: .85em;
   display: inline;
   padding: .25em .5em;
-  color: $secondary;
-  border: 2px solid $secondary;
+  color: $highlight;
+  border: 2px solid $highlight;
   position: relative;
   top: 1em;
 }
