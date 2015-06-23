@@ -9,9 +9,8 @@
     border: 4px solid white;
     background: white;
     margin: 0 auto;
-    -moz-box-shadow:    0 2px $shadow;
-    -webkit-box-shadow: 0 2px $shadow;
-    box-shadow:         0 2px $shadow;
+    border: 4px solid white;
+   box-shadow: 0 0 1px 1px $border;
 
 }
 .slider__wrap {

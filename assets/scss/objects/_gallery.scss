@@ -5,11 +5,12 @@
 //Category Menu
 .categories {
   background: white;
+  border: 1px solid $border;
   margin-bottom: 1em;
   padding: 1em;
   @extend %clearfix;
 }
-.categories p{
+.categories p {
   text-align: center;
   margin-bottom: 1em;
 }
@@ -21,17 +22,21 @@
 }
 .cat-item a {
   display: inline-block;
-  background: $shadow;
+  background: $border;
   color: $base;
   padding: .25em .5em;
   margin: .25em;
+}
+
+.current-cat a {
+  background: $highlight;
+  color: $background;
 }
 
 .no-touch .cat-item a:hover {
   background: $highlight;
   color: $background;
 }
-
 
 //Gallery List Styles
 .gallery-list {
@@ -47,7 +52,6 @@
     @include bp(small) {
       margin-bottom: 2.35765%;
       @include span-columns(6);
-      //@include omega(2n);
     }
   }
 
@@ -58,10 +62,6 @@
    }
 }
 
-
-
-
-
 .category footer {
   margin-top: -.75em;
   @include bp(small) {
@@ -71,9 +71,7 @@
 
 .gallery__border {
   border: 5px solid white;
-  -moz-box-shadow:    0 2px $shadow;
-  -webkit-box-shadow: 0 2px $shadow;
-  box-shadow:         0 2px $shadow;
+  box-shadow: 0 0 1px 1px $border;
   position: relative;
 }
 
@@ -89,7 +87,7 @@
 }
 
 .no-touch .gallery__overlay:hover {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(163, 176, 178, 0.85);
     opacity: 1;
     filter: alpha(opacity=100);
   }
@@ -103,11 +101,10 @@
 }
 
 .gallery__title {
-  font-size: .85em;
+  font-size: 1em;
   display: inline;
   padding: .25em .5em;
-  color: $highlight;
-  border: 2px solid $highlight;
+  color: $background;
   position: relative;
   top: 1em;
 }

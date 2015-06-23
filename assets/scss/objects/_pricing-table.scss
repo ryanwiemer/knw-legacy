@@ -18,15 +18,19 @@
 	@include span-columns(12);
 	background: white;
 	margin: 0 auto;
-	border-bottom: solid 2px $shadow;
+	border: 1px solid $border;
+
+	a {
+		text-decoration: underline;
+	}
 }
 
 .pricing-table__header {
-	text-align: center;
-	color: $base;
-	margin: .75em auto .25em;
-	font-size: 2em;
-	font-family: $freight-sans;
+	text-align: left;
+	color: $highlight;
+	margin: .75em 1em .25em;
+	font-size: 1.5em;
+	font-weight: 600;
 }
 
 .pricing-table__list {
@@ -49,7 +53,6 @@
 	background: white;
 	@extend %clearfix;
 	padding-bottom: .5em;
-	color: $highlight;
 }
 
 .pricing-table__odd {
@@ -89,7 +92,6 @@ div.pricing-table__list-item--price  {
 }
 
 //Pricing Additional Information
-
 .pricing__footnotes span {
 	font-size: .85em;
 	font-weight: 600;
@@ -113,7 +115,6 @@ div.pricing-table__list-item--price  {
 		position: relative;
 		top: -.4em;
 	}
-
 }
 
 .pricing__footnotes ul li {
@@ -125,7 +126,6 @@ div.pricing-table__list-item--price  {
   @include bp(large) {
       font-size: .75em;
   }
-
 }
 
 h4.pricing-table__list-item {

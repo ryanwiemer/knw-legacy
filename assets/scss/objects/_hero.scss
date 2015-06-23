@@ -2,77 +2,17 @@
  *    Hero    *
  * ---------- */
 .hero {
-  margin: 0;
-	height: 200px;
+  margin: 2em 0 0 0;
 	text-align: center;
-	@include bp(small){
-    height: 325px;
-    margin-bottom: 2.35765%;
-	}
-	@include bp(extra-large) {
-		height: 500px;
-	}
-}
-
-.hero--purple {
-	background: $highlight;
 }
 
 .hero__title {
-	color: white;
+	color: $base;
 	text-transform: uppercase;
 	font-size: 2.5em;
 	font-weight: 600!important;
 	letter-spacing: .15em;
-	font-family: $freight-sans;
-	font-weight: 400;
-	text-align: center;
+	font-weight: 600;
+  font-style: italic;
 	display: inline-block;
-	margin-top: 1.75em;
-	&:after {
-		display: block;
-		content: "";
-		background: white;
-		background: rgba(255, 255, 255, .5);
-		width: 1.5em;
-		height: 3px;
-		margin: 8px auto;
-	 }
-		@include bp(small) {
-    	margin-top: 3em;
-		}
-		@include bp(medium) {
-	    margin-top: 2.25em;
-		}
-		@include bp(extra-large) {
-	    margin-top: 2.65em;
-	    font-size: 3.25em;
-		}
-}
-
-.hero__title--big {
-	letter-spacing: 0;
-	margin: 0;
-	font-size: 6em;
-	line-height: 1.5em;
-	padding-top: .2em;
-	@include bp(small) {
-		padding-top: .3em;
-		font-size: 8em;
-		line-height: 1.4em;
-		}
-	@include bp(medium) {
-		font-size: 8em;
-		}
-
-	@include bp(large) {
-    padding-top: .1em;
-	}
-	@include bp(extra-large) {
-		font-size: 9em;
-    padding-top: .4em;
-	}
-	&:after {
-		display: none;
-	}
 }

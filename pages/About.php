@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-<div class="hero hero--purple">
+<div class="hero">
   <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
 </div>
 
@@ -50,18 +50,5 @@ get_header(); ?>
 		  		</div>
 			</div>
 
-				<div class="about-collage about-collage--map">
-				  	<div class="about-collage__content">
-				  		<div class="about-collage--map__img">
-				  			<span class="city">The San Francisco Bay</span>
-				  		</div>
-					</div>
-				</div>
-
-			<div class="about-collage about-collage--beach">
-		  		<div class="about-collage__content">
-		  			<img src="<?php echo get_template_directory_uri(); ?>/assets//img/half-moon-bay-beach-san-francisco-bay-area.jpg" alt="Half Moon Bay beach near the San Francisco Bay Area" />
-		  		</div>
-			</div>
 		</section>
 <?php get_footer(); ?>

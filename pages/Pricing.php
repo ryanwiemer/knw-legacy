@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 
-<div class="hero hero--purple">
+<div class="hero">
   <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
 </div>
 

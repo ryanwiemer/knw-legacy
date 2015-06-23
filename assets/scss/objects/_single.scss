@@ -2,70 +2,11 @@
  *   Single   *
  * ---------- */
 
-//Post-Single
-.post__intro {
-@extend %clearfix;
-border-bottom: 2px solid $border;
-margin-bottom: 1.5em;
-}
-
-.post img{
-  margin-bottom: 1.5em;
-}
-
-.post__title {
-  font-family: $kulturista;
-  font-size: 1.5em;
-  padding-bottom: .25em;
-}
-
-.post blockquote {
-  background: $border;
-  margin: 0 .2em 1.5em .2em;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  border-left: 6px solid $highlight;
-}
-.post blockquote:before {
-  color: $highlight;
-  content: open-quote;
-  font-size: 3.5em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
-.post blockquote p {
-  display: inline;
-}
-
-.post blockquote em {
-  color: $shadow;
-  font-family: $kulturista;
-  display: block;
-  margin-top: .25em;
-}
-
-.post blockquote em:before {
-  content: "\2013";
-  margin-right: .2em;
-}
-
-.post ul li {
-  margin-bottom: .5em;
-  list-style: disc;
-  list-style-position:inside;
-}
-
-.post ul {
-  margin-bottom: 1.5em;
-}
-
-
 //Gallery-Single
 .gallery-intro {
 	@extend %clearfix;
-	background: $border;
+	background: white;
+  border: 1px solid $border;
 	padding: 1em;
   margin-bottom: .5em;
 }
@@ -76,22 +17,15 @@ margin-bottom: 1.5em;
 }
 
 .gallery-intro__location{
-	color: $highlight;
-	padding-bottom: 0;
-}
-
-.gallery-intro__date{
-	color: $highlight;
-	padding-bottom: 1em;
-
+	padding-bottom: .5em;
 }
 
 .icon-grid, .single a[rel="prev"], .single a[rel="next"]  {
 	font-size: 1em;
   padding: .35em;
   margin-right: .25em;
-  background: $shadow;
-  color: $highlight;
+  background: $border;
+  color: $base;
 }
 
 .no-touch .icon-grid:hover, .no-touch .single a[rel="prev"]:hover, .no-touch .single a[rel="next"]:hover {
@@ -121,8 +55,8 @@ margin-bottom: 1.5em;
 }
 
 .gallery-intro__cat a {
-  background: $shadow;
-  color: $highlight;
+  background: $border;
+  color: $base;
   border: none;
   padding: .25em .5em;
 }

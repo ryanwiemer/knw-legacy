@@ -8,7 +8,9 @@
 .about-container {
 	@extend %clearfix;
 	@include outer-container;
-
+	a {
+		text-decoration: underline;
+	}
 }
 .about-collage--content {
 	position: absolute;
@@ -32,52 +34,34 @@
 	margin-bottom: .5em;
 }
 
-
-
-
-
-
-
-
-
-
 //Biography Section
 .about-collage--bio {
 	padding: 1em 1.25em;
 	background: white;
-	border-bottom: 2px solid $shadow;
+	border: 1px solid $border;
 	@include span-columns (12);
 
 	@include bp(large) {
-		@include span-columns (8);
+		@include span-columns (12);
 	}
-	@include bp(extra-large) {
-	    @include span-columns (8);
-	}
-
 }
 
 //Drop Cap
 .about-collage--bio span {
 	font-family: $kulturista;
 	position: relative;
-	top: -.05em;
+	top: .05em;
 	font-size: 4em;
-	font-weight: 300;
 	padding-right: .15em;
 	margin: 0;
-	line-height: 1;
+	line-height: .85;
 	float: left;
 }
-
-
-
-
 
 //Portrait Image
 .about-collage--portrait {
 	background: white;
-	border-bottom: 2px solid $shadow;
+	border: 1px solid $border;
 	position: relative;
 	text-align: center;
 	@include span-columns(12);
@@ -85,12 +69,8 @@
 		@include span-columns(6);
 	}
 	@include bp(large) {
- 	    @include span-columns(4);
+ 	    @include span-columns(6);
  	    @include omega ();
-	}
-	@include bp(extra-large) {
-	    @include span-columns(4);
-	    @include omega();
 	}
 
 	img {
@@ -111,8 +91,8 @@
 	}
 
 	h3 {
-		font-size: 18px;
-		color: $highlight;
+		//font-size: 18px;
+		//font-style: italic;
 	}
 }
 
@@ -137,13 +117,9 @@
 	}
 }
 
-
-
-
-
 //Map Image
 .about-collage--map {
-	border-bottom: 2px solid $shadow;
+	border: 1px solid $border;
 	@include span-columns(12);
 	@include bp(small) {
 		@include span-columns(6);
@@ -201,13 +177,9 @@
 	}
 }
 
-
-
-
-
 //Beach photo
 .about-collage--beach {
-	border-bottom: 2px solid $shadow;
+	border: 1px solid $border;
 	@include span-columns(12);
 	 margin-bottom: 0!important;
 	@include bp(small) {

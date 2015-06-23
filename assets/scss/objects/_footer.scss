@@ -4,7 +4,7 @@
 
 .site-footer{
 	width: 100%;
-	background: lighten($base, 10%);
+	background: $base;
 	height: 70px;
 	color: $tertiary;
 	text-align: center;
@@ -42,9 +42,9 @@
 	width: 33.33333333333333%;
 	height: 70px;
 	float: left;
-	color: $tertiary;
+	color: $border;
 	overflow: hidden;
-	border-right: 1px solid $tertiary;
+	border-right: 1px solid $border;
 	margin: 0;
 	padding: 0;
 	@include bp(small){
@@ -60,8 +60,9 @@
 .no-touch .site-footer a:hover {
 		background: $highlight;
 		color: white;
-		@include bp(small){
+		@include bp(small) {
 			background: none;
+			color: $highlight;
 		}
 	}
 
@@ -82,9 +83,16 @@
 	@include bp(small){
 		display: block;
 		float: right;
-		font-size: .65em;
-		color: $tertiary;
+		//font-size: .65em;
+		color: $border;
 		position: relative;
 		line-height: 120px;
+		font-size: 1em;
+	  @include bp(medium) {
+	      font-size: .95em;
+	  }
+	  @include bp(large) {
+	      font-size: .85em;
+	  }
 	}
 }

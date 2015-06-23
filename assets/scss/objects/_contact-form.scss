@@ -5,7 +5,7 @@
 .form {
     margin:0;
     background: white;
-    border-bottom: 2px solid $shadow;
+    border: 1px solid $border;
     padding: 1em;
     @include bp(medium) {
         padding: 1em 2em;
@@ -65,7 +65,7 @@ input, textarea {
   -moz-box-shadow:none;
   -webkit-box-shadow:none;
   background: $background;
-  border:1px solid $shadow;
+  border:1px solid $border;
 }
 
 //Spam Filter
