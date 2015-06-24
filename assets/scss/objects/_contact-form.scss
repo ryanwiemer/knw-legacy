@@ -8,7 +8,7 @@
     border: 1px solid $border;
     padding: 1em;
     @include bp(medium) {
-        padding: 1em 2em;
+        padding: 1em 1.25em;
     }
 }
 
@@ -104,4 +104,9 @@ input, textarea {
     left: 7em;
     bottom: 2em;
   }
+}
+
+.form label {
+  @extend p;
+  font-weight: 600;
 }

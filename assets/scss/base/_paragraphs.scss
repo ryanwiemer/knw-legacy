@@ -2,13 +2,13 @@
  * PARAGRAPHS *
  * ------- */
 
-p, aside, .cat-item a, .gallery-intro__cat a, .post ul li, .form__success, .form__error {
-  font-size: 1em;
+p, aside, .cat-item a, .gallery-intro__cat a, .about-container ul li, .form__success, .form__error {
+  font-size: .95em;
   @include bp(medium) {
-      font-size: .95em;
+      font-size: .85em;
   }
   @include bp(large) {
-      font-size: .85em;
+      font-size: .75em;
   }
 }
 

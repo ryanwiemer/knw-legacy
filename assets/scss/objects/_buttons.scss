@@ -1,5 +1,5 @@
 .btn {
-	font-size: .85em;
+	@extend p;
 	display: inline-block;
 	background: $highlight;
 	color: white;
@@ -14,21 +14,12 @@
 	color: white;
 }
 
-
-.btn--small {
-		padding: .55em .6em!important;
-		@include bp(small) {
-			font-size: .75em!important;
-			padding: .3em .6em!important;
-		}
-	}
-
 .btn-pagination {
 	@include span-columns(3.2);
 	text-align: center;
 	color: $background;
 	background: lighten($highlight, 10%);
-	font-size: .85em;
+	@extend p;
 	padding: 1em 1.55em;
 	@include bp(medium) {
 			padding: .76em 1.65em;

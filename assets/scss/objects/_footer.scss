@@ -4,7 +4,7 @@
 
 .site-footer{
 	width: 100%;
-	background: $base;
+	background: lighten($base, 15%);
 	height: 70px;
 	color: $tertiary;
 	text-align: center;
@@ -38,11 +38,11 @@
 
 .site-footer a {
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	width: 33.33333333333333%;
 	height: 70px;
 	float: left;
-	color: $border;
+	color: darken($border, 15%);
 	overflow: hidden;
 	border-right: 1px solid $border;
 	margin: 0;
@@ -51,7 +51,7 @@
 		border: none;
 		display: inline;
 		width: auto;
-		font-size: 1.25em;
+		font-size: 1em;
 		float: none;
 		margin: 0 .5em;
 	}
@@ -62,7 +62,7 @@
 		color: white;
 		@include bp(small) {
 			background: none;
-			color: $highlight;
+			color: white;
 		}
 	}
 
@@ -83,16 +83,15 @@
 	@include bp(small){
 		display: block;
 		float: right;
-		//font-size: .65em;
-		color: $border;
+		color: darken($border, 15%);
 		position: relative;
 		line-height: 120px;
-		font-size: 1em;
+		font-size: .95em;
 	  @include bp(medium) {
-	      font-size: .95em;
+	      font-size: .85em;
 	  }
 	  @include bp(large) {
-	      font-size: .85em;
+	      font-size: .75em;
 	  }
 	}
 }

@@ -8,11 +8,11 @@
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-	@include bp (large){
-	margin-right: 25%;
+	@include bp(large){
+	margin-right: 20%;
 	}
 	@include bp(extra-large) {
-		margin-right: 340px;
+		margin-right: 275px;
 		}
 }
 

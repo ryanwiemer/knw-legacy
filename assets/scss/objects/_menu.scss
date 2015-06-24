@@ -10,7 +10,7 @@
   backface-visibility: hidden;
 	text-align: center;
 	background: white;
-	width: 240px;
+	width: 220px;
 	top: 0;
   right:0;
 	z-index: 2;
@@ -20,11 +20,10 @@
 	overflow-y: auto;
 
 		@include bp (large){
-
-			width: 25%;
+			width: 20%;
 			}
 		@include bp(extra-large) {
-		    width: 340px;
+		    width: 275px;
 		}
 
 	ul {
@@ -37,7 +36,7 @@
 		padding: 18px 3em;
 		display: block;
 		text-align: left;
-		font-size: 15px;
+		font-size: 14px;
 		text-transform: uppercase;
 		font-weight: 400;
 		&:hover {
@@ -46,18 +45,14 @@
 		padding-left: 3.75em;
 		}
 		@include bp(extra-large) {
-		    font-size: 17px;
+		    font-size: 15px;
 		}
-
 	}
 
 	li:last-child{
 		border-bottom: solid 1px $border;
 		}
 	}
-.active .menu{
-
-}
 
 // Mobile Menu
 .mobile-menu {
@@ -84,16 +79,8 @@
 	}
 }
 
-.active .mobile-menu {
-
-}
-
 .active .wrapper {
 	position: relative;
-
- @include bp (large) {
-
-  }
 }
 
 .menu-link {
@@ -120,7 +107,6 @@
 }
 
 //Logo
-
 .menu h1 {
 	margin: 1.3em auto;
 	line-height: .95;
@@ -150,13 +136,9 @@
   display: block;
 }
 
-
-
-
-
 //No Transform
 .menu {
-    right: -240px;
+    right: -220px;
     @include bp (large){
       right: 0;
     }
@@ -167,11 +149,11 @@
 }
 
 .active .mobile-menu {
-    right: 240px;
+    right: 220px;
 }
 
 .active .wrapper {
-  right: 240px;
+  right: 220px;
 
  @include bp (large) {
   right: 0;
@@ -181,11 +163,11 @@
 //CSS 2D Transform
 .csstransforms .menu {
     right: 0;
-    -moz-transform: translateX(240px);
-    -ms-transform: translateX(240px);
-    -o-transform: translateX(240px);
-    -webkit-transform: translateX(240px);
-    -moz-transform: translateX(240px);
+    -moz-transform: translateX(220px);
+    -ms-transform: translateX(220px);
+    -o-transform: translateX(220px);
+    -webkit-transform: translateX(220px);
+    -moz-transform: translateX(220px);
     @include bp (large){
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
@@ -206,22 +188,22 @@
 
 .csstransforms .active .mobile-menu {
   right: 0;
-  -moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  -moz-transform: translateX(-240px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
 }
 
 .csstransforms .active .wrapper {
   right: 0;
-  -moz-transform: translateX(-240px);
-  -ms-transform: translateX(-240px);
-  -o-transform: translateX(-240px);
-  -webkit-transform: translateX(-240px);
-  -moz-transform: translateX(-240px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
 
- @include bp (large) {
+ @include bp(large) {
    -moz-transform: translateX(0);
    -ms-transform: translateX(0);
    -o-transform: translateX(0);
@@ -234,12 +216,12 @@
 //CSS 3D Transform
 .csstransforms3d .menu {
     right: 0;
-    -moz-transform: translate3d(240px, 0, 0);
-    -ms-transform: translate3d(240px, 0, 0);
-    -o-transform: translate3d(240px, 0, 0);
-    -webkit-transform: translate3d(240px, 0, 0);
-    transform: translate3d(240px, 0, 0);
-    @include bp (large){
+    -moz-transform: translate3d(220px, 0, 0);
+    -ms-transform: translate3d(220px, 0, 0);
+    -o-transform: translate3d(220px, 0, 0);
+    -webkit-transform: translate3d(220px, 0, 0);
+    transform: translate3d(220px, 0, 0);
+    @include bp(large){
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -o-transform: translate3d(0, 0, 0);
@@ -259,22 +241,22 @@
 
 .csstransforms3d .active .mobile-menu {
     right: 0;
-    -moz-transform: translate3d(-240px, 0, 0);
-    -ms-transform: translate3d(-240px, 0, 0);
-    -o-transform: translate3d(-240px, 0, 0);
-    -webkit-transform: translate3d(-240px, 0, 0);
-    transform: translate3d(-240px, 0, 0);
+    -moz-transform: translate3d(-220px, 0, 0);
+    -ms-transform: translate3d(-220px, 0, 0);
+    -o-transform: translate3d(-220px, 0, 0);
+    -webkit-transform: translate3d(-220px, 0, 0);
+    transform: translate3d(-220px, 0, 0);
 }
 
 .csstransforms3d .active .wrapper {
   right: 0;
-  -moz-transform: translate3d(-240px, 0, 0);
-  -ms-transform: translate3d(-240px, 0, 0);
-  -o-transform: translate3d(-240px, 0, 0);
-  -webkit-transform: translate3d(-240px, 0, 0);
-  transform: translate3d(-240px, 0, 0);
+  -moz-transform: translate3d(-220px, 0, 0);
+  -ms-transform: translate3d(-220px, 0, 0);
+  -o-transform: translate3d(-220px, 0, 0);
+  -webkit-transform: translate3d(-220px, 0, 0);
+  transform: translate3d(-220px, 0, 0);
 
- @include bp (large) {
+ @include bp(large) {
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
