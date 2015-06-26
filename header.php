@@ -27,15 +27,12 @@
 	<body <?php body_class(); ?>>
 		<header>
 				<nav class="menu">
-					<a href="<?php echo get_site_url(); ?>">
-						<h1><span class="knw-logo1">knw</span> <span class="knw-logo2">photography</span></h1>
-					</a>
             <?php wp_nav_menu( array( 'menu' => 'Menu 1', 'container' => 'ul', 'menu_class' => '', 'container_class' => '') ); ?>
+						<a class="logo" href="#">
+							<h1>
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/img/knw.png" />
+							</h1>
+						</a>
 				</nav>
-				<div class="mobile-menu">
-					<div>
-						<a href="<?php echo get_site_url(); ?>" class="knw">knw</a> <a id="menu-link" class="menu-link icon-menu"></a>
-					</div>
-				</div>
 		</header>
 <div class="wrapper" id="wrapper">

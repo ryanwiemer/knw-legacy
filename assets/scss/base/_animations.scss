@@ -1,19 +1,8 @@
-.menu, .active .menu, .wrapper, .active .wrapper, .mobile-menu, .active .mobile-menu, footer, .active footer {
-	-webkit-transition: -webkit-transform 0.3s;
-	-moz-transition: transform 0.3s;
-	-ms-transition: transform 0.3s;
-	-o-transition: transform 0.3s;
-	transition: transform 0.3s;
-	@include bp(large) {
-		-webkit-transition: none !important;
-		-moz-transition: none !important;
-		-ms-transition: none !important;
-		-o-transition: none !important;
-		transition: none !important;
-	 }
+.menu, .menu--small, .menu ul {
+	  @include transition (all .3s);
 }
 
-nav ul a, .gallery__title {
+.gallery__title {
 	@include transition (all .3s);
 }
 
@@ -40,15 +29,7 @@ p a, #slider a {
 	@include transition (all .3s);
 }
 
-.blog-post {
-	@include transition (background .3s);
-}
 
 .gallery-list .gallery a, .gallery .gallery__border .gallery__overlay  {
 	@include transition (all .3s);
 }
-
-//Preload CSS
-//.wf-loading .wrapper {}
-
-//.wf-active .wrapper {}

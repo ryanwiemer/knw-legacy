@@ -6,6 +6,7 @@
 get_header(); ?>
 <div class="content">
 
+
 <div id='slider' class='slider'>
   <div class='slider__wrap'>
     <?php if(get_field('slider')): ?>

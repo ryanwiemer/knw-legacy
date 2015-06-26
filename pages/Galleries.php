@@ -5,11 +5,8 @@
  */
 get_header(); ?>
 
-<div class="hero">
-  <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
-</div>
-
 <div class="content">
+    <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
 
 <?php
   $args = array(

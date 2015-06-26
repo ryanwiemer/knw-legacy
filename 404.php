@@ -7,7 +7,8 @@
 get_header(); ?>
 <div class="content">
 
-<h3>404! Page not found</h3>
+<h2 class="hero__title">Error 404!</h2>
+<p style="text-align: center;">Page not found. Please check the URL and try again.</p>
 
 
 <?php get_footer(); ?>

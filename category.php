@@ -6,10 +6,6 @@
 
 get_header(); ?>
 
-<div class="hero hero--purple">
-  <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
-</div>
-
 <?php $cat_args = array(
   'orderby'            => 'count',
   'title_li'           => __( '' ),
@@ -18,6 +14,7 @@ get_header(); ?>
   'exclude'            => '9'
 ); ?>
 <div class="content">
+  <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
 <div class="categories">
   <p>Click on a gallery below or select a category from the list.</p>
   <ul>

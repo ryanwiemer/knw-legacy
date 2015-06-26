@@ -8,17 +8,11 @@
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-	@include bp(large){
-	margin-right: 20%;
-	}
-	@include bp(extra-large) {
-		margin-right: 275px;
-		}
 }
 
 .content {
 	padding: 0 1em;
-	margin: 2em auto;
+	margin: 4em auto;
 	@extend %clearfix;
 	max-width: 700px;
 	min-height: 300px;
@@ -28,7 +22,7 @@
 	}
 
 	@include bp(large) {
-	    max-width: 750px;
+	    max-width: 800px;
 	}
 	@include bp(extra-large) {
 	    max-width: 950px;
@@ -40,10 +34,7 @@ body {
 	background: $background;
 	color: $base;
 	position: relative;
-	top: 55px;
-	@include bp (large){
-		top: 0;
-	}
+	top: 70px;
 }
 
 ::-moz-selection {

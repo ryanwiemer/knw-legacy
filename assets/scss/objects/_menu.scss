@@ -2,265 +2,81 @@
  *    MENU    *
  * ---------- */
 
-.menu {
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-	text-align: center;
-	background: white;
-	width: 220px;
-	top: 0;
-  right:0;
-	z-index: 2;
-	height: 100%;
-	position: fixed;
-	border-left: 1px solid $border;
-	overflow-y: auto;
-
-		@include bp (large){
-			width: 20%;
-			}
-		@include bp(extra-large) {
-		    width: 275px;
-		}
-
-	ul {
-		margin:  0;
-	}
-
-	ul a{
-		border-top: solid 1px $border;
-		color: $base;
-		padding: 18px 3em;
-		display: block;
-		text-align: left;
-		font-size: 14px;
-		text-transform: uppercase;
-		font-weight: 400;
-		&:hover {
-		color: white;
-		background: $highlight;
-		padding-left: 3.75em;
-		}
-		@include bp(extra-large) {
-		    font-size: 15px;
-		}
-	}
-
-	li:last-child{
-		border-bottom: solid 1px $border;
-		}
-	}
-
-// Mobile Menu
-.mobile-menu {
-	background: white;
-	color: $base;
-	position: fixed;
-	top: 0;
-	z-index: 2;
-	width: 100%;
-	height: 55px;
-	border-bottom: 1px solid $border;
-	@include bp (large){
-		display: none;
-	}
-}
-
-.mobile-menu  div {
-	margin: 0 auto;
-	max-width: 700px;
-	position: relative;
-	padding: 0 1em;
-	@include bp(large) {
-	    max-width: 750px;
-	}
-}
-
-.active .wrapper {
-	position: relative;
-}
-
-.menu-link {
-	cursor: pointer;
-	font-family: "icons";
-	font-size: 18px;
-	text-align: right;
-	float: right;
-	line-height: 55px;
-	position: relative;
-	left: 1em;
-  padding: 0 1em;
-}
-
-.knw {
-  font-family: $kulturista;
-  font-style: italic;
-	color: $base;
-	text-align: left;
-	line-height: 50px;
-	font-size: 22px;
-	font-weight: 300;
-	&:hover {	color: $highlight;}
-}
-
-//Logo
-.menu h1 {
-	margin: 1.3em auto;
-	line-height: .95;
-	font-size: 40px;
+header {
   text-align: center;
-  display: inline-block;
-	@include bp(medium) {
-	    font-size: 2em;
-	}
-	@include bp(extra-large) {
-	    font-size: 2.4em;
-	}
 }
 
-.knw-logo1 {
-    font-style: italic;
-		color: $base;
-		font-size: .85em;
-    margin-bottom: .125em;
-    display: block;
-}
-.knw-logo2 {
-	color: darken($border, 10%);
-	font-family: $freight-sans;
-	text-transform: uppercase;
-	font-size: .4em;
-  display: block;
-}
-
-//No Transform
 .menu {
-    right: -220px;
-    @include bp (large){
-      right: 0;
+  background: white;
+  border-bottom: 1px solid $border;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100px;
+  overflow: hidden;
+  z-index: 99;
+
+  ul {
+    margin: 40px auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+    margin: 0 .5em;
+    text-transform: uppercase;
+    &:nth-child(2) {
+      margin-right: 4em;
     }
-}
+    &:nth-child(3) {
+      margin-left: 4em;
+    }
 
-.active .menu {
-    right: 0;
-}
-
-.active .mobile-menu {
-    right: 220px;
-}
-
-.active .wrapper {
-  right: 220px;
-
- @include bp (large) {
-  right: 0;
+    a {
+      color: $base;
+      font-size: 16px;
+      &:hover {
+        color: $highlight;
+      }
+    }
   }
 }
 
-//CSS 2D Transform
-.csstransforms .menu {
-    right: 0;
-    -moz-transform: translateX(220px);
-    -ms-transform: translateX(220px);
-    -o-transform: translateX(220px);
-    -webkit-transform: translateX(220px);
-    -moz-transform: translateX(220px);
-    @include bp (large){
-      -moz-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -o-transform: translateX(0);
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
+.menu--small {
+  height: 50px;
+    ul {
+      margin: 10px auto;
+    }
+    .logo > h1 {
+      padding-top: 10px;
+      width: 40px;
     }
 }
 
-.csstransforms .active .menu {
+
+
+
+
+.logo {
+    /* fixed position a zero-height full width container */
+    position: fixed;
+    top: 0; /* or whatever position is desired */
+    left: 0;
     right: 0;
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    height: 0;
+      z-index: 999;
+    /* center all inline content */
+    text-align: center;
+    //display: none;
 }
 
-.csstransforms .active .mobile-menu {
-  right: 0;
-  -moz-transform: translateX(-220px);
-  -ms-transform: translateX(-220px);
-  -o-transform: translateX(-220px);
-  -webkit-transform: translateX(-220px);
-  -moz-transform: translateX(-220px);
-}
-
-.csstransforms .active .wrapper {
-  right: 0;
-  -moz-transform: translateX(-220px);
-  -ms-transform: translateX(-220px);
-  -o-transform: translateX(-220px);
-  -webkit-transform: translateX(-220px);
-  -moz-transform: translateX(-220px);
-
- @include bp(large) {
-   -moz-transform: translateX(0);
-   -ms-transform: translateX(0);
-   -o-transform: translateX(0);
-   -webkit-transform: translateX(0);
-   transform: translateX(0);
-  }
-}
-
-
-//CSS 3D Transform
-.csstransforms3d .menu {
-    right: 0;
-    -moz-transform: translate3d(220px, 0, 0);
-    -ms-transform: translate3d(220px, 0, 0);
-    -o-transform: translate3d(220px, 0, 0);
-    -webkit-transform: translate3d(220px, 0, 0);
-    transform: translate3d(220px, 0, 0);
-    @include bp(large){
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-}
-
-.csstransforms3d .active .menu {
-    right: 0;
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-.csstransforms3d .active .mobile-menu {
-    right: 0;
-    -moz-transform: translate3d(-220px, 0, 0);
-    -ms-transform: translate3d(-220px, 0, 0);
-    -o-transform: translate3d(-220px, 0, 0);
-    -webkit-transform: translate3d(-220px, 0, 0);
-    transform: translate3d(-220px, 0, 0);
-}
-
-.csstransforms3d .active .wrapper {
-  right: 0;
-  -moz-transform: translate3d(-220px, 0, 0);
-  -ms-transform: translate3d(-220px, 0, 0);
-  -o-transform: translate3d(-220px, 0, 0);
-  -webkit-transform: translate3d(-220px, 0, 0);
-  transform: translate3d(-220px, 0, 0);
-
- @include bp(large) {
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  }
+.logo > h1 {
+    /* make the block inline */
+    padding-top: 20px;
+    width: 80px;
+    display: inline-block;
+    /* reset container's center alignment */
+    text-align: left;
+    //width: 80px;
 }
