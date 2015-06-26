@@ -21,7 +21,6 @@
 }
 
 .icon-grid, .single a[rel="prev"], .single a[rel="next"]  {
-	font-size: 1em;
   padding: .35em;
   margin-right: .25em;
   background: $border;
@@ -66,15 +65,13 @@
   color: $background;
 }
 
-
-
 .gallery-intro__cat {
-padding-bottom: 1em;
+	padding-bottom: 1em;
+	font-size: 1em;
 }
 
 .gallery-intro__nav {
-margin-bottom: .25em;
-
+	margin-bottom: .25em;
 }
 
 .gallery-intro__nav a{
