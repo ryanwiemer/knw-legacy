@@ -1,0 +1,20 @@
+/* ---------- *
+ *  Homepage  *
+ * ---------- */
+
+.logo--full {
+		width: 250px;
+		margin: auto;
+	  position: absolute;
+		z-index: 2;
+	  top: 51px; left: 0; bottom: 0; right: 0;
+}
+
+.scroll-down {
+	z-index: 2;
+	position: relative;
+	top: -50px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}

@@ -37,7 +37,7 @@ gulp.task ('move', function() {
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/jquery-form/jquery.form.js',
     'bower_components/jquery-validate/dist/jquery.validate.min.js',
-    'bower_components/slick/dist/slick.min.js'])
+    'bower_components/slick.js/slick/slick.min.js'])
     //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
     .pipe(gulp.dest('assets/js/vendor/'));
 });

@@ -21,6 +21,10 @@
   @extend .container;
 }
 
+.home .content {
+    padding-top: 0;
+}
+
 body {
 	background: $background;
 	color: $base;
