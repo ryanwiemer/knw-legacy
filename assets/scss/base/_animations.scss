@@ -1,4 +1,4 @@
-.gallery__title {
+.gallery__title, .scroll-down a {
 	@include transition (all .3s);
 }
 
@@ -24,7 +24,6 @@ p a, #slider a {
 .no-touch .slider__wrap:hover .slider__caption {
 	@include transition (all .3s);
 }
-
 
 .gallery-list .gallery a, .gallery .gallery__border .gallery__overlay  {
 	@include transition (all .3s);
