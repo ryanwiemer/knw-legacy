@@ -33,15 +33,12 @@ gulp.task('browser-sync', function() {
 // Move and Minfiy Scripts from Bower
 gulp.task ('move', function() {
   return gulp.src([
-    'bower_components/picturefill/dist/picturefill.js',
-    'bower_components/jquery/dist/jquery.js',
+    'bower_components/picturefill/dist/picturefill.min.js',
+    'bower_components/jquery/dist/jquery.min.js',
     'bower_components/jquery-form/jquery.form.js',
-    'bower_components/jquery-validate/dist/jquery.validate.js',
-    'bower_components/fastclick/lib/fastclick.js'])
+    'bower_components/jquery-validate/dist/jquery.validate.min.js',
+    'bower_components/slick/dist/slick.min.js'])
     //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
-    //'bower_components/Swipe/swipe.js'
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/js/vendor/'));
 });
 
@@ -55,7 +52,7 @@ gulp.task('scripts', function() {
 
 // Concat JS
 gulp.task('concat', function() {
-  gulp.src(['assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/menu.js'])
+  gulp.src(['assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/myscripts.js'])
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));

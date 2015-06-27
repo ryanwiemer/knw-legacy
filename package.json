@@ -1,6 +1,6 @@
 {
   "name": "knw",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "http://www.knw.io",
   "main": "index.php",
   "scripts": {

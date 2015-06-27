@@ -108,7 +108,7 @@ font-weight: 600;
 	padding-left: 1em;
 	color: $highlight;
 	@include bp(extra-large) {
-		@include span-columns (2);
+		@include span-columns(2);
 		@extend %clearfix;
 		position: relative;
 		top: .1em;
@@ -118,8 +118,8 @@ font-weight: 600;
 .pricing__footnotes ul {
 	margin-top: .5em;
 	font-weight: normal;
-	@include bp(extra-large) {
-		@include span-columns (10);
+	@include bp(large) {
+		@include span-columns(10);
 		margin-bottom: 2em;
 		position: relative;
 		top: -.4em;

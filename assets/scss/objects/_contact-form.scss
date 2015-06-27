@@ -2,6 +2,12 @@
  * Contact Form *
  * ---------- */
 
+.form__intro {
+  @include bp(large) {
+		max-width: 550px;
+  }
+}
+
 .form {
     margin:0;
     background: white;
