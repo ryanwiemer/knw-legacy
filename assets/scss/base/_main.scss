@@ -2,39 +2,28 @@
  *   Main  *
  * ------- */
 
-.wrapper {
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+//container
+.container {
+  padding: 0 1em;
+  max-width: 750px;
+  @include bp(large) {
+      max-width: 850px;
+  }
+  @include bp(extra-large) {
+      max-width: 950px;
+  }
 }
 
 .content {
-	padding: 0 1em;
-	margin: 4em auto;
+	margin: 2.5em auto;
+  padding-top: 50px;
 	@extend %clearfix;
-	max-width: 700px;
-	min-height: 300px;
-
-	@include bp(small) {
-	    min-height: 400px;
-	}
-
-	@include bp(large) {
-	    max-width: 800px;
-	}
-	@include bp(extra-large) {
-	    max-width: 950px;
-	    min-height: 500px;
-	}
+  @extend .container;
 }
 
 body {
 	background: $background;
 	color: $base;
-	position: relative;
-	top: 70px;
 }
 
 ::-moz-selection {

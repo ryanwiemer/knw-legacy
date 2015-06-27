@@ -20,5 +20,5 @@ get_header(); ?>
       }?>
 
 		<?php endwhile; // end of the loop. ?>
-
+</div><!-- content-->
 <?php get_footer(); ?>

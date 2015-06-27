@@ -4,7 +4,6 @@
  */
 ?>
 
-</div><!-- content-->
 <footer class="site-footer">
 		<section>
 			<div class="social-icons">
@@ -15,7 +14,6 @@
 			<span class="copyright">&copy; <?php echo date("Y") ?> KNW Photography</span>
 		</section>
 	</footer>
-</div><!-- wrapper-->
 
 <?php wp_footer(); ?>
 

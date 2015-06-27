@@ -3,39 +3,33 @@
  * ---------- */
 
 header {
-  text-align: center;
-}
-
-.menu {
   background: white;
   border-bottom: 1px solid $border;
   position: fixed;
   width: 100%;
   top: 0;
-  height: 50px;
   line-height: 50px;
   z-index: 99;
+}
 
+.menu {
+  @extend .container;
+  margin: 0 auto;
   ul {
     margin: 0 auto;
-    width: 100%;
-    text-align: center;
+    float: right;
   }
 
   li {
     display: inline;
-    margin: 0 .5em;
+    margin-right: 1em;
     text-transform: uppercase;
-    &:nth-child(2) {
-      margin-right: 3em;
+    &:last-child {
+      margin-right: 0;
     }
-    &:nth-child(3) {
-      margin-left: 3em;
-    }
-
     a {
       color: $base;
-      font-size: 16px;
+      font-size: 15px;
       &:hover {
         color: $highlight;
       }
@@ -43,27 +37,9 @@ header {
   }
 }
 
-
-
 .logo {
-    /* fixed position a zero-height full width container */
-    position: fixed;
-    top: 0; /* or whatever position is desired */
-    left: 0;
-    right: 0;
-    height: 0;
-      z-index: 999;
-    /* center all inline content */
-    text-align: center;
-    //display: none;
-}
-
-.logo > h1 {
-    /* make the block inline */
-    padding-top: 10px;
-    width: 40px;
-    display: inline-block;
-    /* reset container's center alignment */
-    text-align: left;
-    //width: 80px;
+  float: left;
+  padding-top: 10px;
+  width: 40px;
+  display: inline-block;
 }

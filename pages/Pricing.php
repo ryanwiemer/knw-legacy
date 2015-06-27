@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="content">
-    <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
+    <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <section class="pricing__portraits">
 	<div class="pricing-table">
@@ -49,4 +49,5 @@ get_header(); ?>
   	<li>Popular travel locations outside of the San Francisco Bay Area include Las Vegas, Reno, Lake Tahoe, Phoenix, and Salt Lake City.</li>
   </ul>
 </div>
+</div><!-- content-->
 <?php get_footer(); ?>

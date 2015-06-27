@@ -14,7 +14,7 @@ get_header(); ?>
   'exclude'            => '9'
 ); ?>
 <div class="content">
-  <h2 class="hero__title"><?php single_cat_title( '', true ); ?></h2>
+  <h2 class="page__title"><?php single_cat_title( '', true ); ?></h2>
 <div class="categories">
   <p>Click on a gallery below or select a category from the list.</p>
   <ul>

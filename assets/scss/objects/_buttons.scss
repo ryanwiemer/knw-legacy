@@ -1,5 +1,4 @@
 .btn {
-	@extend p;
 	display: inline-block;
 	background: $highlight;
 	color: white;
@@ -19,7 +18,6 @@
 	text-align: center;
 	color: $background;
 	background: lighten($highlight, 10%);
-	@extend p;
 	padding: 1em 1.55em;
 	@include bp(medium) {
 			padding: .76em 1.65em;

@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <div class="content">
-    <h2 class="hero__title"><?php echo get_the_title(); ?></h2>
+    <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <?php
   $args = array(
@@ -77,5 +77,5 @@ get_header(); ?>
 <?php else:  ?>
   <p><?php _e( 'Sorry, no galleries matched your criteria.' ); ?></p>
 <?php endif; ?>
-
+</div><!-- content-->
 <?php get_footer(); ?>

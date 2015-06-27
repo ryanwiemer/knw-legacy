@@ -2,7 +2,7 @@
  *    Hero    *
  * ---------- */
 
-.hero__title {
+.page__title {
   text-align: center;
 	color: $base;
 	text-transform: uppercase;
@@ -10,5 +10,5 @@
 	letter-spacing: .15em;
 	font-weight: 600;
   font-style: italic;
-  margin: 0 0 1em 0;
+  margin: -.25em 0 1em 0;
 }

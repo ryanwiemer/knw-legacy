@@ -19,7 +19,6 @@
 	background: white;
 	margin: 0 auto;
 	border: 1px solid $border;
-
 	a {
 		text-decoration: underline;
 	}
@@ -63,7 +62,6 @@
 	font-size: 1em;
 }
 
-
 .pricing-table__top-row {
 	background: white;
 	@extend %clearfix;
@@ -100,7 +98,6 @@ div.pricing-table__list-item--price  {
 }
 
 //Pricing Additional Information
-
 .pricing__footnotes {
 @extend p;
 font-weight: 600;

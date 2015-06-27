@@ -5,8 +5,6 @@
  */
 get_header(); ?>
 <div class="content">
-
-
 <div id='slider' class='slider'>
   <div class='slider__wrap'>
     <?php if(get_field('slider')): ?>
@@ -32,4 +30,5 @@ get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php endwhile; // end of the loop. ?>
+</div><!-- content-->
 <?php get_footer(); ?>

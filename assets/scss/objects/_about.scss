@@ -31,14 +31,13 @@
 	padding: 1em 1.25em;
 	background: white;
 	border: 1px solid $border;
-	@include span-columns(12);
+	@include bp(medium) {
+			@include span-columns(6);
+	}
 	p {
 		padding: 0;
 		margin: 0;
 		margin-bottom: .5em;
-		@include bp(large) {
-			@include span-columns(6);
-		}
 	}
 	& p:nth-child(2) {
 		margin-right: 0;
@@ -50,7 +49,7 @@
 	font-family: $kulturista;
 	position: relative;
 	top: .05em;
-	font-size: 4em;
+	font-size: 4.5em;
 	padding-right: .15em;
 	margin: 0;
 	line-height: .85;
@@ -59,5 +58,7 @@
 
 //Portrait Image
 .about-collage--portrait {
-	@include span-columns(12);
+	@include bp(medium) {
+			@include span-columns(6);
+	}
 }
