@@ -58,11 +58,12 @@ h1,h2,h3,h4,h5,h6 {
 .icon-left-arrow:before, .single a[rel="prev"]:before {
 	content: "\e601";
 }
-
+.icon-down-arrow:before {
+	content: "\e600";
+}
 .icon-grid:before {
 	content: "\e60a";
 }
-
 .icon-menu:before {
 	content: "\e609";
 }

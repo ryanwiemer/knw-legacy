@@ -3,7 +3,7 @@
  * ---------- */
 
 .logo--full {
-		width: 250px;
+		width: 350px;
 		margin: auto;
 	  position: absolute;
 		z-index: 2;
@@ -13,8 +13,13 @@
 .scroll-down {
 	z-index: 2;
 	position: relative;
-	top: -50px;
+	top: -60px;
 	margin: 0 auto;
 	text-align: center;
-	display: block;
+	a {
+		opacity: .75;
+		display: inline-block;
+		color: white;
+		font-size: 1.75em;
+	}
 }
