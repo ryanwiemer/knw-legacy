@@ -122,15 +122,7 @@ $categories = get_the_category();
   }
 }
 
-//Register and setup Gallery Post Format
-add_action( 'after_setup_theme', 'slug_post_formats' );
-function slug_post_formats() {
-    add_theme_support(
-        'post-formats', array(
-            'gallery'
-        )
-    );
-}
+
 
 //Change Youtube Embed to work with the responsive knw theme
 function alx_embed_html( $html ) {

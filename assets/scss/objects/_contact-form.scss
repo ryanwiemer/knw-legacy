@@ -55,7 +55,7 @@ input, textarea {
 }
 
 .form__submit {
-	font-family: $freight-sans;
+	font-family: $sans;
 	border: 0;
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -64,7 +64,7 @@ input, textarea {
 
 .form__name__input, .form__email__input, .form__message__textarea, .form__bot__input  {
 	padding: .2em;
-	font-family: $freight-sans;
+	font-family: $sans;
 	font-size: .85em;
   margin-bottom:1.25em;
   box-shadow:none;
