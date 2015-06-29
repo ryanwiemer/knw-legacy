@@ -2,10 +2,10 @@
  * Clearfix
  * 1. only meant to be extended from within the stylesheets
  */
-%clearfix { 
+%clearfix {
 	&:after {
-    	display: table;
-    	content: "";
+  	display: table;
+  	content: "";
 		clear: both;
 	}
 }

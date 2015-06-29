@@ -25,9 +25,9 @@ get_header(); ?>
         in the San Franisco Bay Area along with my husband Ryan. Online I
         like to share my life through my personal blog where I take
         candid photos and talk about whatever is on my mind. To read more about
-        that you can visit <a href="http://www.kandrblog.com">K&amp;R Blog</a>
-        or click the link in the menu. I look forward to hearing from you
-        regarding new photo opportunities or even if it’s just to say “hello”.</p>
+        that you can visit <a href="http://www.kandrblog.com">K&amp;R Blog</a>.
+        I look forward to hearing from you regarding new photo opportunities
+        or even if it’s just to say “hello”.</p>
 
         <h3 class="signature">Kirsten Noelle Wiemer</h3>
 	</div>

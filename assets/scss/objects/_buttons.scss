@@ -14,10 +14,11 @@
 }
 
 .btn-pagination {
+	margin-top: 1em;
 	@include span-columns(3.2);
 	text-align: center;
 	color: $background;
-	background: lighten($highlight, 10%);
+	background: $highlight;
 	padding: 1em 1.55em;
 	@include bp(medium) {
 			padding: .76em 1.65em;
@@ -25,7 +26,7 @@
 }
 
 .no-touch .btn-pagination:hover {
-	background: $highlight;
+	background: darken( $highlight, 5% );
 }
 
 .btn-pagination--prev {

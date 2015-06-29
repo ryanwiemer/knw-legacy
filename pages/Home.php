@@ -39,8 +39,8 @@ get_header(); ?>
     $wp_query->query($args);
 ?>
 
-<blockquote id="quote" class="quote">
-  San Francisco Bay Area wedding and event photography
+<blockquote class="quote">
+  San Francisco Bay Area wedding and portrait photography
 </blockquote>
 
 <h2 class="recent-work">Recent Galleries</h2>
@@ -64,8 +64,8 @@ get_header(); ?>
       </a>
     </article>
   <?php endwhile; ?>
-  <p>For even more updates on what I'm currently working on check out my page on <a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank">Facebook</a></p>
 </section>
+<p class="social-aside">For more updates and sneak peeks on what I'm working on visit my page on <a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank">Facebook</a></p>
 
 </div><!-- content-->
 <?php get_footer(); ?>

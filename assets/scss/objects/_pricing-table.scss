@@ -9,15 +9,13 @@
 
 .pricing__weddings {
 	@extend %clearfix;
-	padding-bottom: 1em;
-	padding-top: 2em;
+	padding-bottom: 0;
 }
 
 .pricing-table {
-	@include row(display, ltr);
 	@include span-columns(12);
 	background: white;
-	margin: 0 auto;
+	margin: 0 auto 1em;
 	border: 1px solid $border;
 	a {
 		text-decoration: underline;
@@ -25,11 +23,10 @@
 }
 
 .pricing-table__header {
-	text-align: left;
-	color: $highlight;
+	text-align: center;
+	//color: $highlight;
 	margin: .75em .75em .5em;
 	font-size: 1.5em;
-	font-weight: 600;
 }
 
 .pricing-table__list {
@@ -93,14 +90,15 @@ div.pricing-table__list-item--price  {
 }
 
 .pricing-table__email {
+	max-width: 600px;
 	padding: 1em .5em 0 .5em;
 	@extend p;
 }
 
 //Pricing Additional Information
 .pricing__footnotes {
-@extend p;
-font-weight: 600;
+	@extend p;
+	font-weight: 600;
 }
 .pricing__footnotes span {
 	@extend p;
@@ -109,9 +107,6 @@ font-weight: 600;
 	color: $highlight;
 	@include bp(extra-large) {
 		@include span-columns(2);
-		@extend %clearfix;
-		position: relative;
-		top: .1em;
 	}
 }
 
@@ -121,8 +116,6 @@ font-weight: 600;
 	@include bp(large) {
 		@include span-columns(10);
 		margin-bottom: 2em;
-		position: relative;
-		top: -.4em;
 	}
 }
 
@@ -130,4 +123,14 @@ font-weight: 600;
 	margin: 0 0 1em 1.25em;
 	padding: 0;
 	list-style-type: lower-roman;
+}
+
+.pricing__weddings .pricing__footnotes ul li  {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.pricing__weddings ul{
+		margin-bottom: 0;
 }

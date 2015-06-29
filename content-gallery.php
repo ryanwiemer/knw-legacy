@@ -24,5 +24,4 @@
     else :
     endif;?>
 		<?php the_content(); ?>
-    <a href="#top" id="return-top" class="return-top">return to top</a>
 </gallery>

@@ -17,9 +17,9 @@
 }
 
 .about-collage {
-	margin-bottom: 1em!important;
-	@include bp(small) {
-	   margin-bottom: 2.35765%!important;
+	margin-bottom: 1em;
+	@include bp(medium) {
+	   margin-bottom: 0;
 	}
 }
 .about-collage:last-child {

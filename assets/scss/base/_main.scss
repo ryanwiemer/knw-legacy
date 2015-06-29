@@ -15,10 +15,10 @@
 }
 
 .content {
-	margin: 2.5em auto;
+	margin: 2.5em auto 3.5em;
   padding-top: 50px;
-	@extend %clearfix;
   @extend .container;
+  @extend %clearfix;
 }
 
 body {

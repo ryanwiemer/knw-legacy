@@ -13,12 +13,8 @@
 }
 
 .home .content {
-  padding-top: 0;
-	margin: 3.5em auto;
-
-	&::before{
-		margin-top: 2em;
-	}
+  padding-top: 5.5em;
+	margin: -2.45em auto 3.5em;
 }
 
 .logo--full {
@@ -30,6 +26,10 @@
 	@include bp(medium) {
 		width: 350px;
 	}
+	@include bp(extra-large) {
+		width: 450px;
+	}
+
 }
 
 .scroll-down {
@@ -63,16 +63,23 @@
 .quote {
 	font-family: $serif;
 	font-size: 1.5em;
+	line-height: 1.4;
 	font-style: italic;
 	text-align: center;
 	margin-bottom: 2em;
-	border-top: 2px solid $border;
-	border-bottom: 2px solid $border;
+	border-top: 2px solid darken($border, 5%);
+	border-bottom: 2px solid darken($border, 5%);
 	padding: 1em 0;
+	text-transform: capitalize;
 }
 
 .recent-work {
 	margin-bottom: 1em;
 	font-weight: 600;
 	font-family: $sans;
+	color: $tertiary;
+}
+
+.social-aside {
+	margin-top: 1em;
 }

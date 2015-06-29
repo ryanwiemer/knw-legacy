@@ -23,25 +23,24 @@ get_header(); ?>
   </ul>
 </div>
 
-
-  <section class="gallery-list">
-    <?php while ( have_posts() ) : the_post(); ?>
-      <article class="gallery">
-        <a href="<?php the_permalink(); ?>">
-          <div class="gallery__border">
-            <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
-                else {
-                  echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
-                  }?>
-            <div class="gallery__overlay">
-              <h3 class="gallery__title"><?php the_title(); ?></h3>
-            </div>
+<section class="gallery-list">
+  <?php while ( have_posts() ) : the_post(); ?>
+    <article class="gallery">
+      <a href="<?php the_permalink(); ?>">
+        <div class="gallery__border">
+          <?php if ( has_post_thumbnail() ) {
+              the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
+              else {
+                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                }?>
+          <div class="gallery__overlay">
+            <h3 class="gallery__title"><?php the_title(); ?></h3>
           </div>
-        </a>
-      </article>
-    <?php endwhile; ?>
-  </section>
+        </div>
+      </a>
+    </article>
+  <?php endwhile; ?>
+</section>
 
 <div class="pagination">
   <?php
@@ -49,5 +48,7 @@ get_header(); ?>
     previous_posts_link( 'Newer Entries' );
   ?>
 </div>
+
+</div><!-- content-->
 
 <?php get_footer(); ?>

@@ -18,17 +18,16 @@ get_header(); ?>
 			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Family Portrait</span>Family sessions include up to 4 people (each additional person $25) for 60 minutes. I love working outdoors but I am also willing to shoot inside your home to accommodate your needs.</div><div class="pricing-table__list-item--price">$325</div></li>
 		</ul>
 	</div>
-</section>
-
   <div class="pricing__footnotes">Additional Information
     <ul>
       <li>A $100 non-refundable deposit is required to secure your session date.</li>
-    	<li>Each portrait package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
-    	<li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any session.</li>
+      <li>Each portrait package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
+      <li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any session.</li>
     </ul>
   </div>
+</section>
 
-<section class="pricing__weddings pricing__weddings--last">
+<section class="pricing__weddings">
 	<div class="pricing-table">
 	<h3 class="pricing-table__header">Wedding Packages</h3>
 		<ul class="pricing-table__list">
@@ -39,15 +38,14 @@ get_header(); ?>
       <p class="pricing-table__email">Not finding a good fit? I am also happy to create a custom wedding package just for you! Please <a href="/contact">contact me</a> with details of your wedding to discuss a customized package.</p>
     </ul>
 	</div>
+  <div class="pricing__footnotes">Additional Information
+    <ul>
+      <li>A $500 non-refundable deposit is required to secure your wedding date.</li>
+    	<li>Each wedding package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
+    	<li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any package.</li>
+    	<li>Popular travel locations outside of the San Francisco Bay Area include Las Vegas, Reno, Lake Tahoe, Phoenix, and Salt Lake City.</li>
+    </ul>
+  </div>
 </section>
-
-<div class="pricing__footnotes">Additional Information
-  <ul>
-    <li>A $500 non-refundable deposit is required to secure your wedding date.</li>
-  	<li>Each wedding package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
-  	<li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any package.</li>
-  	<li>Popular travel locations outside of the San Francisco Bay Area include Las Vegas, Reno, Lake Tahoe, Phoenix, and Salt Lake City.</li>
-  </ul>
-</div>
 </div><!-- content-->
 <?php get_footer(); ?>
