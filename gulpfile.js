@@ -37,7 +37,8 @@ gulp.task ('move', function() {
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/jquery-form/jquery.form.js',
     'bower_components/jquery-validate/dist/jquery.validate.min.js',
-    'bower_components/slick.js/slick/slick.min.js'])
+    'bower_components/slick.js/slick/slick.min.js',
+    'bower_components/responsive-nav/responsive-nav.min.js'])
     //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
     .pipe(gulp.dest('assets/js/vendor/'));
 });
@@ -52,12 +53,20 @@ gulp.task('scripts', function() {
 
 // Concat JS
 gulp.task('concat', function() {
-  gulp.src(['assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/myscripts.js'])
+  gulp.src(['assets/js/vendor/responsive-nav.min.js','assets/js/scripts/menu--settings.js','assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/scroll--settings.js'])
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
   gulp.src(['assets/js/vendor/jquery.form.min.js','assets/js/scripts/jquery.form.settings.js','assets/js/vendor/jquery.validate.min.js'])
   .pipe(concat('contact.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('assets/js/'));
+  gulp.src(['assets/js/vendor/slick.min.js','assets/js/scripts/slick--settings.js'])
+  .pipe(concat('slider.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('assets/js/'));
+  gulp.src(['assets/js/vendor/jquery-ias.min.js','assets/js/scripts/jquery-ias--settings.js'])
+  .pipe(concat('gallery.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
 });

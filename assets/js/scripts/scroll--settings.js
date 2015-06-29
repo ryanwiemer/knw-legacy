@@ -1,11 +1,3 @@
-//Menu
-$(document).ready(function() {
-  $('#menu-link').click(function() {
-    $('body').toggleClass('active');
-  });
-});
-
-
 //smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

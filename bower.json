@@ -20,6 +20,7 @@
     "picturefill": "~2.3.1",
     "jquery-ias": "~2.2.1",
     "jquery.validation": "~1.13.1",
-    "slick.js": "~1.5.5"
+    "slick.js": "~1.5.5",
+    "responsive-nav": "~1.0.39"
   }
 }
