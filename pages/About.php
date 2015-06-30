@@ -33,7 +33,11 @@ get_header(); ?>
 	</div>
 
   <div class="about-collage about-collage--portrait">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kirsten-noelle-wiemer-knw-photography.jpg" alt="Kirsten Noelle Wiemer knw photography San Fancisco East Bay photographer"/>
+    <?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail();}
+					else {
+					echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png" />';
+				}?>
   </div>
 	</section>
   </div><!-- content-->

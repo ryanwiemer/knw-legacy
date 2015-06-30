@@ -4,11 +4,6 @@
  *
  */
 
-
-////////////////////////
-//Clean up Wordpress////
-////////////////////////
-
 //Remove WP junk in the head
 function remove_wp_version() {
 return '';
@@ -67,11 +62,6 @@ function posts_link_attributes_prev() {
   return 'class="btn-pagination btn-pagination--prev"';
 }
 
-
-////////////////////////
-//Edits to Image Output/
-////////////////////////
-
 //Remove <p> tags from images
 function filter_ptags_on_images($content){
   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -99,10 +89,6 @@ add_theme_support( 'post-thumbnails' );
 //95% jpeg Quality
 add_filter( 'jpeg_quality', create_function( '', 'return 95;' ) );
 
-///////////////////////////
-//Theme Specific Functions/
-///////////////////////////
-
 //Register Menu
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
@@ -122,14 +108,21 @@ $categories = get_the_category();
   }
 }
 
-
-
 //Change Youtube Embed to work with the responsive knw theme
 function alx_embed_html( $html ) {
     return '<div class="video">' . $html . '</div>';
 }
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
+
+
+//Remove Picturefill from RICG Responsive Images Plugin. (It is already part of the global.min.js)
+function mytheme_dequeue_scripts() {
+  wp_dequeue_script('picturefill');
+}
+
+add_action('wp_enqueue_scripts', 'mytheme_dequeue_scripts');
+
 
 ////////////////////////
 //CSS & JS Scripts//////

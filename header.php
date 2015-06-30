@@ -24,7 +24,7 @@
     <?php wp_head(); ?>
 </head>
 
-	<body <?php body_class(); ?> id="top">
+	<body <?php body_class(); ?>>
 		<header>
 				<nav class="menu">
 					<a class="logo" href="<?php echo get_site_url(); ?>">
