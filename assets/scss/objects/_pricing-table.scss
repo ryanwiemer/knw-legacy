@@ -4,7 +4,7 @@
 
 .pricing__portraits {
 	@extend %clearfix;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 }
 
 .pricing__weddings {
@@ -24,8 +24,7 @@
 
 .pricing-table__header {
 	text-align: center;
-	//color: $highlight;
-	margin: .75em .75em .5em;
+	margin: .75em .75em .75em;
 	font-size: 1.5em;
 }
 
@@ -99,6 +98,7 @@ div.pricing-table__list-item--price  {
 .pricing__footnotes {
 	@extend p;
 	font-weight: 600;
+		margin-bottom: 0;
 }
 .pricing__footnotes span {
 	@extend p;
