@@ -22,12 +22,12 @@
   position: absolute;
 	z-index: 2;
   top: 51px; left: 0; bottom: 0; right: 0;
-	width: 250px;
+	width: 150px;
 	@include bp(medium) {
-		width: 350px;
+		width: 200px;
 	}
 	@include bp(extra-large) {
-		width: 450px;
+		width: 250px;
 	}
 
 }
