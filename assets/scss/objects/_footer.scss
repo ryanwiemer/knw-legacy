@@ -8,7 +8,7 @@
 	height: 70px;
 	color: $tertiary;
 	text-align: center;
-	@include bp(small){
+	@include bp(small) {
 		height: 120px;
 	}
  }

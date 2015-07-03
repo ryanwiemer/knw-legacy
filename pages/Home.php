@@ -16,9 +16,9 @@ get_header(); ?>
   <?php endif; ?>
 
 </div>
-<div class="scroll-down">
-  <a class="icon-" href="#content">&#xe600;</a>
-</div>
+<a href='#content' class="scroll-down">
+  <h3>Explore</h3>
+</a>
 
 <div id="content" class="content">
 <?php
@@ -40,10 +40,10 @@ get_header(); ?>
 ?>
 
 <blockquote class="quote">
-  San Francisco Bay Area wedding and portrait photography
+  KNW Phtography specializes in portrait, lifestyle and wedding photography in the San Francisco Bay Area
 </blockquote>
 
-<h2 class="recent-work">Recent Galleries</h2>
+<h2 class="recent-work">Latest Galleries</h2>
 <section class="gallery-list">
   <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
     <article class="gallery">
@@ -65,7 +65,7 @@ get_header(); ?>
     </article>
   <?php endwhile; ?>
 </section>
-<p class="social-aside">For more updates and sneak peeks on what I'm working on visit my page on <a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank">Facebook</a></p>
-
+<a href="<?php echo get_site_url(); ?>/galleries" class="btn">View More Galleries</a>
+<p class="social-aside">To see what I'm currently working on visit my <a href="https://www.facebook.com/pages/Knw-photography/521554914554863?ref=br_tf" target="_blank">Facebook page</a></p>
 </div><!-- content-->
 <?php get_footer(); ?>

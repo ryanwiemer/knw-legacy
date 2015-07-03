@@ -3,6 +3,7 @@
 	background: $highlight;
 	color: white;
 	padding: 1em 1.55em;
+	text-transform: uppercase;
 	@include bp(medium) {
 	  	padding: .76em 1.65em;
 	}

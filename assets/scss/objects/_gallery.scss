@@ -26,6 +26,7 @@
   color: $base;
   padding: .25em .5em;
   margin: .25em;
+  text-transform: capitalize;
 }
 
 .current-cat a {
@@ -75,11 +76,11 @@
   text-align: center;
 }
 
-.no-touch .gallery__overlay:hover {
-    background: rgba(163, 176, 178, 0.85);
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
+.gallery__overlay:hover {
+  background: rgba(163, 176, 178, 0.85);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
 
 .no-touch .gallery__overlay:hover .gallery__title {
   top: 0;
