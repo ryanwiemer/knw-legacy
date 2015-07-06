@@ -29,12 +29,7 @@
   text-transform: capitalize;
 }
 
-.current-cat a {
-  background: $highlight;
-  color: $background;
-}
-
-.no-touch .cat-item a:hover {
+.current-cat a, .no-touch .cat-item a:hover {
   background: $highlight;
   color: $background;
 }
@@ -61,6 +56,10 @@
    }
 }
 
+.gallery__image {
+  margin-bottom: -3px!important;
+}
+
 .gallery__border {
   position: relative;
 }
@@ -84,10 +83,6 @@
 
 .no-touch .gallery__overlay:hover .gallery__title {
   top: 0;
-}
-
-.gallery__image {
-  margin-bottom: -3px!important;
 }
 
 .gallery__title {

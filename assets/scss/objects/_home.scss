@@ -33,7 +33,6 @@
 	@include bp(extra-large) {
 		width: 250px;
 	}
-
 }
 
 .scroll-down {
@@ -72,7 +71,6 @@
 	border-top: 2px solid darken($border, 5%);
 	border-bottom: 2px solid darken($border, 5%);
 	padding: 1em 0;
-	//text-transform: capitalize;
 }
 
 .recent-work {

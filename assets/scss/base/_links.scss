@@ -12,6 +12,6 @@ p a {
 }
 
 .no-touch p a:hover {
-		color: darken( $highlight, 5% );
-		border-bottom: 1px dotted darken ($highlight, 5%);
+	color: darken( $highlight, 5% );
+	border-bottom: 1px dotted darken ($highlight, 5%);
 }

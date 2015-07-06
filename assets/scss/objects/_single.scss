@@ -79,18 +79,5 @@
 }
 
 .return-top {
-	background: lighten($highlight, 10%);
-	color: $background;
-	display: block;
 	text-align: center;
-	width: 100%;
-	font-size: .85em;
-	cursor: pointer;
-	padding: 1em;
-	@include bp(large) {
-	    padding: .75em;
-	}
-  &:hover {
-  	background: $highlight;
-  }
 }

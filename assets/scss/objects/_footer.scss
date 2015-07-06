@@ -24,7 +24,7 @@
 .social-icons {
 	float: none;
 	position: relative;
-	@include bp(small){
+	@include bp(small) {
 		right: .5em;
 		float: left;
 	}
@@ -74,7 +74,7 @@
 //Copyright
 .copyright {
 	display: none;
-	@include bp(small){
+	@include bp(small) {
 		display: block;
 		float: right;
 		color: darken($border, 15%);

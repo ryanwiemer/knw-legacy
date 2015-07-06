@@ -1,7 +1,7 @@
 .btn {
 	display: inline-block;
 	background: $highlight;
-	color: white;
+	color: $background;
 	padding: 1em 1.55em;
 	text-transform: uppercase;
 	@include bp(medium) {
