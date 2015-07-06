@@ -6,11 +6,9 @@
 
 get_header(); ?>
 
-	<div class="hero hero--purple">
-    <h2 class="page__title"><?php echo get_the_title(); ?></h2>
-  </div>
-
   <div class="content">
+
+	<h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 
     <?php if ( have_posts() ) : ?>

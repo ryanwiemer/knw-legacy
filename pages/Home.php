@@ -14,8 +14,8 @@ get_header(); ?>
     </div>
   <?php endwhile; ?>
   <?php endif; ?>
-
 </div>
+
 <a href='#content' class="scroll-down">
   <h3>Explore</h3>
 </a>

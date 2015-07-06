@@ -6,7 +6,8 @@
 get_header(); ?>
 
 <div class="content">
-    <h2 class="page__title"><?php echo get_the_title(); ?></h2>
+
+<h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <section class="pricing__portraits">
 	<div class="pricing-table">

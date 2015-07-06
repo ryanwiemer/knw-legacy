@@ -6,7 +6,8 @@
 get_header(); ?>
 
 <div class="content">
-    <h2 class="page__title"><?php echo get_the_title(); ?></h2>
+
+<h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <?php
   $args = array(
@@ -26,9 +27,7 @@ get_header(); ?>
     $wp_query = new WP_Query();
     $wp_query->query($args);
 ?>
-
 <?php if ( have_posts() ) : ?>
-
 <?php $cat_args = array(
   'orderby'            => 'count',
   'title_li'           => __( '' ),
@@ -67,10 +66,10 @@ get_header(); ?>
 </section>
     <!-- end of the loop -->
 <div class="pagination">
-  <?php
-    next_posts_link( 'Older Entries' );
-    previous_posts_link( 'Newer Entries' );
-  ?>
+<?php
+  next_posts_link( 'Older Entries' );
+  previous_posts_link( 'Newer Entries' );
+?>
 </div>
 
 <?php $wp_query = null; $wp_query = $temp;  // Reset ?>
