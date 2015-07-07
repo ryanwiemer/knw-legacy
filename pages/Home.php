@@ -40,7 +40,7 @@ get_header(); ?>
 ?>
 
 <blockquote class="quote">
-  KNW Phtography specializes in portrait, lifestyle and wedding photography in the San Francisco Bay Area
+  KNW Photography specializes in portrait, lifestyle and wedding photography in the San Francisco Bay Area
 </blockquote>
 
 <h2 class="recent-work">Latest Galleries</h2>
