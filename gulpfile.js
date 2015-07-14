@@ -38,6 +38,7 @@ gulp.task ('move', function() {
     'bower_components/jquery-form/jquery.form.js',
     'bower_components/jquery-validate/dist/jquery.validate.min.js',
     'bower_components/slick.js/slick/slick.min.js',
+    'bower_components/datepicker-fr/ui/datepicker.js',
     'bower_components/responsive-nav/responsive-nav.min.js'])
     //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
     .pipe(gulp.dest('assets/js/vendor/'));
@@ -57,7 +58,7 @@ gulp.task('concat', function() {
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/vendor/jquery.form.min.js','assets/js/scripts/jquery.form.settings.js','assets/js/vendor/jquery.validate.min.js'])
+  gulp.src(['assets/js/vendor/jquery.form.min.js','assets/js/vendor/datepicker.js','assets/js/scripts/jquery.form.settings.js','assets/js/scripts/jquery.datepicker.settings.js','assets/js/vendor/jquery.validate.min.js'])
   .pipe(concat('contact.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));

@@ -22,6 +22,22 @@ get_header(); ?>
       <input class="form__email__input" name="email" type="text"/>
     </div>
 
+    <div class="form__reason">
+      <label class="form__reason__label" for="contact-reason">Contact Reason</label>
+      <select class="form__reason__select" name="contact-reason">
+        <option value=" "> </option>
+        <option value="Book A Portrait Session">Book A Portrait Session</option>
+        <option value="Book A Wedding Package">Book A Wedding Package</option>
+        <option value="General Inquiry">General Inquiry / Question</option>
+        <option value="Photographer Collaboration">Photographer Collaboration</option>
+      </select>
+    </div>
+
+    <div class="form__date">
+      <label class="form__date__label" for="date">Event Date <span>(Optional)</span></label>
+      <input class="form__date__datepicker" name="date" type="text"/>
+    </div>
+
     <div class="form__message">
       <label class="form__message__label" for="message">Message</label>
       <textarea class="form__message__textarea" name="message" type="text"></textarea>

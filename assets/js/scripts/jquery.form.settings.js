@@ -13,6 +13,13 @@ jQuery(function() {
             message: {
                 required: true,
             },
+            date: {
+                required: false,
+            },
+            reason: {
+                required: true,
+                minlength: 3
+            },
             bot: {
                 required: false,
             },
