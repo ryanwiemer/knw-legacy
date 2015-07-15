@@ -79,7 +79,7 @@ select::-ms-expand {
 .form__name__input, .form__email__input, .form__message__textarea, .form__bot__input, .form__reason__select, .form__date__datepicker  {
 	padding: .2em;
 	font-family: $sans;
-	font-size: .85em;
+  @extend p;
   margin-top: .25em;
   margin-bottom: 1.25em;
   width: 100%;
@@ -103,7 +103,7 @@ select::-ms-expand {
 }
 
 .form__success, .form__error {
-  display: none;
+  //display: none;
 }
 
 .form__success {

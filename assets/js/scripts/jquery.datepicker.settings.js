@@ -1,4 +1,7 @@
 // jQuery UI Datepicker Settings
 $(function() {
-    $( ".form__date__datepicker" ).datepicker();
+  var dateToday = new Date();
+    $( ".form__date__datepicker" ).datepicker({
+      minDate: dateToday
+    });
   });

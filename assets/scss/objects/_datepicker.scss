@@ -104,3 +104,7 @@
  	background-color: white;
  	cursor: default;
  }
+
+ .ui-datepicker-unselectable {
+   color: darken($border, 15%);
+ }

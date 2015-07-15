@@ -18,7 +18,6 @@ jQuery(function() {
             },
             reason: {
                 required: true,
-                minlength: 3
             },
             bot: {
                 required: false,

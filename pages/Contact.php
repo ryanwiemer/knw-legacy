@@ -23,9 +23,9 @@ get_header(); ?>
     </div>
 
     <div class="form__reason">
-      <label class="form__reason__label" for="contact-reason">Contact Reason</label>
-      <select class="form__reason__select" name="contact-reason">
-        <option value=" "> </option>
+      <label class="form__reason__label" for="reason">Contact Reason</label>
+      <select class="form__reason__select" name="reason">
+        <option value=""> </option>
         <option value="Book A Portrait Session">Book A Portrait Session</option>
         <option value="Book A Wedding Package">Book A Wedding Package</option>
         <option value="General Inquiry">General Inquiry / Question</option>
