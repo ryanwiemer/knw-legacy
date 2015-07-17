@@ -3,7 +3,8 @@
 	@include transition (all .3s);
 }
 
-.gallery__title, .scroll-down a, .nav-toggle, .menu ul li a, .form__submit {
+.gallery__title, .scroll-down a, .nav-toggle, .menu ul li a, .form__submit, .cd-top,
+.cd-top.cd-is-visible {
 	@include transition (all .3s);
 }
 

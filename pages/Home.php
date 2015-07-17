@@ -4,7 +4,7 @@
  * Description: A Page Template for the Home Page
  */
 get_header(); ?>
-<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/assets/img/knw.svg" />
+<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/assets/img/KNW_Photography_logo_white.svg" />
 <div class="slider">
   <?php if(get_field('slider')): ?>
   <?php while(has_sub_field('slider')): ?>

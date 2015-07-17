@@ -8,7 +8,11 @@
  	display: none;
  	margin-top: 4px;
  	padding: 10px;
- 	width: 240px;
+ 	width: 280px;
+  @extend p;
+  @include bp(medium) {
+    width: 300px;
+  }
  }
  .ui-datepicker a,
  .ui-datepicker a:hover {
@@ -29,6 +33,8 @@
  }
  .ui-datepicker .ui-datepicker-title {
  	font-weight: bold;
+  background: $background;
+  padding: 5px;
  }
  .ui-datepicker .ui-datepicker-prev,
  .ui-datepicker .ui-datepicker-next {
@@ -41,14 +47,15 @@
  	-webkit-font-smoothing: antialiased;
  	font-style: normal;
  	font-weight: normal;
- 	height: 20px;
- 	line-height: 1;
+ 	height: 30px;
+ 	line-height: 35px;
  	margin-top: 2px;
  	width: 30px;
  }
  .ui-datepicker .ui-datepicker-prev {
  	float: left;
  	text-align: left;
+  padding-left: 5px;
   &:hover {
     cursor: pointer;
     color: $highlight;
@@ -57,6 +64,7 @@
  .ui-datepicker .ui-datepicker-next {
  	float: right;
  	text-align: right;
+  padding-right: 5px;
   &:hover {
     cursor: pointer;
     color: $highlight;
@@ -73,15 +81,20 @@
  }
  .ui-datepicker .ui-datepicker-calendar {
    table-layout: fixed;
- 	width: 100%;
+ 	  width: 100%;
  }
  .ui-datepicker .ui-datepicker-calendar th,
  .ui-datepicker .ui-datepicker-calendar td {
  	text-align: center;
  	padding: 4px 0;
  }
+
+ .ui-datepicker .ui-datepicker-calendar th {
+   font-weight: bold;
+ }
+
  .ui-datepicker .ui-datepicker-calendar td {
- 	border-radius: 4px;
+ 	border-radius: 2px;
  	-webkit-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
  	   -moz-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
  	     -o-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
@@ -93,6 +106,9 @@
  }
  .ui-datepicker .ui-datepicker-calendar td a {
  	text-decoration: none;
+  &:hover {
+    color: white;
+  }
  }
  .ui-datepicker .ui-datepicker-current-day {
  	background-color: $highlight;

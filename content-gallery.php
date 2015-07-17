@@ -24,4 +24,5 @@
     else :
     endif;?>
 		<?php the_content(); ?>
+    <a href="#" class="btn cd-top"> Return to top</a>
 </gallery>

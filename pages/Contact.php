@@ -23,12 +23,12 @@ get_header(); ?>
     </div>
 
     <div class="form__reason">
-      <label class="form__reason__label" for="reason">Contact Reason</label>
+      <label class="form__reason__label" for="reason">Reason For Contacting</label>
       <select class="form__reason__select" name="reason">
         <option value=""> </option>
-        <option value="Book A Portrait Session">Book A Portrait Session</option>
+        <option value="Book A Portrait Package">Book A Portrait Package</option>
         <option value="Book A Wedding Package">Book A Wedding Package</option>
-        <option value="General Inquiry">General Inquiry / Question</option>
+        <option value="General Inquiry / Question">General Inquiry / Question</option>
         <option value="Photographer Collaboration">Photographer Collaboration</option>
       </select>
     </div>

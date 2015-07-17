@@ -9,8 +9,15 @@ get_header(); ?>
 
 <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
-<section class="about-container">
+<div class="about-collage about-collage--portrait">
+	<?php if ( has_post_thumbnail() ) {
+				the_post_thumbnail();}
+				else {
+				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png" />';
+			}?>
+</div>
 
+<section class="about-container">
 	<div class="about-collage about-collage--bio">
 		<p><span>M</span>y name is Kirsten Noelle Wiemer and I started KNW
 		Photography to share my love of capturing moments with others. I have
@@ -31,14 +38,6 @@ get_header(); ?>
 
     <h3 class="signature">Kirsten Noelle Wiemer</h3>
 	</div>
-
-  <div class="about-collage about-collage--portrait">
-    <?php if ( has_post_thumbnail() ) {
-					the_post_thumbnail();}
-					else {
-					echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png" />';
-				}?>
-  </div>
-	</section>
-  </div><!-- content-->
+</section>
+</div><!-- content-->
 <?php get_footer(); ?>

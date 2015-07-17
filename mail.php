@@ -10,8 +10,8 @@
     $reason =  sanitize_text_field( $_POST["reason"] );
     $date = sanitize_text_field( $_POST["date"] );
     $message = esc_textarea( $_POST["message"] );
-    $body = '<b>Message From:</b> ' . $name . '<br>';
-    $body .= '<b>Reason:</b> ' . $reason . '<br><br>';
+    $body = '<b>Name:</b> ' . $name . '<br>';
+    $body .= '<b>Reason For Contacting:</b> ' . $reason . '<br>';
     $body .= '<b>Event Date:</b> ' . $date . '<br><br>';
     $body .= $message;
 

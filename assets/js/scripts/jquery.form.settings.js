@@ -32,10 +32,10 @@ jQuery(function() {
                 clearForm: true,
                 url:"../wp-content/themes/knw/mail.php",
                 error: function() {
-                        $('.form__error').fadeIn().delay( 1000 ).fadeOut();
+                        $('.form__error').fadeIn().delay( 2000 ).fadeOut();
                 },
                 success: function() {
-                        $('.form__success').fadeIn().delay( 1000 ).fadeOut();
+                        $('.form__success').fadeIn().delay( 2000 ).fadeOut();
                 }
             });
         }

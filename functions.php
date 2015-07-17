@@ -149,6 +149,13 @@ function knw_gallery_scripts() {
   }
 }
 
+//Single Page Only
+function knw_single_scripts() {
+  if ( is_single( ) ){
+    wp_enqueue_script( 'knw-backtotop',  get_template_directory_uri() . '/assets/js/scripts/backtotop--settings.js', '', '', true);
+  }
+}
+
 //Contact Page Only
 function knw_contact_scripts() {
   if ( is_page('Contact') ){
@@ -159,4 +166,5 @@ function knw_contact_scripts() {
 add_action( 'wp_enqueue_scripts', 'knw_scripts');
 add_action ('wp_enqueue_scripts', 'knw_home_scripts');
 add_action ('wp_enqueue_scripts', 'knw_gallery_scripts');
+add_action ('wp_enqueue_scripts', 'knw_single_scripts');
 add_action ('wp_enqueue_scripts', 'knw_contact_scripts');

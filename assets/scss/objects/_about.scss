@@ -31,16 +31,16 @@
 	padding: 1em 1.25em;
 	background: white;
 	border: 1px solid $border;
-	@include bp(medium) {
-			@include span-columns(6);
-	}
 	p {
-		padding: 0;
-		margin: 0;
 		margin-bottom: .5em;
 	}
 	& p:nth-child(2) {
 		margin-right: 0;
+	}
+	@include bp(medium) {
+		p {
+			@include span-columns(6);
+		}
 	}
 }
 
@@ -58,7 +58,9 @@
 
 //Portrait Image
 .about-collage--portrait {
-	@include bp(medium) {
-			@include span-columns(6);
+	margin-bottom: 1em;
+	border: 1px solid $border;
+	img {
+		margin-bottom: -3px;
 	}
 }

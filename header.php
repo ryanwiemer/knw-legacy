@@ -28,7 +28,7 @@
 	<header>
 			<nav class="menu">
 				<a class="logo" href="<?php echo get_site_url(); ?>">
-					<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/knw-nav.svg" /></h1>
+					<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/KNW_Photography_logo_black.svg" /></h1>
 				</a>
           <?php wp_nav_menu( array( 'menu' => 'Menu 1', 'container' => 'ul', 'menu_class' => '', 'container_class' => '') ); ?>
 			</nav>
