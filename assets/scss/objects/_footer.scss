@@ -15,10 +15,13 @@
  }
 
 .site-footer section {
-	@extend .container;
 	margin: 0 auto;
+	padding: 0;
 	@include bp(small) {
 		padding: 0 .9em;
+	}
+	@include bp(medium) {
+		@extend .container;
 	}
 }
 
