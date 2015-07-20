@@ -12,6 +12,9 @@
 	@include bp(small) {
 		height: 120px;
 	}
+	@include bp(medium) {
+		z-index: -1;
+	}
  }
 
 .site-footer section {
