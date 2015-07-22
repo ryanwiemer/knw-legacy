@@ -10,6 +10,7 @@ header {
   top: 0;
   line-height: 50px;
   z-index: 99;
+  transition: top 0.2s ease-in-out;
 }
 
 .menu {
@@ -113,4 +114,9 @@ header {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+}
+
+//Hide & Show nav-collapse
+.nav-up {
+    top: -51px;
 }

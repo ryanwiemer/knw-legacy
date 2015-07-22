@@ -12,9 +12,6 @@
 	@include bp(small) {
 		height: 120px;
 	}
-	@include bp(medium) {
-		z-index: -1;
-	}
  }
 
 .site-footer section {
@@ -48,7 +45,7 @@
 	border-right: 1px solid $border;
 	margin: 0;
 	padding: 0;
-	@include bp(small){
+	@include bp(small) {
 		border: none;
 		display: inline;
 		width: auto;

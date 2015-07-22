@@ -78,13 +78,29 @@
   border: none;
 }
 
-.back-to-top {
+
+//Back to top Links
+
+.top-link {
+	bottom: 0;
+	background: gray;
+	width: 100%;
+	display: block;
 	position: fixed;
-	bottom: 1em;
-	display: none;
+	//left: 0;
+	text-align: center;
+	background: lighten($base, 15%);
+	color: white;
+	@extend p;
+	line-height: normal;
+	margin-bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	opacity: .5;
 }
 
-.cd-top {
+
+.top-link--arrow {
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
@@ -103,7 +119,6 @@
 	@include bp(medium) {
 		right: 1em;
 	}
-
 	&:hover {
 		background: $highlight;
 		color: white;
@@ -112,10 +127,4 @@
 	&::before {
 			content: "\e600";
 	}
-}
-
-.cd-top.cd-is-visible {
-  /* the button becomes visible */
-  visibility: visible;
-  opacity: 1;
 }
