@@ -10,3 +10,11 @@ var nav = responsiveNav(".menu ul", {
   navActiveClass: "js-nav-active", // String: Class that is added to  element when nav is active
   jsClass: "js", // String: 'JS enabled' class which is added to  element
 });
+
+//Headroom settings
+var myElement = document.querySelector("header");
+var headroom  = new Headroom(myElement, {
+  offset : 40,
+  tolerance : 3,
+});
+headroom.init();

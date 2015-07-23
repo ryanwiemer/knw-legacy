@@ -39,6 +39,7 @@ gulp.task ('move', function() {
     'bower_components/jquery-validate/dist/jquery.validate.min.js',
     'bower_components/slick.js/slick/slick.min.js',
     'bower_components/datepicker-fr/ui/datepicker.js',
+    'bower_components/headroom.js/dist/headroom.min.js',
     'bower_components/responsive-nav/responsive-nav.min.js'])
     //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
     .pipe(gulp.dest('assets/js/vendor/'));
@@ -54,7 +55,7 @@ gulp.task('scripts', function() {
 
 // Concat JS
 gulp.task('concat', function() {
-  gulp.src(['assets/js/vendor/responsive-nav.min.js','assets/js/scripts/menu--settings.js','assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/loading--settings.js','assets/js/scripts/scroll--settings.js'])
+  gulp.src(['assets/js/vendor/responsive-nav.min.js','assets/js/vendor/headroom.min.js','assets/js/scripts/menu--settings.js','assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/loading--settings.js','assets/js/scripts/scroll--settings.js'])
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));

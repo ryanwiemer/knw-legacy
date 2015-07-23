@@ -25,7 +25,7 @@
 </head>
 
 	<body <?php body_class('loading'); ?>>
-	<header>
+	<header class="headroom">
 			<nav class="menu">
 				<a class="logo" href="<?php echo get_site_url(); ?>">
 					<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/KNW_Photography_logo_black.svg" /></h1>
