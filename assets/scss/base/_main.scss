@@ -26,8 +26,8 @@ body {
 	color: $base;
 }
 
-html {
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+.touch {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 
 ::-moz-selection {

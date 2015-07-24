@@ -77,34 +77,3 @@
 .gallery-intro__nav a{
   border: none;
 }
-
-
-//Back to top Link
-.footroom {
-  transition: all 200ms linear;
-	//transform: translateY(50px);
-}
-.footroom--pinned {
-  transform: translateY(0);
-}
-.footroom--unpinned, .footroom--top {
-  transform: translateY(50px);
-}
-
-.top-link {
-	bottom: 0;
-	background: gray;
-	width: 100%;
-	display: block;
-	position: fixed;
-	left: 0;
-	text-align: center;
-	background: lighten($base, 15%);
-	color: white;
-	@extend p;
-	line-height: normal;
-	margin-bottom: 0;
-	height: 50px;
-	line-height: 50px;
-	opacity: .5;
-}

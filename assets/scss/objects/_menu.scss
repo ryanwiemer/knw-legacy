@@ -10,7 +10,8 @@ header {
   top: 0;
   line-height: 50px;
   z-index: 99;
-  transition: top 0.2s ease-in-out;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 }
 
 .menu {

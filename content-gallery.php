@@ -24,5 +24,5 @@
     else :
     endif;?>
 		<?php the_content(); ?>
-    <a href="#" class="top-link footroom">Return to top</a>
+      <a href="" class="btn">Return to top</a>
 </gallery>

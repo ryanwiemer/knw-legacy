@@ -13,22 +13,3 @@ $(function() {
     }
   });
 });
-
-var footroom = document.querySelector(".footroom");
-var backToTop  = new Headroom(footroom, {
-  offset : 40,
-  tolerance : 3,
-  classes : {
-    // when element is initialised
-    initial : "footroom",
-    // when scrolling up
-    pinned : "footroom--pinned",
-    // when scrolling down
-    unpinned : "footroom--unpinned",
-    // when above offset
-    top : "footroom--top",
-    // when below offset
-    notTop : "footroom--not-top"
-  }
-});
-backToTop.init();
