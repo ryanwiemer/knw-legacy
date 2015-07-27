@@ -14,6 +14,6 @@ var nav = responsiveNav(".menu ul", {
 var header = document.querySelector("header");
 var headroom = new Headroom(header, {
   "offset": 40,
-  "tolerance": 3,
+  "tolerance": 5,
 });
 headroom.init();

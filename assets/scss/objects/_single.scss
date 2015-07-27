@@ -81,5 +81,34 @@
 //Return to top button
 .footroom {
 	position: fixed;
-	bottom: 0;
+	bottom: 16px;
+	right: 16px;
+	-webkit-transform: translateZ(0);
+	transform: translateY(80px);
+	-webkit-backface-visibility: hidden;
+	transition: all 0.3s ease-in-out;
+	font-family: "icons";
+	color: $base;
+	background: white;
+	padding: .5em;
+	border: 1px solid $border;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.no-touch .footroom:hover {
+	background: $highlight;
+	color: white;
+}
+
+.footroom--pinned {
+  transform: translateY(0);
+}
+
+.footroom--unpinned {
+  transform: translateY(80px);
+}
+
+.footroom--top {
+	  transform: translateY(80px);
 }

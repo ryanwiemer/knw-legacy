@@ -152,7 +152,7 @@ function knw_gallery_scripts() {
 //Single Page Only
 function knw_single_scripts() {
   if ( is_single( ) ){
-    wp_enqueue_script( 'knw-backtotop',  get_template_directory_uri() . '/assets/js/scripts/backtotop--settings.js', '', '', true);
+    wp_enqueue_script( 'knw-single',  get_template_directory_uri() . '/assets/js/scripts/single--settings.js', '', '', true);
   }
 }
 
