@@ -17,7 +17,7 @@ get_header(); ?>
 </div>
 
 <a href='#content' class="scroll-down">
-  <h3>Explore</h3>
+  <h3 class="btn--explore">Explore</h3>
 </a>
 
 <div id="content" class="content">
