@@ -30,6 +30,7 @@ get_header(); ?>
 <?php if ( have_posts() ) : ?>
 <?php $cat_args = array(
   'orderby'            => 'count',
+  'order'              =>  'DESC',
   'title_li'           => __( '' ),
   'show_option_none'   => __( 'No categories' ),
   'include'            => '',
