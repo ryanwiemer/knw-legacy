@@ -59,7 +59,7 @@ gulp.task('concat', function() {
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/vendor/jquery.form.min.js','assets/js/vendor/datepicker.js','assets/js/scripts/jquery.form.settings.js','assets/js/scripts/jquery.datepicker.settings.js','assets/js/vendor/jquery.validate.min.js'])
+  gulp.src(['assets/js/vendor/datepicker.js','assets/js/scripts/jquery.datepicker.settings.js','assets/js/vendor/jquery.form.js','assets/js/scripts/jquery.form.settings.js','assets/js/vendor/jquery.validate.min.js'])
   .pipe(concat('contact.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
