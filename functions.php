@@ -82,10 +82,8 @@ function sgr_filter_image_sizes( $sizes) {
   }
 add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
 
-
 //Featured Image Support
 add_theme_support( 'post-thumbnails' );
-
 
 //Support for Gallery Post Type
 add_theme_support( 'post-formats', array( 'gallery' ) );
