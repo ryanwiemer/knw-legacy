@@ -13,8 +13,16 @@
 }
 
 .home .content {
-  padding-top: 3.5em;
-	margin: 0 auto 3.5em;
+		padding-top: 7em;
+		margin: -3em auto 3.5em;
+		@include bp(small) {
+			padding-top: 7em;
+			margin: -2.7em auto 3.5em;
+		}
+		@include bp(medium) {
+			padding-top: 3.5em;
+			margin: 0 auto 3.5em;
+		}
 }
 
 .home .btn {

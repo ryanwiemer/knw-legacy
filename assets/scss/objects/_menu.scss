@@ -122,8 +122,12 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 .headroom--pinned {
-  transform: translateY(0%);
+  @include bp(medium) {
+    transform: translateY(0%);
+  }
 }
 .headroom--unpinned {
-  transform: translateY(-100%);
+  @include bp(medium) {
+    transform: translateY(-100%);
+  }
 }
