@@ -66,6 +66,6 @@ get_header(); ?>
   <?php endwhile; ?>
 </section>
 <a href="<?php echo get_site_url(); ?>/galleries" class="btn">View More Galleries</a>
-<p class="social-aside">To see what I'm currently working on visit my <a href="https://www.facebook.com/knwphoto" target="_blank">Facebook page</a></p>
+<p class="social-aside">To see what I'm currently working on visit my <a href="https://www.facebook.com/knwphoto/" target="_blank">Facebook page</a></p>
 </div><!-- content-->
 <?php get_footer(); ?>
