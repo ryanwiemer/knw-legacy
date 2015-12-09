@@ -9,6 +9,9 @@
   border: 1px solid $border;
 	padding: 1em;
   margin-bottom: .5em;
+	.gallery-intro__description a {
+		text-decoration: underline;
+	}
 }
 
 .gallery-intro__title {
