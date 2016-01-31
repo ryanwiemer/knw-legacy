@@ -10,42 +10,66 @@ get_header(); ?>
 <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <section class="pricing__portraits">
+
 	<div class="pricing-table">
-	  <h3 class="pricing-table__header">Portrait Packages</h3>
+	  <h3 class="pricing-table__title">Portrait Packages</h3>
+		<div class="pricing-table__labels">
+			<h4 class="pricing-table__labels--description">Description</h4>
+			<h4 class="pricing-table__labels--price">Price</h4>
+		</div>
+		<?php if( have_rows('portrait_pricing_table') ): ?>
 		<ul class="pricing-table__list">
-			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item--description">Description</h4><h4 class="pricing-table__list-item--price">Price</h4></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Individual Portrait</span>For high school senior photos, maternity, headshots, and others. This session is for an individual for 60 minutes.</div><div class="pricing-table__list-item--price">$250</div></li>
-			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Couples / Engagements </span>This session includes 1 location for 60 - 90 minutes. I often customize packages for couples so if you need to extend the time or travel to various locations I would love to create a customized package for you.</div><div class="pricing-table__list-item--price">$300</div></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Family Portrait</span>Family sessions include up to 4 people (each additional person $25) for 60 minutes. I love working outdoors but I am also willing to shoot inside your home to accommodate your needs.</div><div class="pricing-table__list-item--price">$325</div></li>
+			<?php while( have_rows('portrait_pricing_table') ): the_row(); ?>
+			<li class="pricing-table__row">
+				<h5><?php the_sub_field('package_name'); ?></h5>
+				<h6><?php the_sub_field('package_description'); ?></h6>
+				<h7>$<?php the_sub_field('package_price'); ?></h7>
+			</li>
+			<?php endwhile; ?>
 		</ul>
+		<?php endif; ?>
 	</div>
+
   <div class="pricing__footnotes">Additional Information
-    <ul>
-      <li>A $100 non-refundable deposit is required to secure your session date.</li>
-      <li>Each portrait package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
-      <li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any package.</li>
-    </ul>
+		<?php if( have_rows('portrait_additional_info') ): ?>
+	    <ul>
+				<?php while( have_rows('portrait_additional_info') ): the_row(); ?>
+	      	<li><?php the_sub_field('footnotes'); ?></li>
+				<?php endwhile; ?>
+	    </ul>
+		<?php endif; ?>
   </div>
+
 </section>
 
 <section class="pricing__weddings">
 	<div class="pricing-table">
-	<h3 class="pricing-table__header">Wedding Packages</h3>
+		<h3 class="pricing-table__title">Wedding Packages</h3>
+		<div class="pricing-table__labels">
+			<h4 class="pricing-table__labels--description">Description</h4>
+			<h4 class="pricing-table__labels--price">Price</h4>
+		</div>
+		<?php if( have_rows('wedding_pricing_table') ): ?>
 		<ul class="pricing-table__list">
-			<li class="pricing-table__top-row"><h4 class="pricing-table__list-item--description">Description</h4><h4 class="pricing-table__list-item--price">Price</h4></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Bridals / Formals</span>This session includes 1 location for a bride / groom or a bride and groom in formal attire for 60 minutes. The session can be done prior to the wedding or on the actual wedding day.</div><div class="pricing-table__list-item--price">$350</div></li>
-			<li class="pricing-table__even"><div class="pricing-table__list-item"><span>Basic Wedding Package</span>This package includes 4 hours of wedding day coverage.</div><div class="pricing-table__list-item--price">$1500</div></li>
-			<li class="pricing-table__odd"><div class="pricing-table__list-item"><span>Complete Wedding Package</span>This package includes 6 hours or more of wedding day coverage.</div><div class="pricing-table__list-item--price">$2100+</div></li>
-      <p class="pricing-table__email">Not finding a good fit? I am also happy to create a custom wedding package just for you! Please <a href="/contact">contact me</a> with details of your wedding to discuss a customized package.</p>
-    </ul>
+			<?php while( have_rows('wedding_pricing_table') ): the_row(); ?>
+			<li class="pricing-table__row">
+				<h5><?php the_sub_field('package_name'); ?></h5>
+				<h6><?php the_sub_field('package_description'); ?></h6>
+				<h7>$<?php the_sub_field('package_price'); ?></h7>
+			</li>
+			<?php endwhile; ?>
+			<p class="pricing-table__email">Not finding a good fit? I am also happy to create a custom wedding package just for you! Please <a href="/contact">contact me</a> with details of your wedding to discuss a customized package.</p>
+		</ul>
+		<?php endif; ?>
 	</div>
   <div class="pricing__footnotes">Additional Information
-    <ul>
-      <li>A $500 non-refundable deposit is required to secure your wedding date.</li>
-    	<li>Each wedding package comes with a USB of edited high resolution color and black and white photos from your session. Printing rights included.</li>
-    	<li>Travel fees may apply outside of the San Francisco East Bay Area. Additional time and locations are available upon request on any package.</li>
-    	<li>Popular travel locations outside of the San Francisco Bay Area include Las Vegas, Reno, Lake Tahoe, Phoenix, and Salt Lake City.</li>
-    </ul>
+		<?php if( have_rows('wedding_additional_info') ): ?>
+	    <ul>
+				<?php while( have_rows('wedding_additional_info') ): the_row(); ?>
+	      	<li><?php the_sub_field('footnotes'); ?></li>
+				<?php endwhile; ?>
+	    </ul>
+		<?php endif; ?>
   </div>
 </section>
 </div><!-- content-->

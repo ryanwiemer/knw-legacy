@@ -12,6 +12,10 @@
 	padding-bottom: 0;
 }
 
+.pricing-table__list {
+	margin: 0 1em 2em;
+}
+
 .pricing-table {
 	@include span-columns(12);
 	background: white;
@@ -22,77 +26,80 @@
 	}
 }
 
-.pricing-table__header {
+.pricing-table__title {
 	text-align: center;
 	margin: .75em .75em .75em;
 	font-size: 1.5em;
 }
 
-.pricing-table__list {
-	margin: 0 1em 2em;
+.pricing-table__labels {
+	margin: 0 1em .5em;
+	padding: 0 .5em;
+	@extend %clearfix;
 }
-
-.pricing-table__list-item {
+.pricing-table__labels--description {
 	@include span-columns(8);
-	padding: .5em;
-	line-height: 1.4;
 }
-
-.pricing-table__list-item--price {
+.pricing-table__labels--price {
 	@include span-columns(4);
 	text-align: center;
-	padding: 0;
-	margin-bottom: .5em;
-	@extend p;
 }
 
-.pricing-table h4 {
-	font-size: 1em;
-	font-family: $serif;
-}
-
-.pricing-table__list-item--description {
-	@include span-columns(8);
-	padding: 0;
-	margin-bottom: .5em;
-	font-size: 1em;
-}
-
-.pricing-table__top-row {
-	background: white;
+.pricing-table__row {
+	margin-bottom: 1em;
+	padding: .5em;
 	@extend %clearfix;
-}
+	h5 {
+		margin-bottom: .25em;
+		@include span-columns(8);
+		font-weight: bold;
+		font-family: $sans;
+		font-size: .95em;
+	  @include bp(medium) {
+	      font-size: .85em;
+	  }
+	  @include bp(large) {
+	      font-size: .75em;
+	  }
+	}
+	h6 {
+		font-family: $sans;
+		font-size: .95em;
+		@include span-columns(8);
+	  @include bp(medium) {
+	    font-size: .85em;
+	  }
+	  @include bp(large) {
+	    font-size: .75em;
+	  }
+	}
+	h7 {
+		font-family: $sans;
+		font-size: .95em;
+		@include span-columns(4);
+		text-align: center;
+	  @include bp(medium) {
+	      font-size: .85em;
+	  }
+	  @include bp(large) {
+	      font-size: .75em;
+	  }
+	}
 
-.pricing-table__odd {
-	background: $border;
-	@extend %clearfix;
-	padding: 0;
-}
-
-.pricing-table__even {
-	@extend %clearfix;
-}
-
-div.pricing-table__list-item--price  {
-	padding-top: .5em;
-}
-
-.pricing-table__list-item span {
-	font-size: 1em;
-	line-height: 1.5;
-	font-weight: 600;
-	@extend %clearfix;
-}
-
-.pricing-table__list-item  {
-	@extend p;
+	&:nth-child(odd){
+		background: $border;
+	}
+	&:last-child div {
+		margin-bottom: 0;
+	}
 }
 
 .pricing-table__email {
 	max-width: 600px;
-	padding: 1em .5em 0 .5em;
+	padding: 0 .5em;
 	@extend p;
 }
+
 
 //Pricing Additional Information
 .pricing__footnotes {

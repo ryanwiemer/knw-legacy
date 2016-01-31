@@ -10,7 +10,9 @@ get_header(); ?>
 <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
 <form class="form" method="post" name="contact" novalidate="novalidate">
-  <p class="form__intro">Please feel free to contact me with comments, questions or to schedule your shoot. I also love to collaborate with other creative individuals on new projects, so please drop me a line.</p>
+  <div class="form__intro">
+    <?php the_content(); ?>
+  </div>
   <fieldset>
     <div class="form__name">
       <label class="form__name__label" for="name">Name</label>
