@@ -82,6 +82,12 @@ function sgr_filter_image_sizes( $sizes) {
   }
 add_filter('intermediate_image_sizes_advanced', 'sgr_filter_image_sizes');
 
+//Remove max width on images (1600px)
+function remove_max_srcset_image_width( $max_width ) {
+    return false;
+}
+add_filter( 'max_srcset_image_width', 'remove_max_srcset_image_width' );
+
 //Featured Image Support
 add_theme_support( 'post-thumbnails' );
 
