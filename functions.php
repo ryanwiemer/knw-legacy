@@ -124,14 +124,6 @@ add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
 
-//Remove Picturefill from RICG Responsive Images Plugin. (It is already part of the global.min.js)
-function mytheme_dequeue_scripts() {
-  wp_dequeue_script('picturefill');
-}
-
-add_action('wp_enqueue_scripts', 'mytheme_dequeue_scripts');
-
-
 ////////////////////////
 //CSS & JS Scripts//////
 ////////////////////////
@@ -160,14 +152,14 @@ function knw_gallery_scripts() {
 //Single Page Only
 function knw_single_scripts() {
   if ( is_single( ) ){
-    wp_enqueue_script( 'knw-single',  get_template_directory_uri() . '/assets/js/scripts/single--settings.js', '', '', true);
+    wp_enqueue_script( 'knw-single',  get_template_directory_uri() . '/assets/js/single.min.js', '', '', true);
   }
 }
 
 //Contact Page Only
 function knw_contact_scripts() {
   if ( is_page('Contact') ){
-    wp_enqueue_script( 'knw-jquery',  get_template_directory_uri() . '/assets/js/contact.min.js', '', '', true);
+    wp_enqueue_script( 'knw-contact',  get_template_directory_uri() . '/assets/js/contact.min.js', '', '', true);
   }
 }
 

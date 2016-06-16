@@ -6,7 +6,7 @@
 
 <?php if( have_rows('gallery_intro') ):
    while ( have_rows('gallery_intro') ) : the_row(); ?>
-<gallery>
+<gallery class="baguetteBox">
   <section class="gallery-intro">
     <div>
       <h2 class="gallery-intro__title"><?php the_title(); ?></h2>

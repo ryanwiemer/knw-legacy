@@ -14,20 +14,14 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.1",
+    "jquery": "~3.0.0",
     "jquery-form": "~3.46.0",
-    "jquery-validate": "~1.14.0",
-    "picturefill": "~3.0.1",
+    "jquery-validate": "~1.15.0",
+    "picturefill": "~3.0.2",
     "jquery-ias": "~2.2.1",
-    "slick.js": "~1.5.5",
+    "slick.js": "~1.6.0",
     "responsive-nav": "~1.0.39",
-    "headroom.js": "~0.7.0",
+    "headroom.js": "~0.9.3",
     "infinite-ajax-scroll": "~2.2.1"
-  },
-  "resolutions": {
-    "jquery-validate": "~1.14.0",
-    "jquery.validation": "~1.14.0",
-    "infinite-ajax-scroll": "~2.2.1",
-    "picturefill": "~3.0.1"
   }
 }

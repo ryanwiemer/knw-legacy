@@ -2,7 +2,6 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
@@ -33,7 +32,6 @@ gulp.task('browser-sync', function() {
 // Move and Minfiy Scripts from Bower
 gulp.task ('move', function() {
   return gulp.src([
-    'bower_components/picturefill/dist/picturefill.min.js',
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/jquery-form/jquery.form.js',
     'bower_components/jquery-validate/dist/jquery.validate.min.js',
@@ -45,17 +43,9 @@ gulp.task ('move', function() {
     .pipe(gulp.dest('assets/js/vendor/'));
 });
 
-// Lint JS
-gulp.task('scripts', function() {
-  gulp.src(['assets/js/scripts/*.js'])
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'))
-  .pipe(browserSync.reload({stream:true}));
-});
-
 // Concat JS
 gulp.task('concat', function() {
-  gulp.src(['assets/js/vendor/responsive-nav.min.js','assets/js/vendor/headroom.min.js','assets/js/scripts/menu--settings.js','assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/loading--settings.js','assets/js/scripts/scroll--settings.js'])
+  gulp.src(['assets/js/vendor/jquery.min.js','assets/js/vendor/responsive-nav.min.js','assets/js/vendor/headroom.min.js','assets/js/scripts/menu--settings.js','assets/js/scripts/loading--settings.js','assets/js/scripts/scroll--settings.js'])
   .pipe(concat('global.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
@@ -71,6 +61,10 @@ gulp.task('concat', function() {
   .pipe(concat('gallery.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('assets/js/'));
+  gulp.src(['assets/js/scripts/backtop--settings.js','assets/js/vendor/baguetteBox.min.js','assets/js/scripts/baguetteBox--settings.js'])
+  .pipe(concat('single.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('assets/js/'));
 });
 
 // Compile Sass & Minify CSS
@@ -79,7 +73,7 @@ gulp.task('sass', function() {
   .pipe(sass({
     includePaths: require('node-neat').includePaths
   }))
-  .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+  .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1'))
   .pipe(minifycss())
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest('assets/css/'))
@@ -88,10 +82,10 @@ gulp.task('sass', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('assets/scss/*/*.scss', ['sass'])
-    gulp.watch('assets/js/*/*.js', ['scripts', 'concat'])
-    gulp.watch('.php').on('change', reload);
+  gulp.watch('assets/scss/*/*.scss', ['sass'])
+  gulp.watch('assets/js/*/*.js', ['concat'])
+  gulp.watch('.php').on('change', reload);
 });
 
 // Default Task
-gulp.task('default', ['sass','scripts','concat', 'browser-sync','watch']);
+gulp.task('default', ['sass','concat', 'browser-sync','watch']);
