@@ -32,7 +32,7 @@ get_header(); ?>
           <?php if ( has_post_thumbnail() ) {
               the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
               else {
-                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
           <div class="gallery__overlay">
             <h3 class="gallery__title"><?php the_title(); ?></h3>

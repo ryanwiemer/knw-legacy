@@ -13,7 +13,7 @@ get_header(); ?>
 	<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail();}
 				else {
-				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png" />';
+				echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png" />';
 			}?>
 </div>
 

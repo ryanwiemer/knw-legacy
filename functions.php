@@ -130,37 +130,8 @@ add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
 //Global Styles and Scripts
 function knw_scripts() {
-  wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/assets/css/style.min.css');
-  wp_enqueue_script( 'knw-modernizr',  get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js');
-  wp_enqueue_script( 'knw-global',  get_template_directory_uri() . '/assets/js/global.min.js', '', '', true);
-}
-
-//Homepage Only
-function knw_home_scripts() {
-  if ( is_page('Home') ){
-    wp_enqueue_script( 'knw-slider',  get_template_directory_uri() . '/assets/js/slider.min.js', '', '', true);
-  }
-}
-
-//Galleries Page Only
-function knw_gallery_scripts() {
-  if ( is_archive() or is_page('Galleries')){
-    wp_enqueue_script( 'knw-infinite-scroll',  get_template_directory_uri() . '/assets/js/gallery.min.js', '', '', true);
-  }
-}
-
-//Single Page Only
-function knw_single_scripts() {
-  if ( is_single( ) ){
-    wp_enqueue_script( 'knw-single',  get_template_directory_uri() . '/assets/js/single.min.js', '', '', true);
-  }
-}
-
-//Contact Page Only
-function knw_contact_scripts() {
-  if ( is_page('Contact') ){
-    wp_enqueue_script( 'knw-contact',  get_template_directory_uri() . '/assets/js/contact.min.js', '', '', true);
-  }
+  wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/dist/css/style.min.css');
+  wp_enqueue_script( 'knw-scripts',  get_template_directory_uri() . '/dist/js/scripts.min.js', '', '', true);
 }
 
 add_action( 'wp_enqueue_scripts', 'knw_scripts');

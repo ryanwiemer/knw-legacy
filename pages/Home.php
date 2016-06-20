@@ -4,7 +4,7 @@
  * Description: A Page Template for the Home Page
  */
 get_header(); ?>
-<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/assets/img/KNW_Photography_logo_white.svg" />
+<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/dist/img/KNW_Photography_logo_white.svg" />
 <div class="slider">
   <?php if(get_field('slider')): ?>
   <?php while(has_sub_field('slider')): ?>
@@ -55,7 +55,7 @@ get_header(); ?>
             <?php
               }
               else {
-                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
           <div class="gallery__overlay">
             <h3 class="gallery__title"><?php the_title(); ?></h3>
