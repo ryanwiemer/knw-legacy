@@ -1,6 +1,7 @@
 {
   "name": "knw",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "description": "http://www.knw.io",
   "main": "index.php",
   "repository": {
@@ -34,8 +35,10 @@
     "gulp-uglify": "~1.5.3",
     "gulp-util": "~3.0.7",
     "headroom.js": "^0.9.3",
+    "infinite-ajax-scroll": "git+https://git@github.com:webcreate/infinite-ajax-scroll.git",
     "jquery": "^3.0.0",
     "jquery-form": "^3.50.0",
+    "jquery-ui": "^1.10.5",
     "jquery-validation": "^1.15.0",
     "node-bourbon": "~4.2.8",
     "node-neat": "~1.7.2",
@@ -43,7 +46,6 @@
     "rollup-stream": "^1.7.1",
     "slick-carousel": "^1.6.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "infinite-ajax-scroll": "git://github.com/webcreate/infinite-ajax-scroll.git"
+    "vinyl-source-stream": "^1.1.0"
   }
 }

@@ -1,5 +1,4 @@
-import { $, jquery } from './vendor/jquery.min.js';
-
+import { $, jquery } from './vendor/jquery.js';
 // import menu from './components/menu';
 // import home from './components/home';
 // import gallery from './components/gallery';
