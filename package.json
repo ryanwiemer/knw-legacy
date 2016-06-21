@@ -35,7 +35,7 @@
     "gulp-uglify": "~1.5.3",
     "gulp-util": "~3.0.7",
     "headroom.js": "^0.9.3",
-    "infinite-ajax-scroll": "git+https://git@github.com:webcreate/infinite-ajax-scroll.git",
+    "infinite-ajax-scroll": "webcreate/infinite-ajax-scroll",
     "jquery": "^3.0.0",
     "jquery-form": "^3.50.0",
     "jquery-ui": "^1.10.5",

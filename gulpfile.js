@@ -68,7 +68,8 @@ gulp.task('js', function() {
   .pipe(babel())
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest('dist/js/'));
+  .pipe(gulp.dest('dist/js/'))
+  .pipe(browserSync.reload({stream:true}));
 });
 
 // Compile Sass & Minify CSS
@@ -93,4 +94,4 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['sass','js','browser-sync','watch']);
-gulp.task('build', ['move-fonts','move-images','move-js']);
+gulp.task('build', ['move-fonts','move-images']);

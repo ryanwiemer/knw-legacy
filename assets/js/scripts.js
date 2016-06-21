@@ -1,5 +1,6 @@
-import { $, jquery } from './vendor/jquery.js';
-// import menu from './components/menu';
+import '../../node_modules/jquery/dist/jquery.js';
+
+import './components/menu';
 // import home from './components/home';
 // import gallery from './components/gallery';
 // import single from './components/single';
