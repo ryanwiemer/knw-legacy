@@ -3,10 +3,7 @@ var gulp = require('gulp');
 
 // Include the Plugins
 var webpack = require('webpack-stream');
-var nodeExternals = require('webpack-node-externals');
 var babel = require('gulp-babel');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
@@ -51,8 +48,6 @@ gulp.task('js', function() {
   return gulp.src('assets/js/scripts.js')
     .pipe(webpack({
       watch: true,
-      target: 'node',
-      externals: [nodeExternals()],
       output: {
         filename: 'scripts.min.js',
       },
@@ -60,7 +55,6 @@ gulp.task('js', function() {
         loaders: [
           {
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
             loader: 'babel?presets[]=es2015'
           },
         ],
