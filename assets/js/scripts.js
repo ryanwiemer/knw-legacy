@@ -1,4 +1,3 @@
-import $ from 'jquery';
 
 import './components/menu';
 // import home from './components/home';

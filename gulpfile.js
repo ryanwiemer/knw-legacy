@@ -3,7 +3,7 @@ var gulp = require('gulp');
 
 // Include the Plugins
 var webpack = require('webpack-stream');
-var rollup = require('rollup-stream');
+var nodeExternals = require('webpack-node-externals');
 var babel = require('gulp-babel');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
@@ -46,38 +46,30 @@ gulp.task ('move-images', function() {
     .pipe(gulp.dest('dist/img/'));
 });
 
-// Move JS Scripts
-gulp.task ('move-js', function() {
-  return gulp.src([
-    'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery-form/jquery.form.js',
-    'node_modules/jquery-validate/dist/jquery.validate.js',
-    'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/headroom.js/dist/headroom.js',
-    'node_modules/baguettebox.js/dist/baguettebox.min.js',
-    'node_modules/responsive-nav/responsive-nav.js'])
-    //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
-    //'bower_components/datepicker-fr/ui/datepicker.js'
-    .pipe(gulp.dest('assets/js/vendor/'));
-});
-
 // Compile JS and Uglify
 gulp.task('js', function() {
   return gulp.src('assets/js/scripts.js')
-  .pipe(webpack({
-    output: {
+    .pipe(webpack({
+      watch: true,
+      target: 'node',
+      externals: [nodeExternals()],
+      output: {
         filename: 'scripts.min.js',
       },
-    module: {
-        loaders: [{
-          loader: 'babel-loader'
-        }]
-      }
-  }))
-  .pipe(babel())
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js/'))
-  .pipe(browserSync.reload({stream:true}));
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            loader: 'babel?presets[]=es2015'
+          },
+        ],
+      },
+    }))
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 // Compile Sass & Minify CSS
