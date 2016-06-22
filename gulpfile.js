@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 
 // Include the Plugins
+var webpack = require('webpack-stream');
 var rollup = require('rollup-stream');
 var babel = require('gulp-babel');
 var source = require('vinyl-source-stream');
@@ -62,12 +63,19 @@ gulp.task ('move-js', function() {
 
 // Compile JS and Uglify
 gulp.task('js', function() {
-  return rollup({entry: 'assets/js/scripts.js'})
-  .pipe(source('scripts.js'))
-  .pipe(buffer())
+  return gulp.src('assets/js/scripts.js')
+  .pipe(webpack({
+    output: {
+        filename: 'scripts.min.js',
+      },
+    module: {
+        loaders: [{
+          loader: 'babel-loader'
+        }]
+      }
+  }))
   .pipe(babel())
   .pipe(uglify())
-  .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest('dist/js/'))
   .pipe(browserSync.reload({stream:true}));
 });

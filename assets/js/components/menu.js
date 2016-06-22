@@ -1,5 +1,6 @@
-import '../../../node_modules/jquery/dist/jquery.js';
+import $ from 'jquery';
 import '../../../node_modules/responsive-nav/responsive-nav.js';
+// import '../../../node_modules/headroom.js/dist/headroom.js';
 
 $(document).ready(function () {
   const nav = responsiveNav(".menu ul", {

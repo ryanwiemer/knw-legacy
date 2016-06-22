@@ -1,4 +1,4 @@
-import '../../node_modules/jquery/dist/jquery.js';
+import $ from 'jquery';
 
 import './components/menu';
 // import home from './components/home';
