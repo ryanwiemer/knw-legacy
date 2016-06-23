@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import responsiveNav from 'responsive-nav';
 import Headroom from 'headroom.js';
 

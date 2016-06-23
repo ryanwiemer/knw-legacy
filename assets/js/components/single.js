@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import baguetteBox from 'baguettebox.js';
 
 baguetteBox.run('.baguetteBox', {

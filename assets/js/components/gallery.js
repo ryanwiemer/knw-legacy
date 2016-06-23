@@ -1,4 +1,4 @@
-import jQuery from 'jquery'
+// import jQuery from 'jquery'
 import IAS from 'jquery-ias';
 
 const ias=jQuery.ias({
