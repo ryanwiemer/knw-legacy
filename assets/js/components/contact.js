@@ -1,3 +1,9 @@
-require('.js/vendor/datepicker.js');
-require('.js/vendor/jquery.form.js');
-require('.js/vendor/jquery.validate.js');
+import $ from 'jquery';
+import Datepicker from 'jquery-ui';
+// import from 'jquery-form';
+// import jqueryValidation from 'jquery-validation';
+
+const dateToday = new Date();
+$('.form__date__datepicker').datepicker({
+  minDate: dateToday,
+});

@@ -18,8 +18,8 @@ var reload      = browserSync.reload;
 // Start Up browser-sync
 gulp.task('browser-sync', function() {
   var files = [
-    'assets/css/*.css',
-    'assets/js/*.js',
+    'dist/css/*.css',
+    'dist/js/*.js',
     '*.php'
   ];
   browserSync.init(files, {
@@ -55,6 +55,7 @@ gulp.task('js', function() {
         loaders: [
           {
             test: /\.js$/,
+            exclude: /node_modules/,
             loader: 'babel?presets[]=es2015,cacheDirectory'
           },
         ],

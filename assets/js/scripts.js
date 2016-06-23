@@ -1,6 +1,6 @@
 
 import './components/menu';
-// import home from './components/home';
-// import gallery from './components/gallery';
-// import single from './components/single';
-// import contact from './components/contact';
+import './components/single';
+import './components/home';
+import './components/contact';
+// import './components/gallery';
