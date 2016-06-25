@@ -2,7 +2,9 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-var webpack = require('webpack-stream');
+var webpack = require("webpack");
+var WebpackDevServer = require("webpack-dev-server");
+var webpackConfig = require("./webpack.config.js");
 var babel = require('gulp-babel');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
