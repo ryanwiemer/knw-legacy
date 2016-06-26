@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Datepicker from 'jquery-ui';
+import { datepicker } from  'jquery-ui';
 // import from 'jquery-form';
 // import jqueryValidation from 'jquery-validation';
 

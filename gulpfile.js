@@ -2,15 +2,16 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-var webpack = require("webpack");
-var WebpackDevServer = require("webpack-dev-server");
-var webpackConfig = require("./webpack.config.js");
-var babel = require('gulp-babel');
+var rollup = require('rollup').rollup;
+var babel = require('rollup-plugin-babel');
+var uglify = require('rollup-plugin-uglify');
+var commonjs = require('rollup-plugin-commonjs');
+var nodeResolve = require('rollup-plugin-node-resolve');
+
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
@@ -47,26 +48,25 @@ gulp.task ('move-images', function() {
 
 // Compile JS and Uglify
 gulp.task('js', function() {
-  return gulp.src('assets/js/scripts.js')
-    .pipe(webpack({
-      watch: true,
-      output: {
-        filename: 'scripts.min.js',
-      },
-      module: {
-        loaders: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel?presets[]=es2015,cacheDirectory'
-          },
-        ],
-      },
-    }))
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js/'))
-    .pipe(browserSync.reload({stream:true}));
+  return rollup({
+      entry: 'assets/js/scripts.js',
+      plugins: [
+        nodeResolve({ jsnext: true }),
+        commonjs(),
+        babel({
+          babelrc: false,
+          presets: ["es2015-rollup"],
+          exclude: 'node_modules/**'
+        }),
+        uglify()
+      ]
+      }).then(function (bundle) {
+  return bundle.write({
+      format: 'iife',
+      dest: 'dist/js/scripts.min.js'
+      });
+      (browserSync.reload({stream:true}));
+    });
 });
 
 // Compile Sass & Minify CSS
