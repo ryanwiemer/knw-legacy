@@ -51,8 +51,13 @@ gulp.task('js', function() {
   return rollup({
       entry: 'assets/js/scripts.js',
       plugins: [
-        nodeResolve({ jsnext: true }),
-        commonjs(),
+        nodeResolve({
+          jsnext: true,
+          main: true
+        }),
+        commonjs({
+          include: 'node_modules/**'
+        }),
         babel({
           babelrc: false,
           presets: ["es2015-rollup"],
@@ -63,7 +68,8 @@ gulp.task('js', function() {
       }).then(function (bundle) {
   return bundle.write({
       format: 'iife',
-      dest: 'dist/js/scripts.min.js'
+      dest: 'dist/js/scripts.min.js',
+      sourceMap: true
       });
       (browserSync.reload({stream:true}));
     });
