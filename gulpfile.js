@@ -51,17 +51,17 @@ gulp.task('js', function() {
   return rollup({
       entry: 'assets/js/scripts.js',
       plugins: [
+        babel({
+          babelrc: false,
+          presets: ["es2015-rollup"],
+          exclude: 'node_modules/**/**'
+        }),
         nodeResolve({
           jsnext: true,
           main: true
         }),
         commonjs({
-          include: 'node_modules/**'
-        }),
-        babel({
-          babelrc: false,
-          presets: ["es2015-rollup"],
-          exclude: 'node_modules/**'
+          include: 'node_modules/**/**',
         }),
         uglify()
       ]
