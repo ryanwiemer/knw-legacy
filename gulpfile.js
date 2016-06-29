@@ -61,9 +61,8 @@ gulp.task('js', function() {
           main: true
         }),
         commonjs({
-          include: 'node_modules/**/**',
-        }),
-        uglify()
+          include: 'node_modules/**/**'
+        })
       ]
       }).then(function (bundle) {
   return bundle.write({
