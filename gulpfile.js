@@ -2,12 +2,10 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-var rollup = require('rollup').rollup;
-var babel = require('rollup-plugin-babel');
-var uglify = require('rollup-plugin-uglify');
-var commonjs = require('rollup-plugin-commonjs');
-var nodeResolve = require('rollup-plugin-node-resolve');
 
+var webpack = require('webpack');
+var gulpWebpack = require('webpack-stream');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
@@ -48,30 +46,35 @@ gulp.task ('move-images', function() {
 
 // Compile JS and Uglify
 gulp.task('js', function() {
-  return rollup({
-      entry: 'src/js/scripts.js',
-      plugins: [
-        babel({
-          babelrc: false,
-          presets: ["es2015-rollup"],
-          exclude: 'node_modules/**/**'
-        }),
-        nodeResolve({
-          jsnext: true,
-          main: true
-        }),
-        commonjs({
-          include: 'node_modules/**/**'
-        })
-      ]
-      }).then(function (bundle) {
-  return bundle.write({
-      format: 'iife',
-      dest: 'src/js/scripts.min.js',
-      sourceMap: true
-      });
-      (browserSync.reload({stream:true}));
-    });
+  return gulp.src('src/js/scripts.js')
+    .pipe(gulpWebpack({
+      watch: true,
+      output: {
+        filename: 'scripts.min.js',
+      },
+      plugins: [new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      })],
+      module: {
+        loaders: [
+          {
+            test: /\.(eot|ico|ttf|woff|woff2|gif|jpe?g|png|svg)$/,
+            exclude: /node_modules/,
+            loader: 'file-loader'
+          },
+          {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel?presets[]=es2015,cacheDirectory'
+          }
+        ]
+      },
+      devtool: 'source-map'
+      }, webpack))
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 // Compile Sass & Minify CSS
