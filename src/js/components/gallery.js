@@ -8,6 +8,6 @@ const ias=jQuery.ias({
   next:".btn-pagination--next",
   negativeMargin:"250"});
   ias.extension(new IASSpinnerExtension({
-    src:"/wp-content/themes/knw/assets/img/loading.gif"
+    src:"/wp-content/themes/knw/dist/img/loading.gif"
   })
 );

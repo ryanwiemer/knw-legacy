@@ -35,21 +35,21 @@ gulp.task('browser-sync', function() {
 // Move Font Icons
 gulp.task ('move-fonts', function() {
   return gulp.src(
-    'assets/fonts/*')
+    'src/fonts/*')
     .pipe(gulp.dest('dist/fonts/'));
 });
 
 // Move Image Files
 gulp.task ('move-images', function() {
   return gulp.src(
-    'assets/img/*')
+    'src/img/*')
     .pipe(gulp.dest('dist/img/'));
 });
 
 // Compile JS and Uglify
 gulp.task('js', function() {
   return rollup({
-      entry: 'assets/js/scripts.js',
+      entry: 'src/js/scripts.js',
       plugins: [
         babel({
           babelrc: false,
@@ -67,7 +67,7 @@ gulp.task('js', function() {
       }).then(function (bundle) {
   return bundle.write({
       format: 'iife',
-      dest: 'dist/js/scripts.min.js',
+      dest: 'src/js/scripts.min.js',
       sourceMap: true
       });
       (browserSync.reload({stream:true}));
@@ -76,7 +76,7 @@ gulp.task('js', function() {
 
 // Compile Sass & Minify CSS
 gulp.task('sass', function() {
-  gulp.src(['assets/scss/style.scss'])
+  gulp.src(['src/scss/style.scss'])
   .pipe(sass({
     includePaths: require('node-neat').includePaths
   }))
@@ -89,8 +89,8 @@ gulp.task('sass', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('assets/scss/*/*.scss', ['sass'])
-  gulp.watch('assets/js/*/*.js', ['js'])
+  gulp.watch('src/scss/*/*.scss', ['sass'])
+  gulp.watch('src/js/*/*.js', ['js'])
   gulp.watch('.php').on('change', reload);
 });
 
