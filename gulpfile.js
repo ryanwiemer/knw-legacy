@@ -53,8 +53,12 @@ gulp.task('js', function() {
         filename: 'scripts.min.js',
       },
       plugins: [new webpack.optimize.UglifyJsPlugin({
+        minimize: true,
         compress: {
           warnings: false
+        },
+        output: {
+          comments: false
         }
       })],
       module: {

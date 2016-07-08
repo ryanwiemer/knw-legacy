@@ -137,7 +137,6 @@ add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 //Global Styles and Scripts
 function knw_scripts() {
   wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/dist/css/style.min.css');
-  wp_enqueue_script( 'knw-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js');
   wp_enqueue_script( 'knw-scripts',  get_template_directory_uri() . '/dist/js/scripts.min.js', '', '', true);
 }
 

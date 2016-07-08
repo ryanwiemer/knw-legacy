@@ -40,6 +40,7 @@
     "jquery-ias": "webcreate/infinite-ajax-scroll",
     "jquery-ui": "^1.10.5",
     "jquery-validation": "^1.15.0",
+    "modernizr-webpack-plugin": "^1.0.5",
     "node-bourbon": "~4.2.8",
     "node-neat": "~1.7.2",
     "responsive-nav": "^1.0.39",
