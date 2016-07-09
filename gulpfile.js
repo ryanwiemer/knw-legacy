@@ -2,10 +2,9 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-
 var webpack = require('webpack');
-var gulpWebpack = require('webpack-stream');
-var sourcemaps = require('gulp-sourcemaps');
+var webpackStream = require('webpack-stream');
+var webpackConfig = require('./webpack.config.js');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
@@ -32,53 +31,21 @@ gulp.task('browser-sync', function() {
 
 // Move Font Icons
 gulp.task ('move-fonts', function() {
-  return gulp.src(
-    'src/fonts/*')
+  return gulp.src('src/fonts/*')
     .pipe(gulp.dest('dist/fonts/'));
 });
 
 // Move Image Files
 gulp.task ('move-images', function() {
-  return gulp.src(
-    'src/img/*')
+  return gulp.src('src/img/*')
     .pipe(gulp.dest('dist/img/'));
 });
 
-// Compile JS and Uglify
+// Compile JS
 gulp.task('js', function() {
   return gulp.src('src/js/scripts.js')
-    .pipe(gulpWebpack({
-      watch: true,
-      output: {
-        filename: 'scripts.min.js',
-      },
-      plugins: [new webpack.optimize.UglifyJsPlugin({
-        minimize: true,
-        compress: {
-          warnings: false
-        },
-        output: {
-          comments: false
-        }
-      })],
-      module: {
-        loaders: [
-          {
-            test: /\.(eot|ico|ttf|woff|woff2|gif|jpe?g|png|svg)$/,
-            exclude: /node_modules/,
-            loader: 'file-loader'
-          },
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel?presets[]=es2015,cacheDirectory'
-          }
-        ]
-      },
-      devtool: 'source-map'
-      }, webpack))
-    .pipe(gulp.dest('dist/js/'))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulp.dest('dist/js'));
 });
 
 // Compile Sass & Minify CSS

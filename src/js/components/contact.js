@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import datepicker from  'jquery-ui/datepicker';
+import datepicker from  'jquery-ui/ui/widgets/datepicker';
 import ajaxSubmit from 'jquery-form';
 import validate from 'jquery-validation';
 
