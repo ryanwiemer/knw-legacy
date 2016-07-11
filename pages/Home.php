@@ -4,19 +4,21 @@
  * Description: A Page Template for the Home Page
  */
 get_header(); ?>
-<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/dist/img/KNW_Photography_logo_white.svg" />
-<div class="slider">
-  <?php if(get_field('slider')): ?>
-  <?php while(has_sub_field('slider')): ?>
-  <?php $large = wp_get_attachment_image_src(get_sub_field('slide_image'), 'extra-large'); ?>
-    <div class="slide" style="background-image: url('<?php echo $large[0]; ?>');">
-    <div class="slide--overlay"></div>
-    </div>
-  <?php endwhile; ?>
-  <?php endif; ?>
-</div>
+<a href="#content" class="slider--link">
+  <img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/dist/img/KNW_Photography_logo_white.svg" />
+  <div class="slider">
+    <?php if(get_field('slider')): ?>
+    <?php while(has_sub_field('slider')): ?>
+    <?php $large = wp_get_attachment_image_src(get_sub_field('slide_image'), 'extra-large'); ?>
+      <div class="slide" style="background-image: url('<?php echo $large[0]; ?>');">
+      <div class="slide--overlay"></div>
+      </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
+</a>
 
-<a href='#content' class="scroll-down">
+<a href="#content" class="scroll-down">
   <h3 class="btn--explore">Explore</h3>
 </a>
 

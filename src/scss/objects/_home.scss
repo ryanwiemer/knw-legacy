@@ -52,16 +52,13 @@
 	margin: 0 auto;
 	text-align: center;
 	opacity: .75;
-	h3 {
-
-	}
-	span {
-		font-size: 1.5em;
-		display: none;
-	}
 	&:hover {
 		opacity: 1;
 	}
+}
+
+.slider--link {
+	cursor: s-resize;
 }
 
 .btn--explore {

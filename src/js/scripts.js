@@ -1,4 +1,3 @@
-
 import './components/menu';
 import './components/single';
 import './components/home';
