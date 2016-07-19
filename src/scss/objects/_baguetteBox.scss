@@ -186,6 +186,14 @@
   stroke-width: 2px;
 }
 
+#baguetteBox-overlay #close-button:hover {
+  background: $highlight;
+  border: $highlight;
+  svg * {
+    stroke: white;
+  }
+}
+
 .baguetteBox a img:hover {
   cursor: zoom-in;
 }

@@ -26,7 +26,7 @@ const Single = (function() {
       notTop:"footroom--not-top"
       }
   });
-  footroom.init();
+  //footroom.init();
 })();
 
 export default Single;
