@@ -144,7 +144,7 @@ function knw_scripts() {
 //Single Page Only
 function knw_single_scripts() {
   if ( is_single( ) ) {
-      wp_add_inline_script( 'knw-scripts', ' document.addEventListener("DOMContentLoaded", function(event) {backToTop.init();});' );
+      wp_add_inline_script( 'knw-scripts', '' );
   }
 }
 

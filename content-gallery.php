@@ -24,7 +24,7 @@
     else :
     endif;?>
 		<?php the_content(); ?>
-    <a href="#">
-      <div class="footroom">&#xe600;</div>
-    </a>
+    <div class="footroom">
+      &#xe600;
+    </div>
 </gallery>

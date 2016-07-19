@@ -25,7 +25,8 @@ module.exports = {
       new webpack.ProvidePlugin({
            $: "jquery",
            jQuery: "jquery"
-       }),
+      })
+      /*,
       new webpack.optimize.UglifyJsPlugin({
         minimize: true,
         compress: {
@@ -33,7 +34,10 @@ module.exports = {
         },
         output: {
           comments: false
+        },
+        mangle: {
+          except: ['jQuery', '$']
         }
-      })
+      })*/
     ]
 };
