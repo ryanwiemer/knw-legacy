@@ -28,3 +28,7 @@
       &#xe600;
     </div>
 </gallery>
+
+<script>
+  window.isSingle=true;
+</script>

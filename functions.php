@@ -141,12 +141,4 @@ function knw_scripts() {
   wp_enqueue_script( 'knw-scripts',  get_template_directory_uri() . '/dist/js/scripts.min.js', '', '', true);
 }
 
-//Single Page Only
-function knw_single_scripts() {
-  if ( is_single( ) ) {
-      wp_add_inline_script( 'knw-scripts', '' );
-  }
-}
-
 add_action( 'wp_enqueue_scripts', 'knw_scripts');
-add_action ('wp_enqueue_scripts', 'knw_single_scripts');
