@@ -7,6 +7,7 @@
 br {
 	margin-top: 1em;
 }
+
 .gallery-intro {
 	@extend %clearfix;
 	background: white;
@@ -39,7 +40,7 @@ br {
   color: $background;
 }
 
-.gallery-intro div {
+.gallery-intro .gallery-intro__container {
 	@include span-columns(12);
 	padding-bottom: 1em;
 	@include bp(medium) {
