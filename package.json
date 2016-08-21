@@ -35,6 +35,7 @@
     "gulp-sass": "2.3.2",
     "gulp-util": "~3.0.7",
     "headroom.js": "^0.9.3",
+    "jquery-ias": "https://github.com/webcreate/infinite-ajax-scroll.git",
     "imports-loader": "^0.6.5",
     "jquery": "^3.0.0",
     "jquery-form": "^3.50.0",
