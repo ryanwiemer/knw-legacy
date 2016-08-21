@@ -3,6 +3,10 @@
  * ---------- */
 
 //Gallery-Single
+
+br {
+	margin-top: 1em;
+}
 .gallery-intro {
 	@extend %clearfix;
 	background: white;

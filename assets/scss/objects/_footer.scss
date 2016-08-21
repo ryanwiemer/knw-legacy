@@ -21,7 +21,8 @@
 		padding: 0 .9em;
 	}
 	@include bp(medium) {
-		@extend .container;
+		max-width: 750px;
+		padding: 0 1em;
 	}
 }
 
