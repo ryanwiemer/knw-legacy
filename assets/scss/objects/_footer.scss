@@ -24,6 +24,12 @@
 		max-width: 750px;
 		padding: 0 1em;
 	}
+	@include bp(large) {
+			max-width: 850px;
+	}
+	@include bp(extra-large) {
+			max-width: 950px;
+	}
 }
 
 .social-icons {

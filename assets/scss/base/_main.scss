@@ -20,6 +20,12 @@
   padding-top: 50px;
   max-width: 750px;
   @extend %clearfix;
+  @include bp(large) {
+      max-width: 850px;
+  }
+  @include bp(extra-large) {
+      max-width: 950px;
+  }
 }
 
 body {
