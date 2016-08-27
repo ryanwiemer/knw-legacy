@@ -25,6 +25,8 @@
   <?php  endwhile;
     else :
     endif;?>
-		<?php the_content(); ?>
-      <div class="footroom">&#xe600;</div>
+    <section class="gallery-content">
+		    <?php the_content(); ?>
+    </section>
+    <div class="footroom">&#xe600;</div>
 </gallery>

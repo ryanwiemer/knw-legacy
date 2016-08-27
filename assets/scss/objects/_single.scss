@@ -8,6 +8,10 @@ br {
 	margin-top: 1em;
 }
 
+.single strong {
+	font-weight: bold;
+}
+
 .gallery-intro {
 	@extend %clearfix;
 	background: white;
@@ -119,4 +123,34 @@ br {
 
 .footroom--top {
 	  transform: translateY(80px);
+}
+
+//Side by Side Images
+
+.gallery-content {
+	line-height: 0;
+}
+
+.gallery-content img {
+  margin-bottom: .5em;
+}
+
+.single .alignleft, .page .alignleft {
+  @include bp(medium) {
+		float: left;
+		width: 49.25%;
+    width: calc(50% - .25em);
+		margin-right: .25em;
+  }
+}
+
+.single .alignright {
+  @include bp(medium) {
+    @include direction-context(right-to-left) {
+			float: right;
+			width: 49.25%;
+	    width: calc(50% - .25em);
+			margin-left: .25em;
+    }
+  }
 }
