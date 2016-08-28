@@ -17,12 +17,18 @@
 .site-footer section {
 	margin: 0 auto;
 	padding: 0;
-	@extend .container;
 	@include bp(small) {
 		padding: 0 .9em;
 	}
 	@include bp(medium) {
-
+		max-width: 750px;
+		padding: 0 1em;
+	}
+	@include bp(large) {
+			max-width: 850px;
+	}
+	@include bp(extra-large) {
+			max-width: 950px;
 	}
 }
 

@@ -8,7 +8,7 @@
    while ( have_rows('gallery_intro') ) : the_row(); ?>
 <gallery class="baguetteBox">
   <section class="gallery-intro">
-    <div>
+    <div class="gallery-intro__container">
       <h2 class="gallery-intro__title"><?php the_title(); ?></h2>
         <p class="gallery-intro__location"><?php the_sub_field('gallery_intro_location'); ?></p>
         <p class="gallery-intro__cat"><?php knw_the_category( ); ?></p>
@@ -18,15 +18,17 @@
           <?php next_post_link('%link', '', TRUE, ' ', 'post_format' ); ?>
         </p>
     </div>
-    <p class="gallery-intro__description"><?php the_sub_field('gallery_intro_description'); ?></p>
+    <div class="gallery-intro__description">
+      <?php the_sub_field('gallery_intro_description'); ?>
+    </div>
 </section>
   <?php  endwhile;
     else :
     endif;?>
-		<?php the_content(); ?>
-    <div class="footroom">
-      &#xe600;
-    </div>
+    <section class="gallery-content">
+		    <?php the_content(); ?>
+    </section>
+    <div class="footroom">&#xe600;</div>
 </gallery>
 
 <script>
