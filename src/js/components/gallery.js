@@ -1,9 +1,6 @@
-import $ from 'jquery';
 import 'jquery-ias/src/callbacks.js';
 import 'jquery-ias/src/jquery-ias.js';
 import 'jquery-ias/src/extension/spinner.js';
-
-
 
 
 const Gallery = (function() {

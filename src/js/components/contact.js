@@ -1,4 +1,3 @@
-import 'jquery';
 import datepicker from 'jquery-ui/ui/widgets/datepicker';
 import ajaxSubmit from 'jquery-form';
 import validate from 'jquery-validation';
@@ -6,13 +5,13 @@ import validate from 'jquery-validation';
 const Contact = (function() {
   // Datepicker Code
   const dateToday = new Date();
-  $('.form__date__datepicker').datepicker({
+  window.$('.form__date__datepicker').datepicker({
     minDate: dateToday,
   });
 
   // jQuery Validate and jQuery Form Code
-  $(function() {
-      $('.form').validate({
+  window.$(function() {
+      window.$('.form').validate({
           rules: {
               name: {
                   required: true,
@@ -37,17 +36,17 @@ const Contact = (function() {
           },
           errorPlacement: function () { },
           submitHandler: function(form) {
-              if($('.form__bot__input').val().length===0){
-              $(form).ajaxSubmit({
+              if(window.$('.form__bot__input').val().length===0){
+              window.$(form).ajaxSubmit({
                   type:"POST",
                   data: $(form).serialize(),
                   clearForm: true,
                   url:"../wp-content/themes/knw/mail.php",
                   error: function() {
-                    $('.form__error').fadeIn().delay( 2000 ).fadeOut();
+                    window.$('.form__error').fadeIn().delay( 2000 ).fadeOut();
                   },
                   success: function() {
-                    $('.form__success').fadeIn().delay( 2000 ).fadeOut();
+                    window.$('.form__success').fadeIn().delay( 2000 ).fadeOut();
                   }
               });
           }

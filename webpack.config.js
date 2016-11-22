@@ -18,6 +18,10 @@ module.exports = {
           test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel?presets[]=es2015,cacheDirectory'
+        },
+        {
+          test: /jquery/,
+          loader: 'expose?$!expose?jquery'
         }
       ]
     },
