@@ -5,7 +5,6 @@
 //General About Styles
 .about-container {
 	@extend %clearfix;
-	@include outer-container;
 	a {
 		text-decoration: underline;
 	}
@@ -16,31 +15,27 @@
 	}
 }
 
-.about-collage {
-	margin-bottom: 1em;
-	@include bp(medium) {
-	   margin-bottom: 0;
-	}
-}
-.about-collage:last-child {
-	margin-bottom: 0;
-}
-
 //Biography Section
-.about-collage--bio {
+.about-text {
+	@extend %clearfix;
 	padding: 1em 1.25em;
 	background: white;
 	border: 1px solid $border;
-	@include bp(medium) {
-		@include span-columns(6);
-	}
 	p {
 		margin-bottom: .5em;
+	}
+	& p:nth-child(2) {
+		margin-right: 0;
+	}
+	@include bp(medium) {
+		p {
+			@include span-columns(6);
+		}
 	}
 }
 
 //Drop Cap
-.about-collage--bio span {
+.about-text span {
 	font-family: $serif;
 	position: relative;
 	top: .05em;
@@ -52,13 +47,13 @@
 }
 
 //Portrait Image
-.about-collage--portrait {
+.about-portrait {
+	width: 100%;
 	margin-bottom: 1em;
 	img {
 		margin-bottom: -3px;
 	}
 	@include bp(medium) {
-		@include span-columns(6);
-		margin-bottom: 0;
+		margin-bottom: 1em;
 	}
 }
