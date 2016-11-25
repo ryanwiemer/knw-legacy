@@ -24,7 +24,7 @@ get_header(); ?>
   </ul>
 </div>
 
-<section class="gallery-list">
+<section class="gallery-list  infinite-selector">
   <?php while ( have_posts() ) : the_post(); ?>
     <article class="gallery">
       <a href="<?php the_permalink(); ?>">
@@ -41,14 +41,13 @@ get_header(); ?>
       </a>
     </article>
   <?php endwhile; ?>
+  <div class="pagination  infinite-selector">
+    <?php
+      next_posts_link( 'Older Entries');
+      previous_posts_link( 'Newer Entries' );
+    ?>
+  </div>
 </section>
-
-<div class="pagination">
-  <?php
-    next_posts_link( 'Older Entries');
-    previous_posts_link( 'Newer Entries' );
-  ?>
-</div>
 
 </div><!-- content-->
 

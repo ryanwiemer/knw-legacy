@@ -1,11 +1,10 @@
-// import baguetteBox from 'baguettebox.js';
+import $ from 'jquery';
 import Headroom from 'headroom.js';
 
 const Single = (function() {
   if(window.isSingle){
-
       // Back To Top Button
-      window.$(".footroom").click(function(){$("body,html").animate({scrollTop:0},800);return false});
+      $(".footroom").click(function(){$("body,html").animate({scrollTop:0},800);return false});
 
       // Footroom Settings
       const footroomContainer=document.querySelector(".footroom");
@@ -22,7 +21,6 @@ const Single = (function() {
       });
       footroom.init();
   }
-
 })();
 
 export default Single;

@@ -1,7 +1,8 @@
+import $ from 'jquery';
 import slick from 'slick-carousel';
 
 const Home = (function() {
-  window.$('.slider').slick({
+  $('.slider').slick({
     arrows: false,
     dots: false,
     infinite: true,

@@ -1,6 +1,6 @@
 {
   "name": "knw",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "license": "UNLICENSED",
   "description": "http://www.knw.io",
   "main": "index.php",
@@ -38,7 +38,6 @@
     "imports-loader": "^0.6.5",
     "jquery": "^3.1.1",
     "jquery-form": "^3.50.0",
-    "jquery-ias": "https://github.com/webcreate/infinite-ajax-scroll.git",
     "jquery-ui": "^1.10.5",
     "jquery-validation": "^1.15.0",
     "modernizr-webpack-plugin": "^1.0.5",
@@ -46,6 +45,7 @@
     "node-neat": "~1.7.2",
     "path": "^0.12.7",
     "responsive-nav": "^1.0.39",
+    "script-loader": "^0.7.0",
     "slick-carousel": "^1.6.0",
     "webpack": "^1.13.1",
     "webpack-stream": "^3.2.0"

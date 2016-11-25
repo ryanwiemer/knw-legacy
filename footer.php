@@ -9,7 +9,7 @@
 			<div class="social-icons">
 				<a href="https://www.facebook.com/knwphoto/" target="_blank" class="icon-facebook"></a>
 				<a href="https://www.pinterest.com/knwphoto/" target="_blank" class="icon-pinterest"></a>
-				<a href="https://instagram.com/knwphoto/" target="_blank" class="icon-instagram"></a>
+				<a href="https://instagram.com/kirstennoellew/" target="_blank" class="icon-instagram"></a>
 			</div>
 			<span class="copyright">&copy; <?php echo date("Y") ?> KNW Photography</span>
 		</section>

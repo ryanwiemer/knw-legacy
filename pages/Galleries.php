@@ -46,7 +46,7 @@ get_header(); ?>
 </div>
 <section class="gallery-list">
   <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-    <article class="gallery">
+    <article class="gallery infinite-selector">
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
@@ -64,14 +64,15 @@ get_header(); ?>
       </a>
     </article>
   <?php endwhile; ?>
+  <div class="pagination infinite-selector">
+  <?php
+    next_posts_link( 'Older Entries' );
+    previous_posts_link( 'Newer Entries' );
+  ?>
+  </div>
+
 </section>
     <!-- end of the loop -->
-<div class="pagination">
-<?php
-  next_posts_link( 'Older Entries' );
-  previous_posts_link( 'Newer Entries' );
-?>
-</div>
 
 <?php $wp_query = null; $wp_query = $temp;  // Reset ?>
 <?php else:  ?>

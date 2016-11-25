@@ -1,10 +1,25 @@
-import 'jquery-ias/src/callbacks.js';
-import 'jquery-ias/src/jquery-ias.js';
-import 'jquery-ias/src/extension/spinner.js';
-
+import $ from 'jquery';
+import '../vendor/jquery.jscroll.min.js';
 
 const Gallery = (function() {
-  const scrollSettings = jQuery.ias({
+  $('.gallery-list').jscroll({
+    padding: 100,
+    autoTrigger: true,
+    loadingHtml: '<img class="loader" src="/wp-content/themes/knw/dist/img/loading.gif" />',
+    nextSelector: 'a.btn-pagination--next',
+    contentSelector: '.infinite-selector'
+});
+})();
+
+export default Gallery;
+
+/*
+
+import $ from 'jquery';
+import '../vendor/jquery-ias.min.js';
+
+const Gallery = (function() {
+  const scrollSettings = $.ias({
       container: '.gallery-list',
       item: '.gallery',
       pagination: '.pagination',
@@ -15,4 +30,8 @@ const Gallery = (function() {
   }));
 })();
 
+
 export default Gallery;
+
+
+*/

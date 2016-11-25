@@ -20,17 +20,12 @@ module.exports = {
           loader: 'babel?presets[]=es2015,cacheDirectory'
         },
         {
-          test: /jquery/,
-          loader: 'expose?$!expose?jquery'
+          test: /vendor\/.+\.(jsx|js)$/,
+          loader: 'imports?jQuery=jquery,$=jquery,this=>window'
         }
       ]
     },
     plugins: [
-      new webpack.ProvidePlugin({
-           $: "jquery",
-           jQuery: "jquery"
-      })
-      /*,
       new webpack.optimize.UglifyJsPlugin({
         minimize: true,
         compress: {
@@ -40,8 +35,8 @@ module.exports = {
           comments: false
         },
         mangle: {
-          except: ['jQuery', '$']
+          except: ['jQuery', '$','jquery']
         }
-      })*/
+      })
     ]
 };
