@@ -5,7 +5,8 @@ WordPress theme built for KNW Photography.
 - Git
 - Node / NPM
 - Gulp
+- Webpack
 
 ###Copyright
 - All rights reserved
-- Copyright 2016 KNW Photography
+- Copyright 2017 KNW Photography
