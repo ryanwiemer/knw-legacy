@@ -24,13 +24,17 @@ get_header(); ?>
   </ul>
 </div>
 
-<section class="gallery-list  infinite-selector">
+<section class="gallery-listor">
   <?php while ( have_posts() ) : the_post(); ?>
-    <article class="gallery">
+    <article class="gallery ratio-container">
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
-              the_post_thumbnail( 'thumbnail', array( 'class' => 'gallery__image' ) ); }
+            $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'medium');
+            $srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($post->ID));?>
+            <img class="gallery__image lazyload" data-sizes="auto" data-src='<?php echo $src[0]; ?>' data-srcset='<?php echo $srcset; ?>'>
+            <?php
+              }
               else {
                 echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
@@ -41,13 +45,14 @@ get_header(); ?>
       </a>
     </article>
   <?php endwhile; ?>
-  <div class="pagination  infinite-selector">
+  <div class="pagination">
     <?php
       next_posts_link( 'Older Entries');
       previous_posts_link( 'Newer Entries' );
     ?>
   </div>
 </section>
+
 
 </div><!-- content-->
 

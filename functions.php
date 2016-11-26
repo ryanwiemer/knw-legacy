@@ -139,6 +139,7 @@ function knw_scripts() {
   wp_enqueue_script( 'knw-modernizr',  get_template_directory_uri() . '/dist/js/modernizr.min.js');
   wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/dist/css/style.min.css');
   wp_enqueue_script( 'knw-scripts',  get_template_directory_uri() . '/dist/js/scripts.min.js', '', '', true);
+    wp_enqueue_script( 'lazysizes',  get_template_directory_uri() . '/dist/js/lazysizes.min.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'knw_scripts');

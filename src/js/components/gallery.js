@@ -1,6 +1,13 @@
 import $ from 'jquery';
-import '../vendor/jquery.jscroll.min.js';
+import '../vendor/lazysizes.min.js';
 
+const Gallery = (function() {
+
+})();
+
+export default Gallery;
+
+/*
 const Gallery = (function() {
   $('.gallery-list').jscroll({
     padding: 100,
@@ -12,3 +19,5 @@ const Gallery = (function() {
 })();
 
 export default Gallery;
+
+*/

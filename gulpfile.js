@@ -47,6 +47,12 @@ gulp.task ('move-modernizr', function() {
     .pipe(gulp.dest('dist/js/'));
 });
 
+// Move lazysizes
+gulp.task ('move-lazysizes', function() {
+  return gulp.src('src/js/vendor/lazysizes.min.js')
+    .pipe(gulp.dest('dist/js/'));
+});
+
 // Compile JS
 gulp.task('js', function() {
   return gulp.src('src/js/scripts.js')
@@ -76,4 +82,4 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['sass','js','browser-sync','watch']);
-gulp.task('build', ['move-fonts','move-images','move-modernizr']);
+gulp.task('build', ['move-fonts','move-images','move-modernizr','move-lazysizes']);

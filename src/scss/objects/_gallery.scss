@@ -94,15 +94,38 @@
   top: 1em;
 }
 
-//Infinite Scroll Styles
-
-.jscroll-inner .pagination {
-  display: none!important;
+// Lazy Loading
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
 }
 
-.loader {
+.loading .ratio-container {
+  background: $border;
+  opacity: 1;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.ratio-container {
+  position: relative;
+}
+.ratio-container:after {
+  content: '';
   display: block;
-  width: 20px;
-  height: 20px;
-  margin: 0 auto;
+  height: 0;
+  width: 100%;
+  padding-bottom: 66.67%;
+}
+.ratio-container > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }

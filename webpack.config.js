@@ -2,7 +2,7 @@ var webpackStream = require('webpack-stream');
 var webpack = require('webpack');
 
 module.exports = {
-    // devtool: 'source-map',
+    devtool: 'source-map',
     entry: './src/js/scripts.js',
     output: {
       filename: 'scripts.min.js'
