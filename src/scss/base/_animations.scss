@@ -34,3 +34,7 @@ p a, #slider a {
 .gallery-list .gallery a, .gallery .gallery__border .gallery__overlay  {
 	@include transition (all .3s);
 }
+
+.pricing__cover, .pricing__cover__overlay {
+	@include transition (all .3s);
+}

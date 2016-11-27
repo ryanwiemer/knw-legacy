@@ -57,7 +57,7 @@ get_header(); ?>
             <?php
               }
               else {
-                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
+                echo '<div class="ratio-container"> <img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
               </div>
           <div class="gallery__overlay">
@@ -75,7 +75,7 @@ get_header(); ?>
   </div>
 
 </section>
-    <!-- end of the loop -->
+<!-- end of the loop -->
 
 <?php $wp_query = null; $wp_query = $temp;  // Reset ?>
 <?php else:  ?>
