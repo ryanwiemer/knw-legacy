@@ -11,17 +11,17 @@ get_header(); ?>
 
 <section class="pricing">
 
-<?php if( get_field('family_pricing_image') ): ?>
-	<a href="<?php echo get_site_url(); ?>/pricing/family" data-bg="<?php the_field('family_pricing_image'); ?>" class="pricing__cover lazyload">
-<?php endif; ?>
+<?php $family_image_cover = wp_get_attachment_image_src(get_field('family_pricing_image'), 'medium'); ?>
+
+	<a href="<?php echo get_site_url(); ?>/pricing/family" data-bg="<?php echo $family_image_cover[0]; ?>" class="pricing__cover lazyload">
 		<div class="pricing__cover__overlay"></div>
 		<h3 class="pricing__cover__title">Family</h3>
 	</a>
 
 
-<?php if( get_field('wedding_pricing_image') ): ?>
-<a href="<?php echo get_site_url(); ?>/pricing/wedding" data-bg="<?php the_field('wedding_pricing_image'); ?>" class="pricing__cover lazyload">
-<?php endif; ?>
+<?php $wedding_image_cover = wp_get_attachment_image_src(get_field('wedding_pricing_image'), 'medium'); ?>
+
+<a href="<?php echo get_site_url(); ?>/pricing/wedding" data-bg="<?php echo $wedding_image_cover[0]; ?>" class="pricing__cover lazyload">
 	<div class="pricing__cover__overlay"></div>
 	<h3 class="pricing__cover__title">Wedding</h3>
 </a>
