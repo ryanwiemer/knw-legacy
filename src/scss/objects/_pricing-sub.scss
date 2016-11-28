@@ -11,6 +11,9 @@
 		margin-bottom: 1em;
 		border-right: 1px solid darken($border, 5%);
 	}
+	a {
+		text-decoration: underline;
+	}
 }
 
 .side-column {
@@ -23,9 +26,14 @@
 }
 
 .page-template-Pricing-Sub blockquote {
+	@extend %clearfix;
+	text-align: center;
 	background: $border;
-	padding: .5em;
+	padding: .5em .5em 0 .5em;
 	margin-bottom: 1em;
+	a {
+		font-size: 1em;
+	}
 }
 
 .page-template-Pricing-Sub img {
@@ -70,15 +78,16 @@
 	h4 {
 		margin-bottom: .5em;
 		font-size: 2em;
-		font-weight: bold;
 		letter-spacing: .1em;
 		background: $border;
 		color: $base;
-		width: 3.5em;
-		height: 3.5em;
-		border-radius: 50%;
+		//width: 3.5em;
+		height: 2.5em;
+		//line-height: 2.5em;
+		border-radius: 2px;
 		display: inline-block;
-		line-height: 3.5em;
+		padding: .5em;
+		//line-height: 3.5em;
 
 	}
 	a {

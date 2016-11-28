@@ -31,7 +31,6 @@ header {
       height: 50px;
     }
   }
-
   li {
     line-height: 50px;
     width: 100%;
@@ -49,18 +48,19 @@ header {
       display: block;
       color: $base;
       font-size: 15px;
-      &:hover {
-        background: $highlight;
-        color: white;
-      }
       @include bp(medium) {
         display: inline;
-        &:hover {
-          color: $highlight;
-          background: none;
-        }
       }
     }
+  }
+}
+
+.no-touch .menu li a:hover {
+  background: $highlight;
+  color: white;
+  @include bp(medium) {
+    color: $highlight;
+    background: none;
   }
 }
 

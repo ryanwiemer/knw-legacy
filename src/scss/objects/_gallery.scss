@@ -75,7 +75,7 @@
   text-align: center;
 }
 
-.gallery__overlay:hover {
+.no-touch .gallery__overlay:hover {
   background: rgba(163, 176, 178, 0.85);
   opacity: 1;
   filter: alpha(opacity=100);

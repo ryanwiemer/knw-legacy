@@ -5,16 +5,14 @@
 //General About Styles
 .page-about {
 	@extend %clearfix;
-	p a {
-		text-decoration: underline;
-	}
 	h3 {
-		font-style: italic;
 		font-size: 1.5em;
-		margin-bottom: .5em;
 	}
 	img {
 		margin-bottom: 1em;
+	}
+	strong {
+		font-weight: bold;
 	}
 	@extend .page-template-Pricing-Sub;
 }

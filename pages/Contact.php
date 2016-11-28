@@ -9,6 +9,11 @@ get_header(); ?>
 
 <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
+<?php if ( has_post_thumbnail() ) {
+    the_post_thumbnail();}
+    else {
+  }?>
+
 <form class="form" method="post" name="contact" novalidate="novalidate">
   <div class="form__intro">
     <?php the_content(); ?>
@@ -28,10 +33,9 @@ get_header(); ?>
       <label class="form__reason__label" for="reason">Reason For Contacting</label>
       <select class="form__reason__select" name="reason">
         <option value=""> </option>
-        <option value="Book A Portrait Package">Book A Portrait Package</option>
+        <option value="Book A Family / Lifestyle Package">Book A Family / Lifestlye Package</option>
         <option value="Book A Wedding Package">Book A Wedding Package</option>
         <option value="General Inquiry / Question">General Inquiry / Question</option>
-        <option value="Photographer Collaboration">Photographer Collaboration</option>
       </select>
     </div>
 
