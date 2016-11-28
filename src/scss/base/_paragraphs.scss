@@ -2,7 +2,7 @@
  * PARAGRAPHS *
  * ------- */
 
-p, .btn,.btn-pagination, .cat-item a, .gallery-intro__cat a, .form label, .form__success, .form__error {
+p, .btn,.btn-pagination, .cat-item a, .gallery-intro__cat a, .form label, .form__success, .form__error, .price-card li {
   font-size: .95em;
   @include bp(medium) {
       font-size: .85em;

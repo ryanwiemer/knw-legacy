@@ -9,8 +9,9 @@ get_header(); ?>
 
 <h2 class="page__title"><?php echo get_the_title(); ?></h2>
 
-<section class="pricing">
+<section class="pricing__sub">
 
+<?php the_content(); ?>
 
 </section>
 

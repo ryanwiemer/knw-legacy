@@ -135,7 +135,7 @@ br {
   margin-bottom: .5em;
 }
 
-.single .alignleft, .page .alignleft {
+.single .alignleft {
   @include bp(medium) {
 		float: left;
 		width: 49.25%;
