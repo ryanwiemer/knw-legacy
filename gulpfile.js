@@ -41,16 +41,10 @@ gulp.task ('move-images', function() {
     .pipe(gulp.dest('dist/img/'));
 });
 
-// Move Modernizr
-gulp.task ('move-modernizr', function() {
-  return gulp.src('src/js/vendor/modernizr.min.js')
-    .pipe(gulp.dest('dist/js/'));
-});
-
-// Move lazysizes
-gulp.task ('move-lazysizes', function() {
-  return gulp.src('src/js/vendor/lazysizes.min.js')
-    .pipe(gulp.dest('dist/js/'));
+// Move Vendor Scripts
+gulp.task ('move-vendor', function() {
+  return gulp.src('src/js/vendor/*')
+    .pipe(gulp.dest('dist/js/vendor'));
 });
 
 // Compile JS
@@ -82,4 +76,4 @@ gulp.task('watch', function() {
 
 // Default Task
 gulp.task('default', ['sass','js','browser-sync','watch']);
-gulp.task('build', ['move-fonts','move-images','move-modernizr','move-lazysizes']);
+gulp.task('build', ['move-fonts','move-images','move-vendor']);
