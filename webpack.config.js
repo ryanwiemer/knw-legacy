@@ -1,5 +1,6 @@
 var webpackStream = require('webpack-stream');
 var webpack = require('webpack');
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     devtool: 'source-map',

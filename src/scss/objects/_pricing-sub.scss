@@ -4,6 +4,7 @@
 
 .main-column {
 	height: 100%;
+	@extend %clearfix;
 	@include bp(medium) {
 		@include span-columns(8);
 		padding-right:2.35765%;
@@ -42,27 +43,58 @@
 
 .page-template-Pricing-Sub .alignleft {
   @include bp(medium) {
-		@include span-columns(4);
+		@include span-columns(12);
   }
 }
 
 .page-template-Pricing-Sub .aligncenter {
   @include bp(medium) {
-		@include span-columns(8);
+		@include span-columns(12);
   }
 }
 
 .page-template-Pricing-Sub .alignright {
   @include bp(medium) {
 		@include direction-context(right-to-left) {
-			@include span-columns(4);
-			margin-right: 0;
-			margin-left: 0;
+			float: right !important;
+			margin-right: 0 !important;
 		}
   }
 }
 
+// 12 Column Grid Options
+.page-template-Pricing-Sub .col-4 {
+	@include bp(medium) {
+		@include span-columns(4);
+	}
+}
+
+.page-template-Pricing-Sub .col-6  {
+	@include bp(medium) {
+		@include span-columns(6);
+	}
+}
+
+.page-template-Pricing-Sub .col-8  {
+	@include bp(medium) {
+		@include span-columns(8);
+	}
+}
+
+.page-template-Pricing-Sub .col-12  {
+	@include bp(medium) {
+		@include span-columns(12);
+	}
+}
+
+
+
+
+
+
+
 .price-card {
+	@include span-columns(12);
 	@extend %clearfix;
 	background: white;
 	border: 6px solid $border;
@@ -81,14 +113,10 @@
 		letter-spacing: .1em;
 		background: $border;
 		color: $base;
-		//width: 3.5em;
 		height: 2.5em;
-		//line-height: 2.5em;
 		border-radius: 2px;
 		display: inline-block;
 		padding: .5em;
-		//line-height: 3.5em;
-
 	}
 	a {
 		font-size: 1em !important;
@@ -117,3 +145,20 @@
 		}
 	}
 }
+
+/*
+
+
+<div class="price-card aligncenter">
+<h3>Lifestyle Package</h3>
+<h4>$500</h4>
+<ul>
+ 	<li>1 - 2 hours of shooting time</li>
+ 	<li>USB with high resolution images</li>
+ 	<li>Printing rights included</li>
+</ul>
+<a class="btn" href="/contact/">Book Now</a>
+
+</div>
+
+*/
