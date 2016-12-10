@@ -26,6 +26,13 @@
 	}
 }
 
+.photo-grid {
+	@extend %clearfix;
+	float: left;
+}
+
+
+
 .page-template-Pricing-Sub blockquote {
 	@extend %clearfix;
 	text-align: center;
@@ -55,10 +62,8 @@
 
 .page-template-Pricing-Sub .alignright {
   @include bp(medium) {
-		@include direction-context(right-to-left) {
-			float: right !important;
-			margin-right: 0 !important;
-		}
+		float: right !important;
+		margin-right: 0 !important;
   }
 }
 
@@ -88,11 +93,7 @@
 }
 
 
-
-
-
-
-
+//Price Cards
 .price-card {
 	@include span-columns(12);
 	@extend %clearfix;
@@ -102,7 +103,7 @@
 	text-align: center;
 	margin-bottom: 1em;
 	h3 {
-		padding: 0 .5em;
+		padding: 0 1em;
 		font-family: $sans;
 		font-weight: bold;
 		margin-bottom: 1em;
@@ -145,20 +146,3 @@
 		}
 	}
 }
-
-/*
-
-
-<div class="price-card aligncenter">
-<h3>Lifestyle Package</h3>
-<h4>$500</h4>
-<ul>
- 	<li>1 - 2 hours of shooting time</li>
- 	<li>USB with high resolution images</li>
- 	<li>Printing rights included</li>
-</ul>
-<a class="btn" href="/contact/">Book Now</a>
-
-</div>
-
-*/
