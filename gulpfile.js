@@ -2,96 +2,78 @@
 var gulp = require('gulp');
 
 // Include the Plugins
-var jshint = require('gulp-jshint');
+var webpack = require('webpack');
+var webpackStream = require('webpack-stream');
+var webpackConfig = require('./webpack.config.js');
 var sass = require('gulp-sass');
 var bourbon = require('node-bourbon');
 var neat = require('node-neat');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var minifycss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 
+// Start Up browser-sync
 gulp.task('browser-sync', function() {
-  //watch files
   var files = [
-    'assets/css/*.css',
-    'assets/js/*.js',
+    'dist/css/*.css',
+    'dist/js/*.js',
     '*.php'
   ];
-  //initialize browsersync
   browserSync.init(files, {
-  //browsersync with a php server
-  proxy: "knw.dev",
-  notify: false,
-  open: false
+    proxy: "knw.dev",
+    notify: false,
+    open: false
   });
 });
 
-// Move and Minfiy Scripts from Bower
-gulp.task ('move', function() {
-  return gulp.src([
-    'bower_components/picturefill/dist/picturefill.min.js',
-    'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/jquery-form/jquery.form.js',
-    'bower_components/jquery-validate/dist/jquery.validate.min.js',
-    'bower_components/slick.js/slick/slick.min.js',
-    'bower_components/datepicker-fr/ui/datepicker.js',
-    'bower_components/headroom.js/dist/headroom.min.js',
-    'bower_components/responsive-nav/responsive-nav.min.js'])
-    //'bower_components/infinite-ajax-scroll/src/jquery-ias.js'
-    .pipe(gulp.dest('assets/js/vendor/'));
+// Move Font Icons
+gulp.task ('move-fonts', function() {
+  return gulp.src('src/fonts/*')
+    .pipe(gulp.dest('dist/fonts/'));
 });
 
-// Lint JS
-gulp.task('scripts', function() {
-  gulp.src(['assets/js/scripts/*.js'])
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'))
-  .pipe(browserSync.reload({stream:true}));
+// Move Image Files
+gulp.task ('move-images', function() {
+  return gulp.src('src/img/*')
+    .pipe(gulp.dest('dist/img/'));
 });
 
-// Concat JS
-gulp.task('concat', function() {
-  gulp.src(['assets/js/vendor/responsive-nav.min.js','assets/js/vendor/headroom.min.js','assets/js/scripts/menu--settings.js','assets/js/vendor/picturefill.min.js','assets/js/vendor/jquery.min.js','assets/js/scripts/loading--settings.js','assets/js/scripts/scroll--settings.js'])
-  .pipe(concat('global.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/vendor/datepicker.js','assets/js/scripts/jquery.datepicker.settings.js','assets/js/vendor/jquery.form.js','assets/js/scripts/jquery.form.settings.js','assets/js/vendor/jquery.validate.min.js'])
-  .pipe(concat('contact.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/vendor/slick.min.js','assets/js/scripts/slick--settings.js'])
-  .pipe(concat('slider.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('assets/js/'));
-  gulp.src(['assets/js/vendor/jquery-ias.min.js','assets/js/scripts/jquery-ias--settings.js'])
-  .pipe(concat('gallery.min.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest('assets/js/'));
+// Move Vendor Scripts
+gulp.task ('move-vendor', function() {
+  return gulp.src('src/js/vendor/*')
+    .pipe(gulp.dest('dist/js/vendor'));
+});
+
+// Compile JS
+gulp.task('js', function() {
+  return gulp.src('src/js/scripts.js')
+    .pipe(webpackStream(webpackConfig), webpack)
+    .pipe(gulp.dest('dist/js'));
 });
 
 // Compile Sass & Minify CSS
 gulp.task('sass', function() {
-  gulp.src(['assets/scss/style.scss'])
+  gulp.src(['src/scss/style.scss'])
   .pipe(sass({
     includePaths: require('node-neat').includePaths
   }))
-  .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-  .pipe(minifycss())
+  .pipe(autoprefixer('last 2 version'))
+  .pipe(cleanCSS())
   .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest('assets/css/'))
+  .pipe(gulp.dest('dist/css/'))
   .pipe(browserSync.reload({stream:true}));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('assets/scss/*/*.scss', ['sass'])
-    gulp.watch('assets/js/*/*.js', ['scripts', 'concat'])
-    gulp.watch('.php').on('change', reload);
+  gulp.watch('src/scss/*/*.scss', ['sass'])
+  gulp.watch('src/js/*/*.js', ['js'])
+  gulp.watch('.php').on('change', reload);
 });
 
 // Default Task
-gulp.task('default', ['sass','scripts','concat', 'browser-sync','watch']);
+gulp.task('default', ['sass','js','browser-sync','watch']);
+gulp.task('build', ['move-fonts','move-images','move-vendor']);

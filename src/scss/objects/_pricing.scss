@@ -1,0 +1,78 @@
+/* ---------- *
+ *  PRICING   *
+ * ---------- */
+
+.pricing__cover {
+	@include span-columns(12);
+	height: 300px;
+	background: $border;
+	background-size: cover;
+	background-position: center center;
+	display: inline-block;
+	margin-bottom: 1em;
+	position: relative;
+	.pricing__cover__overlay {
+		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
+	  background: $base;
+	  z-index: 2;
+		position: absolute;
+		top: 0;
+		opacity: .5;
+	}
+	@include bp(medium) {
+		@include span-columns(6);
+		margin-bottom: 0;
+		height: 500px;
+	}
+	@include bp(large) {
+		height: 550px;
+	}
+	@include bp(extra-large) {
+		height: 650px;
+	}
+}
+
+.no-touch .pricing__cover:hover .pricing__cover__overlay {
+	opacity: .25;
+}
+
+.pricing__cover h3 {
+	font-size: 1.5em;
+	letter-spacing: .1em;
+	line-height: 300px;
+	text-align: center;
+	color: white;
+	z-index: 3;
+	position: relative;
+	@include bp(medium) {
+		line-height: 500px;
+	}
+	@include bp(large) {
+		line-height: 550px;
+	}
+	@include bp(extra-large) {
+		line-height: 650px;
+	}
+}
+
+//Lazy Loading Styling
+.pricing .lazyload,
+.pricing .lazyloading {
+  opacity: 1;
+	& h3 {
+		color: darken($border, 25%);
+	}
+}
+
+.loading .pricing__cover__overlay {
+	background-color: $border;
+	opacity: 1;
+}
+
+.lazyloaded .pricing__cover__overlay {
+	opacity: .5;
+	background: $base;
+}

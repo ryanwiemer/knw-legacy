@@ -1,0 +1,138 @@
+/* ---------- *
+ * Contact Form *
+ * ---------- */
+
+.page-contact .content img {
+  margin-bottom: 1em;
+}
+
+.form__intro {
+  text-align: center;
+  margin: 0 auto 1em;
+  @include bp(large) {
+		max-width: 600px;
+  }
+}
+
+.form {
+  margin:0;
+  background: white;
+  border: 1px solid $border;
+  padding: 1em;
+  @include bp(medium) {
+      padding: 1em 1.25em;
+  }
+}
+
+input, textarea, select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+  resize: none;
+  &:focus {
+    outline: none !important;
+    box-shadow: 0;
+  }
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.form__reason__select {
+  background: $background url(../img/arrows.svg) no-repeat 98% 0!important;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form__date__datepicker {
+  background: $background url(../img/calendar.svg) no-repeat 98% 0!important;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form__name, .form__email, .form__reason, .form__date {
+	@extend %clearfix;
+  width: 100%;
+  @include bp(medium) {
+    @include span-columns(6);
+    @include omega(2n);
+  }
+}
+
+.form__message__textarea {
+	height: 300px;
+	resize: none;
+  overflow: auto;
+}
+
+.form__submit {
+	font-family: $sans;
+	border: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.form__date span {
+  color: darken($border, 15%);
+}
+
+.form__name__input, .form__email__input, .form__message__textarea, .form__bot__input, .form__reason__select, .form__date__datepicker  {
+	padding: .2em;
+	font-family: $sans;
+  @extend p;
+  margin-top: .25em;
+  margin-bottom: 1.25em;
+  width: 100%;
+  background: $background;
+  border: 1px solid $border;
+  border-radius: 0!important;
+  &:focus {
+    border: 1px solid $highlight;
+  }
+}
+
+//Spam Filter
+.form__bot, .form__bot__label, .form__bot__input {
+  display: none!important;
+}
+
+//Validation Styling
+.error {
+  border: 1px solid #cc423e!important;
+  color: #cc423e;
+}
+
+.form__success, .form__error {
+  display: none;
+}
+
+.form__success {
+  color: $highlight;
+}
+
+.form__error {
+  color: #cc423e;
+}
+
+.form__success, .form__error {
+  float: left;
+  position: relative;
+  left: 6em;
+  bottom: 2em;
+  @include bp(medium) {
+    left: 6em;
+    bottom: 1.8em;
+  }
+  @include bp(large) {
+    left: 7em;
+    bottom: 2em;
+  }
+}
+
+.form label {
+  font-weight: 600;
+}

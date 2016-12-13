@@ -4,6 +4,12 @@
  *
  */
 
+//Remove wp-embed script
+ function my_deregister_scripts(){
+   wp_deregister_script( 'wp-embed' );
+ }
+ add_action( 'wp_footer', 'my_deregister_scripts' );
+
 //Remove WP junk in the head
 function remove_wp_version() {
 return '';
@@ -123,14 +129,27 @@ function alx_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
+// Async load
+function ikreativ_async_scripts($url)
+{
+    if ( strpos( $url, '#asyncload') === false )
+        return $url;
+    else if ( is_admin() )
+        return str_replace( '#asyncload', '', $url );
+    else
+	return str_replace( '#asyncload', '', $url )."' async='async";
+    }
+add_filter( 'clean_url', 'ikreativ_async_scripts', 11, 1 );
 
-//Remove Picturefill from RICG Responsive Images Plugin. (It is already part of the global.min.js)
-function mytheme_dequeue_scripts() {
-  wp_dequeue_script('picturefill');
+//Wordpress Mail Hooks
+add_filter('wp_mail_from','yoursite_wp_mail_from');
+function yoursite_wp_mail_from($content_type) {
+  return 'kirsten@knwio.io';
 }
-
-add_action('wp_enqueue_scripts', 'mytheme_dequeue_scripts');
-
+add_filter('wp_mail_from_name','yoursite_wp_mail_from_name');
+function yoursite_wp_mail_from_name($name) {
+  return 'KNW Photography';
+}
 
 ////////////////////////
 //CSS & JS Scripts//////
@@ -138,41 +157,10 @@ add_action('wp_enqueue_scripts', 'mytheme_dequeue_scripts');
 
 //Global Styles and Scripts
 function knw_scripts() {
-  wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/assets/css/style.min.css');
-  wp_enqueue_script( 'knw-modernizr',  get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js');
-  wp_enqueue_script( 'knw-global',  get_template_directory_uri() . '/assets/js/global.min.js', '', '', true);
-}
-
-//Homepage Only
-function knw_home_scripts() {
-  if ( is_page('Home') ){
-    wp_enqueue_script( 'knw-slider',  get_template_directory_uri() . '/assets/js/slider.min.js', '', '', true);
-  }
-}
-
-//Galleries Page Only
-function knw_gallery_scripts() {
-  if ( is_archive() or is_page('Galleries')){
-    wp_enqueue_script( 'knw-infinite-scroll',  get_template_directory_uri() . '/assets/js/gallery.min.js', '', '', true);
-  }
-}
-
-//Single Page Only
-function knw_single_scripts() {
-  if ( is_single( ) ){
-    wp_enqueue_script( 'knw-single',  get_template_directory_uri() . '/assets/js/scripts/single--settings.js', '', '', true);
-  }
-}
-
-//Contact Page Only
-function knw_contact_scripts() {
-  if ( is_page('Contact') ){
-    wp_enqueue_script( 'knw-jquery',  get_template_directory_uri() . '/assets/js/contact.min.js', '', '', true);
-  }
+  wp_enqueue_script( 'knw-modernizr',  get_template_directory_uri() . '/dist/js/vendor/modernizr.min.js');
+  wp_enqueue_style( 'knw-style',  get_stylesheet_directory_uri() . '/dist/css/style.min.css');
+  wp_enqueue_script( 'knw-scripts',  get_template_directory_uri() . '/dist/js/scripts.min.js', '', '', true);
+  wp_enqueue_script( 'lazysizes',  get_template_directory_uri() . '/dist/js/vendor/lazysizes.min.js#asyncload');
 }
 
 add_action( 'wp_enqueue_scripts', 'knw_scripts');
-add_action ('wp_enqueue_scripts', 'knw_home_scripts');
-add_action ('wp_enqueue_scripts', 'knw_gallery_scripts');
-add_action ('wp_enqueue_scripts', 'knw_single_scripts');
-add_action ('wp_enqueue_scripts', 'knw_contact_scripts');

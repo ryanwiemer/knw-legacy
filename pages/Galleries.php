@@ -20,7 +20,7 @@ get_header(); ?>
   'terms' =>  'post-format-gallery',
   )
   ),
-  'posts_per_page' => 6,
+  'posts_per_page' => 1000,
   );
     $temp = $wp_query;
     $wp_query = null;
@@ -50,13 +50,16 @@ get_header(); ?>
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
-            $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');?>
-            <img class="gallery__image" src="<?php echo $medium[0]; ?>">
+            $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'medium');
+            $srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($post->ID));?>
+            <div class="ratio-container">
+            <img class="gallery__image lazyload" data-sizes="auto" data-src='<?php echo $src[0]; ?>' data-srcset='<?php echo $srcset; ?>'>
             <?php
               }
               else {
-                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                echo '<div class="ratio-container"> <img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
+              </div>
           <div class="gallery__overlay">
             <h3 class="gallery__title"><?php the_title(); ?></h3>
           </div>
@@ -64,14 +67,15 @@ get_header(); ?>
       </a>
     </article>
   <?php endwhile; ?>
+  <div class="pagination">
+  <?php
+    next_posts_link( 'Older Entries' );
+    previous_posts_link( 'Newer Entries' );
+  ?>
+  </div>
+
 </section>
-    <!-- end of the loop -->
-<div class="pagination">
-<?php
-  next_posts_link( 'Older Entries' );
-  previous_posts_link( 'Newer Entries' );
-?>
-</div>
+<!-- end of the loop -->
 
 <?php $wp_query = null; $wp_query = $temp;  // Reset ?>
 <?php else:  ?>

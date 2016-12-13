@@ -4,19 +4,21 @@
  * Description: A Page Template for the Home Page
  */
 get_header(); ?>
-<img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/assets/img/KNW_Photography_logo_white.svg" />
-<div class="slider">
-  <?php if(get_field('slider')): ?>
-  <?php while(has_sub_field('slider')): ?>
-  <?php $large = wp_get_attachment_image_src(get_sub_field('slide_image'), 'extra-large'); ?>
-    <div class="slide" style="background-image: url('<?php echo $large[0]; ?>');">
-    <div class="slide--overlay"></div>
-    </div>
-  <?php endwhile; ?>
-  <?php endif; ?>
-</div>
+<a href="#content" class="slider--link">
+  <img class="logo--full" src="<?php echo get_template_directory_uri(); ?>/dist/img/KNW_Photography_logo_white.svg" />
+  <div class="slider">
+    <?php if(get_field('slider')): ?>
+    <?php while(has_sub_field('slider')): ?>
+    <?php $large = wp_get_attachment_image_src(get_sub_field('slide_image'), 'extra-large'); ?>
+      <div class="slide" style="background-image: url('<?php echo $large[0]; ?>');">
+      <div class="slide--overlay"></div>
+      </div>
+    <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
+</a>
 
-<a href='#content' class="scroll-down">
+<a href="#content" class="scroll-down">
   <h3 class="btn--explore">Explore</h3>
 </a>
 
@@ -50,13 +52,16 @@ get_header(); ?>
       <a href="<?php the_permalink(); ?>">
         <div class="gallery__border">
           <?php if ( has_post_thumbnail() ) {
-            $medium = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');?>
-            <img class="gallery__image" src="<?php echo $medium[0]; ?>">
+            $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'medium');
+            $srcset = wp_get_attachment_image_srcset(get_post_thumbnail_id($post->ID));?>
+            <div class="ratio-container">
+            <img class="gallery__image lazyload" data-sizes="auto" data-src='<?php echo $src[0]; ?>' data-srcset='<?php echo $srcset; ?>'>
             <?php
               }
               else {
-                echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/img/placeholder.png"  class="gallery__image"/>';
+                echo '<div class="ratio-container"> <img src="' . get_bloginfo( 'stylesheet_directory' ) . '/dist/img/placeholder.png"  class="gallery__image"/>';
                 }?>
+            </div>
           <div class="gallery__overlay">
             <h3 class="gallery__title"><?php the_title(); ?></h3>
           </div>
