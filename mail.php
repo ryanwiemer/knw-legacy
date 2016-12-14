@@ -30,7 +30,7 @@
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     $body = 'Hi there!<br><br>';
-    $body .= 'Thanks for reaching out. I am currently out of the country on vacation for the holidays and will respond to your email as soon as I arrive home. I will be back and responding December 26th but will have very limited internet access before then. Thanks so much for you patience and happy holidays!<br><br>';
+    $body .= 'Thanks for reaching out. I am currently out of the country on vacation for the holidays and will respond to your email as soon as I arrive home. I will be back and responding December 26th but will have very limited internet access before then. Thanks so much for your patience and happy holidays!<br><br>';
     $body .= '- Kirsten at KNW Photography';
     $send = wp_mail($to, $subject, $body, $headers);
 ?>
