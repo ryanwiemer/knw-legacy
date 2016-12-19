@@ -142,10 +142,6 @@ function ikreativ_async_scripts($url)
 add_filter( 'clean_url', 'ikreativ_async_scripts', 11, 1 );
 
 //Wordpress Mail Hooks
-add_filter('wp_mail_from','yoursite_wp_mail_from');
-function yoursite_wp_mail_from($content_type) {
-  return 'kirsten@knwio.io';
-}
 add_filter('wp_mail_from_name','yoursite_wp_mail_from_name');
 function yoursite_wp_mail_from_name($name) {
   return 'KNW Photography';
