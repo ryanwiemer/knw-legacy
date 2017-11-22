@@ -7,6 +7,6 @@ DEPRECATED: WordPress theme built for KNW Photography which was active from 2015
 - Gulp
 - Webpack
 
-###Copyright
+### Copyright
 - All rights reserved
 - Copyright KNW Photography
