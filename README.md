@@ -1,7 +1,7 @@
-#README
-WordPress theme built for KNW Photography.
+# README
+DEPRECATED: WordPress theme built for KNW Photography which was active from 2015 - 2017. 
 
-###Dependencies
+### Dependencies
 - Git
 - Node / NPM
 - Gulp
@@ -9,4 +9,4 @@ WordPress theme built for KNW Photography.
 
 ###Copyright
 - All rights reserved
-- Copyright 2017 KNW Photography
+- Copyright KNW Photography
